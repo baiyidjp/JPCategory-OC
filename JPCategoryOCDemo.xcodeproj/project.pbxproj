@@ -17,6 +17,9 @@
 		F5DBB01425918BEB0008D98F /* UIButton+JPImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */; };
 		F5DBB01525918BEB0008D98F /* UIButton+JPRemoveHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */; };
 		F5DBB01625918BEB0008D98F /* UIButton+JPInitMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB01225918BEB0008D98F /* UIButton+JPInitMethod.m */; };
+		F5DBB0802591C1B70008D98F /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB07F2591C1B70008D98F /* CenterViewController.m */; };
+		F5DBB0842591C1C00008D98F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB0832591C1C00008D98F /* LeftViewController.m */; };
+		F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB0872591C1C70008D98F /* RightViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,12 @@
 		F5DBB01125918BEB0008D98F /* UIButton+JPImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPImagePosition.h"; sourceTree = "<group>"; };
 		F5DBB01225918BEB0008D98F /* UIButton+JPInitMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPInitMethod.m"; sourceTree = "<group>"; };
 		F5DBB01325918BEB0008D98F /* JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCategory.h; sourceTree = "<group>"; };
+		F5DBB07E2591C1B60008D98F /* CenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
+		F5DBB07F2591C1B70008D98F /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
+		F5DBB0822591C1C00008D98F /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		F5DBB0832591C1C00008D98F /* LeftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		F5DBB0862591C1C70008D98F /* RightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		F5DBB0872591C1C70008D98F /* RightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,12 @@
 				F5DBAFF425918BCA0008D98F /* SceneDelegate.m */,
 				F5DBAFF625918BCA0008D98F /* ViewController.h */,
 				F5DBAFF725918BCA0008D98F /* ViewController.m */,
+				F5DBB07E2591C1B60008D98F /* CenterViewController.h */,
+				F5DBB07F2591C1B70008D98F /* CenterViewController.m */,
+				F5DBB0822591C1C00008D98F /* LeftViewController.h */,
+				F5DBB0832591C1C00008D98F /* LeftViewController.m */,
+				F5DBB0862591C1C70008D98F /* RightViewController.h */,
+				F5DBB0872591C1C70008D98F /* RightViewController.m */,
 				F5DBAFF925918BCA0008D98F /* Main.storyboard */,
 				F5DBAFFC25918BCB0008D98F /* Assets.xcassets */,
 				F5DBAFFE25918BCB0008D98F /* LaunchScreen.storyboard */,
@@ -180,9 +195,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DBB0842591C1C00008D98F /* LeftViewController.m in Sources */,
 				F5DBAFF825918BCA0008D98F /* ViewController.m in Sources */,
+				F5DBB0802591C1B70008D98F /* CenterViewController.m in Sources */,
 				F5DBB01425918BEB0008D98F /* UIButton+JPImagePosition.m in Sources */,
 				F5DBAFF225918BCA0008D98F /* AppDelegate.m in Sources */,
+				F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */,
 				F5DBB01625918BEB0008D98F /* UIButton+JPInitMethod.m in Sources */,
 				F5DBB00325918BCB0008D98F /* main.m in Sources */,
 				F5DBB01525918BEB0008D98F /* UIButton+JPRemoveHighlight.m in Sources */,
