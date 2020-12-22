@@ -9,11 +9,11 @@ Pod::Spec.new do |s|
   s.author             =  "baiyidjp"
   s.ios.deployment_target = "8.0"
   s.source       = { :git => "https://github.com/baiyidjp/JPCategory-OC.git", :tag => "#{s.version}" }
-  s.source_files  = "JPCategory_OC/*.{h,m}"
+  s.source_files  = "JPCategory-OC/*.{h,m}"
   s.requires_arc = true
 
   #UIButton
-  s.subspec 'JPButtonCategory-OC' do |ss|
+  s.subspec 'UIButton' do |ss|
   ss.source_files = "JPCategory-OC/UIButton/*.{h,m}"
   end
 # pod trunk push --allow-warnings
