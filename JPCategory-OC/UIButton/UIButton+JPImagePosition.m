@@ -50,11 +50,22 @@
     CGFloat buttonWidth = self.frame.size.width;
     CGFloat buttonHeight = self.frame.size.height;
     
-    CGFloat imageWidth = self.imageView.frame.size.width;
-    CGFloat imageHeight = self.imageView.frame.size.height;
+    CGFloat imageContentWidth = self.imageView.intrinsicContentSize.width;
+    CGFloat imageContentHeight = self.imageView.intrinsicContentSize.height;
+    CGFloat imageFrameWidth = self.imageView.frame.size.width;
+    CGFloat imageFrameHeight = self.imageView.frame.size.height;
     
-    CGFloat titleWidth = self.titleLabel.intrinsicContentSize.width;
-    CGFloat titleHeight = self.titleLabel.intrinsicContentSize.height;
+    CGFloat imageWidth = MAX(imageContentWidth, imageFrameWidth);
+    CGFloat imageHeight = MAX(imageContentHeight, imageFrameHeight);
+    
+    CGFloat titleContentWidth = self.titleLabel.intrinsicContentSize.width;
+    CGFloat titleContentHeight = self.titleLabel.intrinsicContentSize.height;
+    CGFloat titleFrameWidth = self.titleLabel.frame.size.width;
+    CGFloat titleFrameHeight = self.titleLabel.frame.size.height;
+    
+    CGFloat titleWidth = MAX(titleFrameWidth, titleContentWidth);
+    CGFloat titleHeight = MAX(titleFrameHeight, titleContentHeight);
+    NSLog(@"titleFrameWidth: %f,titleContentWidth: %f, titleWidth: %f", titleFrameWidth,titleContentWidth,titleWidth);
     
     UIEdgeInsets imageEdgeInsets = self.imageEdgeInsets;
     UIEdgeInsets titleEdgeInsets = self.titleEdgeInsets;
@@ -64,16 +75,28 @@
     
     // 水平实际的间距
     CGFloat horizontalMargin = margin;
+    // 是否需要扩充
+    BOOL isWidthNeedExtendEdge = NO;
+    BOOL isHeightNeedExtendEdge = NO;
     // 如果加上间距后总宽度大于按钮的宽度,重新给间距赋值
     if (imageWidth + titleWidth + margin > buttonWidth && autoMargin) {
         horizontalMargin = buttonWidth - (imageWidth + titleWidth);
     }
-    
+    if (imageWidth + titleWidth > buttonWidth && autoMargin) {
+        horizontalMargin = 0;
+        isWidthNeedExtendEdge = YES;
+    }
+
     // 垂直实际的间距
     CGFloat verticalMargin = margin;
     // 如果加上间距后总高度大于按钮的高度,重新给间距赋值
     if (imageHeight + titleHeight + margin > buttonHeight && autoMargin) {
         verticalMargin = buttonHeight - (imageHeight + titleHeight);
+    }
+    // 如果加上间距后总高度大于按钮的高度,重新给间距赋值
+    if (imageHeight + titleHeight > buttonHeight && autoMargin) {
+        verticalMargin = 0;
+        isHeightNeedExtendEdge = YES;
     }
     
     // 水平居中
@@ -83,11 +106,21 @@
         if (position == JPButtonImagePosition_Left && horizontalMargin >= 0) {
             imageEdgeInsets = UIEdgeInsetsMake(0, -horizontalMargin*0.5, 0, horizontalMargin*0.5);
             titleEdgeInsets = UIEdgeInsetsMake(0, horizontalMargin*0.5, 0, -horizontalMargin*0.5);
+            if (isWidthNeedExtendEdge) {
+                CGRect frame = self.frame;
+                frame.size.width = imageWidth+titleWidth;
+                self.frame = frame;
+            }
         }
         // 图片居右
         if (position == JPButtonImagePosition_Right && horizontalMargin >= 0) {
             imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth+horizontalMargin*0.5, 0, -(titleWidth+horizontalMargin*0.5));
             titleEdgeInsets = UIEdgeInsetsMake(0, -(imageWidth+horizontalMargin*0.5), 0, imageWidth+horizontalMargin*0.5);
+            if (isWidthNeedExtendEdge) {
+                CGRect frame = self.frame;
+                frame.size.width = imageWidth+titleWidth;
+                self.frame = frame;
+            }
         }
         
         // 垂直居中
@@ -98,6 +131,31 @@
                 CGFloat verticalCenter = (imageHeight + titleHeight + verticalMargin)*0.5;
                 imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, titleWidth*0.5, verticalCenter-imageHeight*0.5, -titleWidth*0.5);
                 titleEdgeInsets = UIEdgeInsetsMake(verticalCenter-titleHeight*0.5, -imageWidth*0.5, titleHeight*0.5-verticalCenter, imageWidth*0.5);
+                if (isWidthNeedExtendEdge) {
+                    CGFloat maxWidth = MAX(imageWidth, titleWidth);
+                    CGRect frame = self.frame;
+                    frame.size.width = MAX(buttonWidth, maxWidth);
+                    self.frame = frame;
+                    titleEdgeInsets = UIEdgeInsetsMake(verticalCenter-titleHeight*0.5, -imageWidth, titleHeight*0.5-verticalCenter, 0);
+                    if (buttonWidth <= maxWidth) {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, titleWidth*0.5-imageWidth*0.5, verticalCenter-imageHeight*0.5, -(titleWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, 0, verticalCenter-imageHeight*0.5, 0);
+                        }
+                    } else {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, buttonWidth*0.5-imageWidth*0.5, verticalCenter-imageHeight*0.5, -(buttonWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, buttonWidth*0.5-imageWidth*0.5, verticalCenter-imageHeight*0.5, -(buttonWidth*0.5-imageWidth*0.5));
+                        }
+                    }
+                }
+                if (isHeightNeedExtendEdge) {
+                    CGRect frame = self.frame;
+                    frame.size.height = imageHeight+titleHeight;
+                    self.frame = frame;
+                }
             }
             
             // 图片居下
@@ -105,6 +163,31 @@
                 CGFloat verticalCenter = (imageHeight + titleHeight + verticalMargin)*0.5;
                 imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, titleWidth*0.5, imageHeight*0.5-verticalCenter, -titleWidth*0.5);
                 titleEdgeInsets = UIEdgeInsetsMake(titleHeight*0.5-verticalCenter, -imageWidth*0.5, verticalCenter-titleHeight*0.5, imageWidth*0.5);
+                if (isWidthNeedExtendEdge) {
+                    CGFloat maxWidth = MAX(imageWidth, titleWidth);
+                    CGRect frame = self.frame;
+                    frame.size.width = MAX(buttonWidth, maxWidth);
+                    self.frame = frame;
+                    titleEdgeInsets = UIEdgeInsetsMake(titleHeight*0.5-verticalCenter, -imageWidth, verticalCenter-titleHeight*0.5, 0);
+                    if (buttonWidth <= maxWidth) {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, titleWidth*0.5-imageWidth*0.5, imageHeight*0.5-verticalCenter, -(titleWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, 0, imageHeight*0.5-verticalCenter, 0);
+                        }
+                    } else {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, buttonWidth*0.5-imageWidth*0.5, imageHeight*0.5-verticalCenter, -(buttonWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, buttonWidth*0.5-imageWidth*0.5, imageHeight*0.5-verticalCenter, -(buttonWidth*0.5-imageWidth*0.5));
+                        }
+                    }
+                }
+                if (isHeightNeedExtendEdge) {
+                    CGRect frame = self.frame;
+                    frame.size.height = imageHeight+titleHeight;
+                    self.frame = frame;
+                }
             }
         }
         
@@ -115,12 +198,62 @@
             if (position == JPButtonImagePosition_Top && verticalMargin >= 0) {
                 imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5, 0, -titleWidth*0.5);
                 titleEdgeInsets = UIEdgeInsetsMake(imageHeight+verticalMargin, -imageWidth*0.5, -(imageHeight+verticalMargin), imageWidth*0.5);
+                if (isWidthNeedExtendEdge) {
+                    CGFloat maxWidth = MAX(imageWidth, titleWidth);
+                    CGRect frame = self.frame;
+                    frame.size.width = MAX(buttonWidth, maxWidth);
+                    self.frame = frame;
+                    titleEdgeInsets = UIEdgeInsetsMake(imageHeight+verticalMargin, -imageWidth, -(imageHeight+verticalMargin), 0);
+                    if (buttonWidth <= maxWidth) {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5-imageWidth*0.5, 0, -(titleWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+                        }
+                    } else {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
+                        }
+                    }
+                }
+                if (isHeightNeedExtendEdge) {
+                    CGRect frame = self.frame;
+                    frame.size.height = imageHeight+titleHeight;
+                    self.frame = frame;
+                }
             }
             
             // 图片居下
             if (position == JPButtonImagePosition_Bottom && verticalMargin >= 0) {
                 imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, titleWidth*0.5, -(titleHeight+verticalMargin), -titleWidth*0.5);
                 titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth*0.5, 0, imageWidth*0.5);
+                if (isWidthNeedExtendEdge) {
+                    CGFloat maxWidth = MAX(imageWidth, titleWidth);
+                    CGRect frame = self.frame;
+                    frame.size.width = MAX(buttonWidth, maxWidth);
+                    self.frame = frame;
+                    titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth, 0, 0);
+                    if (buttonWidth <= maxWidth) {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, titleWidth*0.5-imageWidth*0.5, -(titleHeight+verticalMargin), -(titleWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, 0, -(titleHeight+verticalMargin), 0);
+                        }
+                    } else {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, buttonWidth*0.5-imageWidth*0.5, -(titleHeight+verticalMargin), -(buttonWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, buttonWidth*0.5-imageWidth*0.5, -(titleHeight+verticalMargin), -(buttonWidth*0.5-imageWidth*0.5));
+                        }
+                    }
+                }
+                if (isHeightNeedExtendEdge) {
+                    CGRect frame = self.frame;
+                    frame.size.height = imageHeight+titleHeight;
+                    self.frame = frame;
+                }
             }
         }
         
@@ -131,12 +264,66 @@
             if (position == JPButtonImagePosition_Top && verticalMargin >= 0) {
                 imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), titleWidth*0.5, titleHeight+verticalMargin, -titleWidth*0.5);
                 titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth*0.5, 0, imageWidth*0.5);
+                if (isWidthNeedExtendEdge) {
+                    CGFloat maxWidth = MAX(imageWidth, titleWidth);
+                    CGRect frame = self.frame;
+                    frame.size.width = MAX(buttonWidth, maxWidth);
+                    self.frame = frame;
+                    titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth, 0, 0);
+                    if (buttonWidth <= maxWidth) {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), titleWidth*0.5-imageWidth*0.5, titleHeight+verticalMargin, -(titleWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), 0, titleHeight+verticalMargin, 0);
+                        }
+                    } else {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), buttonWidth*0.5-imageWidth*0.5, titleHeight+verticalMargin, -(buttonWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), buttonWidth*0.5-imageWidth*0.5, titleHeight+verticalMargin, -(buttonWidth*0.5-imageWidth*0.5));
+                        }
+                    }
+
+                }
+                if (isHeightNeedExtendEdge) {
+                    CGRect frame = self.frame;
+                    frame.size.height = imageHeight+titleHeight;
+                    self.frame = frame;
+                }
             }
             
             // 图片居下
             if (position == JPButtonImagePosition_Bottom && verticalMargin >= 0) {
                 imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5, 0, -titleWidth*0.5);
                 titleEdgeInsets = UIEdgeInsetsMake(-(imageHeight+verticalMargin), -imageWidth*0.5, imageHeight+verticalMargin, imageWidth*0.5);
+                if (isWidthNeedExtendEdge) {
+                    CGFloat maxWidth = MAX(imageWidth, titleWidth);
+                    CGRect frame = self.frame;
+                    frame.size.width = MAX(buttonWidth, maxWidth);
+                    self.frame = frame;
+                    imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5-imageWidth*0.5, 0, -(titleWidth*0.5-imageWidth*0.5));
+                    titleEdgeInsets = UIEdgeInsetsMake(-(imageHeight+verticalMargin), -imageWidth, imageHeight+verticalMargin, 0);
+                    if (buttonWidth <= maxWidth) {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5-imageWidth*0.5, 0, -(titleWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+                        }
+                    } else {
+                        if (titleWidth >= imageWidth) {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
+                        } else {
+                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
+                        }
+                    }
+
+                }
+                if (isHeightNeedExtendEdge) {
+                    CGRect frame = self.frame;
+                    frame.size.height = imageHeight+titleHeight;
+                    self.frame = frame;
+                }
+
             }
         }
     }
