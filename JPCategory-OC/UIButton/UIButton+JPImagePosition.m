@@ -53,8 +53,8 @@
     CGFloat imageWidth = self.imageView.frame.size.width;
     CGFloat imageHeight = self.imageView.frame.size.height;
     
-    CGFloat titleWidth = self.titleLabel.frame.size.width;
-    CGFloat titleHeight = self.titleLabel.frame.size.height;
+    CGFloat titleWidth = self.titleLabel.intrinsicContentSize.width;
+    CGFloat titleHeight = self.titleLabel.intrinsicContentSize.height;
     
     UIEdgeInsets imageEdgeInsets = self.imageEdgeInsets;
     UIEdgeInsets titleEdgeInsets = self.titleEdgeInsets;

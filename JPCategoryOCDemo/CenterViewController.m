@@ -36,7 +36,9 @@
     [button3 setImagePosition:JPButtonImagePosition_Right margin:10];
     [scrollView addSubview:button3];
     
-    UIButton *button4 = [UIButton buttonWithNormalTitle:@"垂直居中-图片居上-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button3.frame)+10, 350, 80)];
+    UIButton *button4 = [UIButton buttonWithNormalTitle:@"垂直居中-图片居上-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectZero];
+    button4.frame = CGRectMake(20, CGRectGetMaxY(button3.frame)+10, 350, 80);
+    NSLog(@"%@", NSStringFromCGRect(button4.titleLabel.frame));
     button4.backgroundColor = [UIColor blackColor];
     [button4 setImagePosition:JPButtonImagePosition_Top margin:10];
     [scrollView addSubview:button4];
