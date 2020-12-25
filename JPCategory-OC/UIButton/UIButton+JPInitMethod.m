@@ -29,6 +29,10 @@
     return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:normalImage selectedImage:normalImage frame:frame];
 }
 
++ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont *)titleFont normalTitleColor:(UIColor *)normalTitleColor normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage frame:(CGRect)frame {
+    return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:normalImage selectedImage:selectedImage frame:frame];
+}
+
 + (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont *)titleFont normalTitleColor:(UIColor *)normalTitleColor normalBackgroundImage:(UIImage *)normalBackgroundImage frame:(CGRect)frame {
 
     return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:nil normalImage:nil selectedImage:nil frame:frame];

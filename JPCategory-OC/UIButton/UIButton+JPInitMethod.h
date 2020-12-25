@@ -112,6 +112,25 @@
                               frame:(CGRect)frame;
 
 /**
+ title/font/titleColor/normalImage/selectedImage
+
+ @param normalTitle normalTitle description
+ @param titleFont titleFont description
+ @param normalTitleColor normalTitleColor description
+ @param normalImage normalImage description
+ @param selectedImage
+ @param frame frame description
+ @return return value description
+ */
++ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle
+                          titleFont:(UIFont *)titleFont
+                   normalTitleColor:(UIColor *)normalTitleColor
+                        normalImage:(UIImage *)normalImage
+                      selectedImage:(UIImage *)selectedImage
+                              frame:(CGRect)frame;
+
+
+/**
  title/font/titleColor/backImage
 
  @param normalTitle normalTitle description

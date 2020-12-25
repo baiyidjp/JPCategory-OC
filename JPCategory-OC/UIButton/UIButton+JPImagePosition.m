@@ -19,6 +19,11 @@
     [self setImagePosition:JPButtonImagePosition_Left margin:8 autoMargin:autoMargin];
 }
 
+- (void)setImagePositionWithMargin:(CGFloat)margin {
+
+    [self setImagePosition:JPButtonImagePosition_Left margin:margin];
+}
+
 - (void)setImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin {
     
     [self setImagePosition:position margin:margin autoMargin:YES];
