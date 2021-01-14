@@ -33,18 +33,18 @@
 }
 
 - (void)jp_SetHighlighted:(BOOL)highlighted {
-    if (!self.removeHighlight) {
+    if (!self.jp_removeHighlightState) {
         //如果没有设置removeHighlight为Yes,就执行原有的方法,而原有的方法已经被我们替换,所以就执行当前这个方法
         [self jp_SetHighlighted:highlighted];
     }
 }
 
-- (void)setRemoveHighlight:(BOOL)removeHighlight {
+- (void)setJp_removeHighlightState:(BOOL)jp_removeHighlightState {
     
-    objc_setAssociatedObject(self, KEY, @(removeHighlight), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, KEY, @(jp_removeHighlightState), OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (BOOL)removeHighlight {
+- (BOOL)jp_removeHighlightState {
     
     return [objc_getAssociatedObject(self, KEY) boolValue];
 }

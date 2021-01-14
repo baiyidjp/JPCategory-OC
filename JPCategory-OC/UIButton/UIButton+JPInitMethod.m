@@ -9,78 +9,120 @@
 
 @implementation UIButton (JPInitMethod)
 
-+ (UIButton *)buttonWithNormalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage frame:(CGRect)frame {
-    
-        return [self buttonWithNormalTitle:nil selectedTitle:nil titleFont:nil normalTitleColor:nil selectedTitleColor:nil normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:normalImage selectedImage:selectedImage frame:frame];
-}
-+ (UIButton *)buttonWithNormalBackgroundImage:(UIImage *)normalBackgroundImage selectedBackgroundImage:(UIImage *)selectedBackgroundImage frame:(CGRect)frame {
-    
-    return [self buttonWithNormalTitle:nil selectedTitle:nil titleFont:nil normalTitleColor:nil selectedTitleColor:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage normalImage:nil selectedImage:nil frame:frame];
-}
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                                 frame:(CGRect)frame {
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont *)titleFont normalTitleColor:(UIColor *)normalTitleColor frame:(CGRect)frame {
-    
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:nil selectedImage:nil frame:frame];
-
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:nil selectedImage:nil normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont *)titleFont normalTitleColor:(UIColor *)normalTitleColor normalImage:(UIImage *)normalImage frame:(CGRect)frame {
-    
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:normalImage selectedImage:normalImage frame:frame];
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                           normalImage:(UIImage *)normalImage
+                                 frame:(CGRect)frame {
+
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:normalImage selectedImage:normalImage normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont *)titleFont normalTitleColor:(UIColor *)normalTitleColor normalImage:(UIImage *)normalImage selectedImage:(UIImage *)selectedImage frame:(CGRect)frame {
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:normalImage selectedImage:selectedImage frame:frame];
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                         selectedTitle:(NSString *)selectedTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                    selectedTitleColor:(UIColor *)selectedTitleColor
+                                 frame:(CGRect)frame {
+
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:selectedTitle titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImage:nil selectedImage:nil normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont *)titleFont normalTitleColor:(UIColor *)normalTitleColor normalBackgroundImage:(UIImage *)normalBackgroundImage frame:(CGRect)frame {
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                           normalImage:(UIImage *)normalImage
+                         selectedImage:(UIImage *)selectedImage
+                                 frame:(CGRect)frame {
 
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:nil normalImage:nil selectedImage:nil frame:frame];
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:normalImage selectedImage:selectedImage normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont *)titleFont normalTitleColor:(UIColor *)normalTitleColor selectedTitleColor:(UIColor *)selectedTitleColor frame:(CGRect)frame {
-    
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:nil selectedImage:nil frame:frame];
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                         selectedTitle:(NSString *)selectedTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                    selectedTitleColor:(UIColor *)selectedTitleColor
+                           normalImage:(UIImage *)normalImage
+                         selectedImage:(UIImage *)selectedImage
+                                 frame:(CGRect)frame {
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:selectedTitle titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImage:normalImage selectedImage:selectedImage normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle titleFont:(UIFont*)titleFont normalTitleColor:(UIColor *)normalTitleColor selectedTitleColor:(UIColor *)selectedTitleColor normalBackgroundImage:(UIImage *)normalBackgroundImage selectedBackgroundImage:(UIImage *)selectedBackgroundImage frame:(CGRect)frame {
-    
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage normalImage:nil selectedImage:nil frame:frame];
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                    selectedTitleColor:(UIColor *)selectedTitleColor
+                 normalBackgroundImage:(UIImage *)normalBackgroundImage
+               selectedBackgroundImage:(UIImage *)selectedBackgroundImage
+                                 frame:(CGRect)frame {
+
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:nil selectedImage:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle
-                      selectedTitle:(NSString *)selectedTitle
-                          titleFont:(UIFont *)titleFont
-                   normalTitleColor:(UIColor *)normalTitleColor
-                 selectedTitleColor:(UIColor *)selectedTitleColor
-                              frame:(CGRect)frame {
-    
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:selectedTitle titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalBackgroundImage:nil selectedBackgroundImage:nil normalImage:nil selectedImage:nil frame:frame];
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                         selectedTitle:(NSString *)selectedTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                    selectedTitleColor:(UIColor *)selectedTitleColor
+                 normalBackgroundImage:(UIImage *)normalBackgroundImage
+               selectedBackgroundImage:(UIImage *)selectedBackgroundImage
+                                 frame:(CGRect)frame {
+
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:selectedTitle titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImage:nil selectedImage:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle
-          selectedTitle:(NSString *)selectedTitle
-              titleFont:(UIFont *)titleFont
-       normalTitleColor:(UIColor *)normalTitleColor
-     selectedTitleColor:(UIColor *)selectedTitleColor
-  normalBackgroundImage:(UIImage *)normalBackgroundImage
-selectedBackgroundImage:(UIImage *)selectedBackgroundImage
-                              frame:(CGRect)frame {
-    
-    return [self buttonWithNormalTitle:normalTitle selectedTitle:selectedTitle titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage normalImage:nil selectedImage:nil frame:frame];
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                 normalBackgroundImage:(UIImage *)normalBackgroundImage
+                                 frame:(CGRect)frame {
+
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:nil selectedImage:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:nil frame:frame];
 }
 
-+ (UIButton *)buttonWithNormalTitle:(NSString *)normalTitle
-                      selectedTitle:(NSString *)selectedTitle
-                          titleFont:(UIFont *)titleFont
-                   normalTitleColor:(UIColor *)normalTitleColor
-                 selectedTitleColor:(UIColor *)selectedTitleColor
-              normalBackgroundImage:(UIImage *)normalBackgroundImage
-            selectedBackgroundImage:(UIImage *)selectedBackgroundImage
-                        normalImage:(UIImage *)normalImage
-                      selectedImage:(UIImage *)selectedImage
-                              frame:(CGRect)frame {
-    
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                    selectedTitleColor:(UIColor *)selectedTitleColor
+                                 frame:(CGRect)frame {
+
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:nil selectedImage:nil normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
+}
+
++ (UIButton *)jp_buttonWithNormalBackgroundImage:(UIImage *)normalBackgroundImage
+                         selectedBackgroundImage:(UIImage *)selectedBackgroundImage
+                                           frame:(CGRect)frame {
+
+    return [self jp_buttonWithNormalTitle:nil selectedTitle:nil titleFont:nil normalTitleColor:nil selectedTitleColor:nil normalImage:nil selectedImage:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage frame:frame];
+}
+
++ (UIButton *)jp_buttonWithNormalImage:(UIImage *)normalImage
+                         selectedImage:(UIImage *)selectedImage
+                                 frame:(CGRect)frame {
+
+        return [self jp_buttonWithNormalTitle:nil selectedTitle:nil titleFont:nil normalTitleColor:nil selectedTitleColor:nil normalImage:normalImage selectedImage:selectedImage normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
+}
+
++ (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
+                         selectedTitle:(NSString *)selectedTitle
+                             titleFont:(UIFont *)titleFont
+                      normalTitleColor:(UIColor *)normalTitleColor
+                    selectedTitleColor:(UIColor *)selectedTitleColor
+                           normalImage:(UIImage *)normalImage
+                         selectedImage:(UIImage *)selectedImage
+                 normalBackgroundImage:(UIImage *)normalBackgroundImage
+               selectedBackgroundImage:(UIImage *)selectedBackgroundImage
+                                 frame:(CGRect)frame {
+
     UIButton *button = [[UIButton alloc] initWithFrame:frame];
     if (normalTitle) {
         [button setTitle:normalTitle forState:UIControlStateNormal];

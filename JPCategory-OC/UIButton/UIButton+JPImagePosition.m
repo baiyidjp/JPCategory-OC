@@ -9,27 +9,42 @@
 
 @implementation UIButton (JPImagePosition)
 
-- (void)setImagePosition {
-    
-    [self setImagePosition:JPButtonImagePosition_Left margin:8];
+- (void)jp_imagePosition {
+
+    [self jp_imagePosition:JPButtonImagePosition_Left margin:8 autoMargin:YES];
 }
 
-- (void)setImagePositionAutoMargin:(BOOL)autoMargin {
-    
-    [self setImagePosition:JPButtonImagePosition_Left margin:8 autoMargin:autoMargin];
+- (void)jp_imagePosition:(JPButtonImagePosition)position {
+
+    [self jp_imagePosition:position margin:8 autoMargin:YES];
 }
 
-- (void)setImagePositionWithMargin:(CGFloat)margin {
+- (void)jp_imagePositionWithMargin:(CGFloat)margin {
 
-    [self setImagePosition:JPButtonImagePosition_Left margin:margin];
+    [self jp_imagePosition:JPButtonImagePosition_Left margin:margin autoMargin:YES];
 }
 
-- (void)setImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin {
-    
-    [self setImagePosition:position margin:margin autoMargin:YES];
+- (void)jp_imagePositionWithAutoMargin:(BOOL)autoMargin {
+
+    [self jp_imagePosition:JPButtonImagePosition_Left margin:8 autoMargin:autoMargin];
 }
 
-- (void)setImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(BOOL)autoMargin {
+- (void)jp_imagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin {
+
+    [self jp_imagePosition:position margin:margin autoMargin:YES];
+}
+
+- (void)jp_imagePosition:(JPButtonImagePosition)position autoMargin:(BOOL)autoMargin {
+
+    [self jp_imagePosition:position margin:8 autoMargin:autoMargin];
+}
+
+- (void)jp_imagePositionWithMargin:(CGFloat)margin autoMargin:(BOOL)autoMargin {
+
+    [self jp_imagePosition:JPButtonImagePosition_Left margin:margin autoMargin:autoMargin];
+}
+
+- (void)jp_imagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(BOOL)autoMargin {
     
     if (!self.currentImage) {
         NSLog(@"图片不存在");
@@ -142,17 +157,12 @@
                     frame.size.width = MAX(buttonWidth, maxWidth);
                     self.frame = frame;
                     titleEdgeInsets = UIEdgeInsetsMake(verticalCenter-titleHeight*0.5, -imageWidth, titleHeight*0.5-verticalCenter, 0);
+                    imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, buttonWidth*0.5-imageWidth*0.5, verticalCenter-imageHeight*0.5, -(buttonWidth*0.5-imageWidth*0.5));
                     if (buttonWidth <= maxWidth) {
                         if (titleWidth >= imageWidth) {
                             imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, titleWidth*0.5-imageWidth*0.5, verticalCenter-imageHeight*0.5, -(titleWidth*0.5-imageWidth*0.5));
                         } else {
                             imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, 0, verticalCenter-imageHeight*0.5, 0);
-                        }
-                    } else {
-                        if (titleWidth >= imageWidth) {
-                            imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, buttonWidth*0.5-imageWidth*0.5, verticalCenter-imageHeight*0.5, -(buttonWidth*0.5-imageWidth*0.5));
-                        } else {
-                            imageEdgeInsets = UIEdgeInsetsMake(imageHeight*0.5-verticalCenter, buttonWidth*0.5-imageWidth*0.5, verticalCenter-imageHeight*0.5, -(buttonWidth*0.5-imageWidth*0.5));
                         }
                     }
                 }
@@ -174,17 +184,12 @@
                     frame.size.width = MAX(buttonWidth, maxWidth);
                     self.frame = frame;
                     titleEdgeInsets = UIEdgeInsetsMake(titleHeight*0.5-verticalCenter, -imageWidth, verticalCenter-titleHeight*0.5, 0);
+                    imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, buttonWidth*0.5-imageWidth*0.5, imageHeight*0.5-verticalCenter, -(buttonWidth*0.5-imageWidth*0.5));
                     if (buttonWidth <= maxWidth) {
                         if (titleWidth >= imageWidth) {
                             imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, titleWidth*0.5-imageWidth*0.5, imageHeight*0.5-verticalCenter, -(titleWidth*0.5-imageWidth*0.5));
                         } else {
                             imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, 0, imageHeight*0.5-verticalCenter, 0);
-                        }
-                    } else {
-                        if (titleWidth >= imageWidth) {
-                            imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, buttonWidth*0.5-imageWidth*0.5, imageHeight*0.5-verticalCenter, -(buttonWidth*0.5-imageWidth*0.5));
-                        } else {
-                            imageEdgeInsets = UIEdgeInsetsMake(verticalCenter-imageHeight*0.5, buttonWidth*0.5-imageWidth*0.5, imageHeight*0.5-verticalCenter, -(buttonWidth*0.5-imageWidth*0.5));
                         }
                     }
                 }
@@ -209,17 +214,12 @@
                     frame.size.width = MAX(buttonWidth, maxWidth);
                     self.frame = frame;
                     titleEdgeInsets = UIEdgeInsetsMake(imageHeight+verticalMargin, -imageWidth, -(imageHeight+verticalMargin), 0);
+                    imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
                     if (buttonWidth <= maxWidth) {
                         if (titleWidth >= imageWidth) {
                             imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5-imageWidth*0.5, 0, -(titleWidth*0.5-imageWidth*0.5));
                         } else {
                             imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-                        }
-                    } else {
-                        if (titleWidth >= imageWidth) {
-                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
-                        } else {
-                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
                         }
                     }
                 }
@@ -240,17 +240,12 @@
                     frame.size.width = MAX(buttonWidth, maxWidth);
                     self.frame = frame;
                     titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth, 0, 0);
+                    imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, buttonWidth*0.5-imageWidth*0.5, -(titleHeight+verticalMargin), -(buttonWidth*0.5-imageWidth*0.5));
                     if (buttonWidth <= maxWidth) {
                         if (titleWidth >= imageWidth) {
                             imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, titleWidth*0.5-imageWidth*0.5, -(titleHeight+verticalMargin), -(titleWidth*0.5-imageWidth*0.5));
                         } else {
                             imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, 0, -(titleHeight+verticalMargin), 0);
-                        }
-                    } else {
-                        if (titleWidth >= imageWidth) {
-                            imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, buttonWidth*0.5-imageWidth*0.5, -(titleHeight+verticalMargin), -(buttonWidth*0.5-imageWidth*0.5));
-                        } else {
-                            imageEdgeInsets = UIEdgeInsetsMake(titleHeight+verticalMargin, buttonWidth*0.5-imageWidth*0.5, -(titleHeight+verticalMargin), -(buttonWidth*0.5-imageWidth*0.5));
                         }
                     }
                 }
@@ -275,17 +270,12 @@
                     frame.size.width = MAX(buttonWidth, maxWidth);
                     self.frame = frame;
                     titleEdgeInsets = UIEdgeInsetsMake(0, -imageWidth, 0, 0);
+                    imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), buttonWidth*0.5-imageWidth*0.5, titleHeight+verticalMargin, -(buttonWidth*0.5-imageWidth*0.5));
                     if (buttonWidth <= maxWidth) {
                         if (titleWidth >= imageWidth) {
                             imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), titleWidth*0.5-imageWidth*0.5, titleHeight+verticalMargin, -(titleWidth*0.5-imageWidth*0.5));
                         } else {
                             imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), 0, titleHeight+verticalMargin, 0);
-                        }
-                    } else {
-                        if (titleWidth >= imageWidth) {
-                            imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), buttonWidth*0.5-imageWidth*0.5, titleHeight+verticalMargin, -(buttonWidth*0.5-imageWidth*0.5));
-                        } else {
-                            imageEdgeInsets = UIEdgeInsetsMake(-(titleHeight+verticalMargin), buttonWidth*0.5-imageWidth*0.5, titleHeight+verticalMargin, -(buttonWidth*0.5-imageWidth*0.5));
                         }
                     }
 
@@ -299,26 +289,20 @@
             
             // 图片居下
             if (position == JPButtonImagePosition_Bottom && verticalMargin >= 0) {
-                imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5, 0, -titleWidth*0.5);
                 titleEdgeInsets = UIEdgeInsetsMake(-(imageHeight+verticalMargin), -imageWidth*0.5, imageHeight+verticalMargin, imageWidth*0.5);
+                imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5, 0, -titleWidth*0.5);
                 if (isWidthNeedExtendEdge) {
                     CGFloat maxWidth = MAX(imageWidth, titleWidth);
                     CGRect frame = self.frame;
                     frame.size.width = MAX(buttonWidth, maxWidth);
                     self.frame = frame;
-                    imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5-imageWidth*0.5, 0, -(titleWidth*0.5-imageWidth*0.5));
+                    imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
                     titleEdgeInsets = UIEdgeInsetsMake(-(imageHeight+verticalMargin), -imageWidth, imageHeight+verticalMargin, 0);
                     if (buttonWidth <= maxWidth) {
                         if (titleWidth >= imageWidth) {
                             imageEdgeInsets = UIEdgeInsetsMake(0, titleWidth*0.5-imageWidth*0.5, 0, -(titleWidth*0.5-imageWidth*0.5));
                         } else {
                             imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
-                        }
-                    } else {
-                        if (titleWidth >= imageWidth) {
-                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
-                        } else {
-                            imageEdgeInsets = UIEdgeInsetsMake(0, buttonWidth*0.5-imageWidth*0.5, 0, -(buttonWidth*0.5-imageWidth*0.5));
                         }
                     }
 

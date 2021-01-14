@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIButton (JPRemoveHighlight)
 
 //如果指定为YES,那个Button的高亮效果就移除
-@property(nonatomic, assign) BOOL removeHighlight;
+@property(nonatomic, assign) BOOL jp_removeHighlightState;
 
 @end
 
