@@ -114,7 +114,7 @@ static char kActionHandlerLongPressGestureKey;
     }
 }
 
-- (void)addTapActionWithBlock:(GestureActionBlock)block {
+- (void)jp_addTapActionWithBlock:(GestureActionBlock)block {
 
     UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, &kActionHandlerTapGestureKey);
     if (!gesture) {
@@ -134,11 +134,17 @@ static char kActionHandlerLongPressGestureKey;
     }
 }
 
-- (void)addLongPressActionWithBlock:(GestureActionBlock)block {
+- (void)jp_addLongPressActionWithBlock:(GestureActionBlock)block {
+
+    [self jp_addLongPressActionWithDuration:0.5 block:block];
+}
+
+- (void)jp_addLongPressActionWithDuration:(NSTimeInterval)minimumPressDuration block:(GestureActionBlock)block {
 
     UILongPressGestureRecognizer *gesture = objc_getAssociatedObject(self, &kActionHandlerLongPressGestureKey);
     if (!gesture) {
         gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleActionForLongPressGesture:)];
+        gesture.minimumPressDuration = minimumPressDuration;
         [self addGestureRecognizer:gesture];
         objc_setAssociatedObject(self, &kActionHandlerLongPressGestureKey, gesture, OBJC_ASSOCIATION_RETAIN);
     }
@@ -155,7 +161,7 @@ static char kActionHandlerLongPressGestureKey;
     }
 }
 
-- (UIViewController *)jp_viewController {
+- (UIViewController *)jp_currentController {
 
     for (UIView *view = self; view; view = view.superview) {
         UIResponder *nextResponder = [view nextResponder];

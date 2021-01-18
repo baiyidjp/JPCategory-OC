@@ -53,7 +53,12 @@
 + (UILabel *)jp_labelWith:(NSString *)text font:(CGFloat)size
 {
     UILabel *label = [UILabel jp_labelWith:text];
-    label.font = [UIFont boldSystemFontOfSize:size];
+    NSString *fontName = [self regularFontName];
+    if (fontName && fontName.length > 0) {
+        label.font = [UIFont fontWithName:fontName size:size];
+    } else {
+        label.font = [UIFont systemFontOfSize:size];
+    }
     return label;
 }
 
@@ -74,7 +79,12 @@
 + (UILabel *)jp_labelWith:(NSString *)text boldFont:(CGFloat)size
 {
     UILabel *label = [UILabel jp_labelWith:text];
-    label.font = [UIFont boldSystemFontOfSize:size];
+    NSString *fontName = [self boldFontName];
+    if (fontName && fontName.length > 0) {
+        label.font = [UIFont fontWithName:fontName size:size];
+    } else {
+        label.font = [UIFont boldSystemFontOfSize:size];
+    }
     return label;
 }
 
@@ -113,6 +123,23 @@
     UILabel *label = [UILabel jp_centerLabelWith:text];
     label.font = [UIFont boldSystemFontOfSize:size];
     return label;
+}
+
++ (void)jp_saveCustomFontNameRegular:(NSString *)regularName bold:(NSString *)boldName {
+
+    [[NSUserDefaults standardUserDefaults] setObject:regularName forKey:JP_FONTNAME_REGULAR];
+    [[NSUserDefaults standardUserDefaults] setObject:boldName forKey:JP_FONTNAME_BOLD];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (NSString *)regularFontName {
+
+    return [[NSUserDefaults standardUserDefaults] objectForKey:JP_FONTNAME_REGULAR];
+}
+
++ (NSString *)boldFontName {
+
+    return [[NSUserDefaults standardUserDefaults] objectForKey:JP_FONTNAME_BOLD];
 }
 
 @end

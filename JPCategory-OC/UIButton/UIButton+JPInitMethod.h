@@ -10,13 +10,12 @@
 @interface UIButton (JPInitMethod)
 
 /**
- init button (title/font/titleColor)
-
- @param normalTitle normalTitle description
- @param titleFont titleFont description
- @param normalTitleColor normalTitleColor description
- @param frame frame description
- @return return value description
+ * init button (title/font/titleColor)
+ * @param normalTitle
+ * @param titleFont
+ * @param normalTitleColor
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                              titleFont:(UIFont *)titleFont
@@ -24,14 +23,13 @@
                                  frame:(CGRect)frame;
 
 /**
- init button (title/font/titleColor/normalImage)
-
- @param normalTitle normalTitle description
- @param titleFont titleFont description
- @param normalTitleColor normalTitleColor description
- @param normalImage normalImage description
- @param frame frame description
- @return return value description
+ * init button (title/font/titleColor/normalImage)
+ * @param normalTitle
+ * @param titleFont
+ * @param normalTitleColor
+ * @param normalImage
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                              titleFont:(UIFont *)titleFont
@@ -40,15 +38,14 @@
                                  frame:(CGRect)frame;
 
 /**
- init button (title/selectedTitle/font/titleColor/selectedTitleColor)
-
- @param normalTitle normalTitle description
- @param selectedTitle selected 文本
- @param titleFont titleFont description
- @param normalTitleColor normalTitleColor description
- @param selectedTitleColor selectedTitleColor description
- @param frame frame description
- @return return value description
+ * init button (title/selectedTitle/font/titleColor/selectedTitleColor)
+ * @param normalTitle
+ * @param selectedTitle
+ * @param titleFont
+ * @param normalTitleColor
+ * @param selectedTitleColor
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                          selectedTitle:(NSString *)selectedTitle
@@ -97,16 +94,15 @@
                                  frame:(CGRect)frame;
 
 /**
- init button (title/font/titleColor/selectedTitleColor/normalBackgroundImage/selectedBackgroundImage)
-
- @param normalTitle normalTitle description
- @param titleFont titleFont description
- @param normalTitleColor normalTitleColor description
- @param selectedTitleColor selectedTitleColor description
- @param normalBackgroundImage normalBackgroundImage description
- @param selectedBackgroundImage selectedBackgroundImage description
- @param frame frame description
- @return return value description
+ * init button (title/font/titleColor/selectedTitleColor/normalBackgroundImage/selectedBackgroundImage)
+ * @param normalTitle
+ * @param titleFont
+ * @param normalTitleColor
+ * @param selectedTitleColor
+ * @param normalBackgroundImage
+ * @param selectedBackgroundImage
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                              titleFont:(UIFont *)titleFont
@@ -117,17 +113,16 @@
                                  frame:(CGRect)frame;
 
 /**
- init button (title/selectedTitle/font/titleColor/selectedTitleColor/normalBackgroundImage/selectedBackgroundImage)
-
- @param normalTitle normalTitle description
- @param selectedTitle selected 文本
- @param titleFont titleFont description
- @param normalTitleColor normalTitleColor description
- @param selectedTitleColor selectedTitleColor description
- @param normalBackgroundImage normalBackgroundImage description
- @param selectedBackgroundImage selectedBackgroundImage description
- @param frame frame description
- @return return value description
+ * init button (title/selectedTitle/font/titleColor/selectedTitleColor/normalBackgroundImage/selectedBackgroundImage)
+ * @param normalTitle
+ * @param selectedTitle
+ * @param titleFont
+ * @param normalTitleColor
+ * @param selectedTitleColor
+ * @param normalBackgroundImage
+ * @param selectedBackgroundImage
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                          selectedTitle:(NSString *)selectedTitle
@@ -139,14 +134,13 @@
                                  frame:(CGRect)frame;
 
 /**
- init button (title/font/titleColor/normalBackgroundImage)
-
- @param normalTitle normalTitle description
- @param titleFont titleFont description
- @param normalTitleColor normalTitleColor description
- @param normalBackgroundImage normalBackgroundImage description
- @param frame frame description
- @return return value description
+ * init button (title/font/titleColor/normalBackgroundImage)
+ * @param normalTitle
+ * @param titleFont
+ * @param normalTitleColor
+ * @param normalBackgroundImage
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                              titleFont:(UIFont *)titleFont
@@ -156,14 +150,13 @@
 
 
 /**
- init button (title/font/titleColor/selectedTitleColor)
-
- @param normalTitle normalTitle description
- @param titleFont titleFont description
- @param normalTitleColor normalTitleColor description
- @param selectedTitleColor selectedTitleColor description
- @param frame frame description
- @return return value description
+ * init button (title/font/titleColor/selectedTitleColor)
+ * @param normalTitle
+ * @param titleFont
+ * @param normalTitleColor
+ * @param selectedTitleColor
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                              titleFont:(UIFont *)titleFont
@@ -172,44 +165,41 @@
                                  frame:(CGRect)frame;
 
 /**
- init button (normalBackgroundImage/selectedBackgroundImage)
-
- @param normalBackgroundImage normalBackgroundImage description
- @param selectedBackgroundImage selectedBackgroundImage description
- @param frame frame description
- @return return value description
+ * init button (normalBackgroundImage/selectedBackgroundImage)
+ * @param normalBackgroundImage
+ * @param selectedBackgroundImage
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalBackgroundImage:(UIImage *)normalBackgroundImage
                          selectedBackgroundImage:(UIImage *)selectedBackgroundImage
                                            frame:(CGRect)frame;
 
 /**
- init button (normalImage/selectedImage)
-
- @param normalImage normalImage description
- @param selectedImage selectedImage description
- @param frame frame description
- @return return value description
+ * init button (normalImage/selectedImage)
+ * @param normalImage
+ * @param selectedImage
+ * @param frame
+ * @return
  */
 + (UIButton *)jp_buttonWithNormalImage:(UIImage *)normalImage
                          selectedImage:(UIImage *)selectedImage
                                  frame:(CGRect)frame;
 
-/**
- init button 全部属性
-
- @param normalTitle normal 文本
- @param selectedTitle selected 文本
- @param titleFont 字号
- @param normalTitleColor normal 文本颜色
- @param selectedTitleColor selected 文本颜色
- @param normalImage normal 图片
- @param selectedImage selected 图片
- @param normalBackgroundImage normal 背景图
- @param selectedBackgroundImage selected 背景图
- @param frame frame
- @return UIButton
- */
+ /**
+  * init button 全部属性
+  * @param normalTitle normal 文本
+  * @param selectedTitle selected 文本
+  * @param titleFont 字号
+  * @param normalTitleColor normal 文本颜色
+  * @param selectedTitleColor selected 文本颜色
+  * @param normalImage normal 图片
+  * @param selectedImage selected 图片
+  * @param normalBackgroundImage normal 背景图
+  * @param selectedBackgroundImage selected 背景图
+  * @param frame
+  * @return
+  */
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
                          selectedTitle:(NSString *)selectedTitle
                              titleFont:(UIFont *)titleFont

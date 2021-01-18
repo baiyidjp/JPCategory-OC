@@ -11,23 +11,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (JPCategory)
 
-/**
- iOS十六进制颜色转换为UIColor(默认透明度为1.0)
- 带A或者AA的色值 透明度不适用默认的
- 
- @param hexString 包括8种格式(RGB,ARGB,RRGGBB,AARRGGBB,#RGB,#ARGB,#RRGGBB,#AARRGGBB)
- @return 颜色
- */
+ /**
+  * iOS十六进制颜色转换为UIColor(默认透明度为1.0)
+  * 带A或者AA的色值 透明度不适用默认的
+  * @param hexString 包括8种格式(RGB,ARGB,RRGGBB,AARRGGBB,#RGB,#ARGB,#RRGGBB,#AARRGGBB)
+  * @return
+  */
 + (UIColor *)jp_colorWithHexString:(NSString *)hexString;
 
 /**
- iOS十六进制颜色转换为UIColor
- 带A或者AA的色值 透明度不适用默认的
- 
- @param hexString 包括8种格式(RGB,ARGB,RRGGBB,AARRGGBB,#RGB,#ARGB,#RRGGBB,#AARRGGBB)
- @param alpha 颜色的透明度
- @return 颜色
- */
+* iOS十六进制颜色转换为UIColor
+* 带A或者AA的色值 透明度不适用默认的
+* @param hexString 包括8种格式(RGB,ARGB,RRGGBB,AARRGGBB,#RGB,#ARGB,#RRGGBB,#AARRGGBB)
+* @param alpha 颜色的透明度
+* @return
+*/
 + (UIColor *)jp_colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha;
 
 @end

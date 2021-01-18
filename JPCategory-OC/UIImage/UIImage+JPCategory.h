@@ -12,59 +12,74 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImage (JPCategory)
 
 /**
- 圆形图片
- 
- @param size size description
- @return return value description
+ * 通过颜色获取图片
+ * @param color
+ * @return
  */
-- (UIImage *)stey_cornerImageWithSize:(CGSize)size;
++ (UIImage *)jp_imageWithColor:(UIColor *)color;
 
 /**
- 直接切圆角 返回图片
- 
- @param size size description
- @param cornerRadius cornerRadius description
- @return return value description
+ * 通过颜色获取图片
+ * @param color
+ * @param size
+ * @return
  */
-- (UIImage *)stey_cornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
++ (UIImage *)jp_imageWithColor:(UIColor *)color size:(CGSize)size;
 
 /**
- 异步圆形图片 适用于正方形切成圆形
- 
- @param size size description
- @param completion completion description
+ * 获取随机颜色的图片
+ * @param size
+ * @return
  */
-- (void)stey_asynCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *image))completion;
++ (UIImage *)jp_randomColorImageWith:(CGSize)size;
 
 /**
- 异步图片切圆角 适用于只切圆角
- 
- @param size defalut--imageView size
- @param cornerRadius custom =0->不作处理的原图
- @param completion return--带圆角的图片
+ * 圆形图片
+ * @param size
+ * @return
  */
-- (void)stey_asynCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *cornerImage))completion;
+- (UIImage *)jp_cornerImageWithSize:(CGSize)size;
 
 /**
- 图片剪切为圆形 默认的边框颜色和边框宽度
- 
- @param size 圆的外围
- @param cornerRadius 圆角
- @param completion 回调
+ * 直接切圆角 返回图片
+ * @param size
+ * @param cornerRadius
+ * @return
  */
-
-- (void)stey_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion;
+- (UIImage *)jp_cornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
 
 /**
- 图片剪切为圆形
-
- @param size 圆的外围
- @param cornerRadius 圆角
- @param borderWidth 边框宽度
- @param borderColor 边框颜色
- @param completion 回调
+ * 异步圆形图片 适用于正方形切成圆形
+ * @param size
+ * @param completion
  */
-- (void)stey_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion;
+- (void)jp_asynCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *image))completion;
+
+/**
+ * 异步图片切圆角 适用于只切圆角
+ * @param size
+ * @param cornerRadius
+ * @param completion
+ */
+- (void)jp_asynCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *cornerImage))completion;
+
+/**
+ * 图片剪切为圆形 默认的边框颜色和边框宽度
+ * @param size
+ * @param cornerRadius
+ * @param completion
+ */
+- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion;
+
+ /**
+  * 图片剪切为圆形
+  * @param size 圆的外围
+  * @param cornerRadius 圆角
+  * @param borderWidth 边框的宽度
+  * @param borderColor 边框的颜色
+  * @param completion 回调图片
+  */
+- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion;
 
 @end
 

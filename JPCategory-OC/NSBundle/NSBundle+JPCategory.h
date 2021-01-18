@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSBundle (JPCategory)
 
+/**
+ * 设置当前App的本地语言
+ * @param language
+ */
 + (void)jp_setLocalLanguage:(NSString *)language;
 
 @end

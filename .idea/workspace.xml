@@ -2,39 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/NSBundle/NSBundle+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/NSBundle/NSBundle+JPCategory.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIColor/UIColor+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIColor/UIColor+JPCategory.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSBundle/NSBundle+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSBundle/NSBundle+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/JPCategory-UIButton.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPInitMethod.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPInitMethod.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPInitMethod.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPInitMethod.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIColor/UIColor+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIColor/UIColor+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_00008030-000928992E80802E" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -72,6 +63,7 @@
       <workItem from="1608870829139" duration="808000" />
       <workItem from="1610606034464" duration="3082000" />
       <workItem from="1610609923019" duration="2130000" />
+      <workItem from="1610952500669" duration="2121000" />
     </task>
     <servers />
   </component>

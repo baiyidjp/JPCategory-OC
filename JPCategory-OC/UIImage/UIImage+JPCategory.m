@@ -9,12 +9,39 @@
 
 @implementation UIImage (JPCategory)
 
-- (UIImage *)stey_cornerImageWithSize:(CGSize)size {
++ (UIImage *)jp_imageWithColor:(UIColor *)color {
     
-    return [self stey_cornerImageWithSize:size cornerRadius:size.width/2.0];
+    return [UIImage jp_imageWithColor:color size:CGSizeMake(1, 1)];
 }
 
-- (UIImage *)stey_cornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius {
++ (UIImage *)jp_imageWithColor:(UIColor *)color size:(CGSize)size {
+    
+    if (color == nil) {
+        return nil;
+    }
+    
+    CGRect rect=CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
+
++ (UIImage *)jp_randomColorImageWith:(CGSize)size {
+    
+    UIColor *randomColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+    return [UIImage jp_imageWithColor:randomColor size:size];
+}
+
+- (UIImage *)jp_cornerImageWithSize:(CGSize)size {
+    
+    return [self jp_cornerImageWithSize:size cornerRadius:size.width/2.0];
+}
+
+- (UIImage *)jp_cornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius {
     
     //使用绘图 取得上下文
     UIGraphicsBeginImageContextWithOptions(size, NO, UIScreen.mainScreen.scale);
@@ -40,13 +67,13 @@
     
 }
 
-- (void)stey_asynCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *))completion {
+- (void)jp_asynCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *))completion {
     
-    [self stey_asynCornerImageWithSize:size cornerRadius:size.width/2.0 completion:completion];
+    [self jp_asynCornerImageWithSize:size cornerRadius:size.width/2.0 completion:completion];
 }
 
 
-- (void)stey_asynCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion {
+- (void)jp_asynCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion {
     
     //异步绘制
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -85,12 +112,12 @@
     });
 }
 
-- (void)stey_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage * _Nonnull))completion {
+- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage * _Nonnull))completion {
     
-    [self stey_asynRoundImageWithSize:size cornerRadius:cornerRadius borderWidth:2 borderColor:[UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1] completion:completion];
+    [self jp_asynRoundImageWithSize:size cornerRadius:cornerRadius borderWidth:2 borderColor:[UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1] completion:completion];
 }
 
-- (void)stey_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion {
+- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion {
     
     //异步绘制
     dispatch_async(dispatch_get_global_queue(0, 0), ^{

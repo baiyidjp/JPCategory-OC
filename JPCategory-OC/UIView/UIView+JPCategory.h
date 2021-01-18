@@ -24,30 +24,35 @@ typedef void (^GestureActionBlock)(UIGestureRecognizer *gestureRecognizer);
 @property(nonatomic, assign) CGFloat jp_maxY;
 
 /**
- 移除当前View的所有子view
+ * 移除当前View的所有子view
  */
 - (void)jp_removeAllSubViews;
 
 /**
- *  @brief  添加tap手势
- *
- *  @param block 代码块
+ * 给View添加单击手势
+ * @param block
  */
-- (void)addTapActionWithBlock:(GestureActionBlock)block;
+- (void)jp_addTapActionWithBlock:(GestureActionBlock)block;
 
 /**
- *  @brief  添加长按手势
- *
- *  @param block 代码块
+ * 给View添加长按手势
+ * @param block
  */
-- (void)addLongPressActionWithBlock:(GestureActionBlock)block;
+- (void)jp_addLongPressActionWithBlock:(GestureActionBlock)block;
+
+/**
+ * 给View添加长按手势
+ * @param minimumPressDuration
+ * @param block
+ */
+- (void)jp_addLongPressActionWithDuration:(NSTimeInterval)minimumPressDuration block:(GestureActionBlock)block;
 
 /**
  获取当前view所在的控制器
 
  @return 当前控制器
  */
-- (UIViewController *)jp_viewController;
+- (UIViewController *)jp_currentController;
 
 /**
  切圆角->已知size(杜绝离屏渲染)
