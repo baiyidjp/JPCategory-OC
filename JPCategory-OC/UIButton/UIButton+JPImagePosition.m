@@ -47,22 +47,22 @@
 - (void)jp_imagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(BOOL)autoMargin {
     
     if (!self.currentImage) {
-        NSLog(@"图片不存在");
+        NSLog(@"JPImagePosition: 图片不存在");
         return;
     }
     
     if (!self.titleLabel.text) {
-        NSLog(@"文本不存在");
+        NSLog(@"JPImagePosition: 文本不存在");
         return;;
     }
     
     if (!(self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentLeft || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentCenter || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentRight)) {
-        NSLog(@"水平对齐只支持: Left & Center & Right");
+        NSLog(@"JPImagePosition水平对齐只支持: Left & Center & Right");
         return;
     }
     
     if (!(self.contentVerticalAlignment == UIControlContentVerticalAlignmentTop || self.contentVerticalAlignment == UIControlContentVerticalAlignmentCenter || self.contentVerticalAlignment == UIControlContentVerticalAlignmentBottom)) {
-        NSLog(@"垂直对齐只支持: Top & Center & Bottom");
+        NSLog(@"JPImagePosition垂直对齐只支持: Top & Center & Bottom");
         return;
     }
     
@@ -85,7 +85,6 @@
     
     CGFloat titleWidth = MAX(titleFrameWidth, titleContentWidth);
     CGFloat titleHeight = MAX(titleFrameHeight, titleContentHeight);
-    NSLog(@"titleFrameWidth: %f,titleContentWidth: %f, titleWidth: %f", titleFrameWidth,titleContentWidth,titleWidth);
     
     UIEdgeInsets imageEdgeInsets = self.imageEdgeInsets;
     UIEdgeInsets titleEdgeInsets = self.titleEdgeInsets;
