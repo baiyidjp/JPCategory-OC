@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */; };
 		F5D1DD2D25B0287B00A7936F /* NSObject+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */; };
 		F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */; };
 		F5D1DD3525B0296900A7936F /* UIImage+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPNavigationBar.h"; sourceTree = "<group>"; };
+		F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPNavigationBar.m"; sourceTree = "<group>"; };
 		F5D1DD2B25B0287B00A7936F /* NSObject+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPCategory.h"; sourceTree = "<group>"; };
 		F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPCategory.m"; sourceTree = "<group>"; };
 		F5D1DD2F25B028DD00A7936F /* NSArray+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCategory.h"; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 			children = (
 				F5D1DD2B25B0287B00A7936F /* NSObject+JPCategory.h */,
 				F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */,
+				F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */,
+				F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */,
 				F5DBB01625918BEB0008D98F /* UIButton+JPInitMethod.m in Sources */,
 				F5DBB00325918BCB0008D98F /* main.m in Sources */,
+				F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */,
 				F5DBB01525918BEB0008D98F /* UIButton+JPRemoveHighlight.m in Sources */,
 				F5D1DD3D25B029CC00A7936F /* UIView+JPCategory.m in Sources */,
 				F5D1DD4125B02B0900A7936F /* NSBundle+JPCategory.m in Sources */,
