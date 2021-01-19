@@ -20,7 +20,7 @@ static char kActionHandlerLongPressGestureKey;
     return self.frame.origin.x;
 }
 
-- (void)setStey_x:(CGFloat)jp_x {
+- (void)setJp_x:(CGFloat)jp_x {
 
     CGRect frame = self.frame;
     frame.origin.x = jp_x;
@@ -32,7 +32,7 @@ static char kActionHandlerLongPressGestureKey;
     return self.frame.origin.y;
 }
 
-- (void)setStey_y:(CGFloat)jp_y {
+- (void)setJp_y:(CGFloat)jp_y {
 
     CGRect frame = self.frame;
     frame.origin.y = jp_y;
@@ -44,7 +44,7 @@ static char kActionHandlerLongPressGestureKey;
     return self.frame.size.width;
 }
 
-- (void)setStey_w:(CGFloat)jp_w {
+- (void)setJp_w:(CGFloat)jp_w {
 
     CGRect frame = self.frame;
     frame.size.width = jp_w;
@@ -56,7 +56,7 @@ static char kActionHandlerLongPressGestureKey;
     return self.frame.size.height;
 }
 
-- (void)setStey_h:(CGFloat)jp_h {
+- (void)setJp_h:(CGFloat)jp_h {
 
     CGRect frame = self.frame;
     frame.size.height = jp_h;
@@ -68,7 +68,7 @@ static char kActionHandlerLongPressGestureKey;
     return self.frame.size;
 }
 
-- (void)setStey_size:(CGSize)jp_size {
+- (void)setJp_size:(CGSize)jp_size {
 
     CGRect frame = self.frame;
     frame.size = jp_size;
@@ -80,7 +80,7 @@ static char kActionHandlerLongPressGestureKey;
     return self.center.x;
 }
 
-- (void)setStey_centerX:(CGFloat)jp_centerX {
+- (void)setJp_centerX:(CGFloat)jp_centerX {
 
     CGPoint center = self.center;
     center.x = jp_centerX;
@@ -92,7 +92,7 @@ static char kActionHandlerLongPressGestureKey;
     return self.center.y;
 }
 
-- (void)setStey_centerY:(CGFloat)jp_centerY {
+- (void)setJp_centerY:(CGFloat)jp_centerY {
 
     CGPoint center = self.center;
     center.y = jp_centerY;

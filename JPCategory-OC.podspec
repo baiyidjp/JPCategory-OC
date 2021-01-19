@@ -2,12 +2,12 @@
 Pod::Spec.new do |s|
 
   s.name         = "JPCategory-OC"
-  s.version      = "1.2.2"
+  s.version      = "1.2.3"
   s.summary      = "views categories."
   s.homepage     = "https://github.com/baiyidjp/JPCategory-OC"
   s.license      = "MIT"
   s.author             =  "baiyidjp"
-  s.ios.deployment_target = "8.0"
+  s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/baiyidjp/JPCategory-OC.git", :tag => "#{s.version}" }
   s.source_files  = "JPCategory-OC/*.{h,m}"
   s.requires_arc = true
@@ -51,6 +51,6 @@ Pod::Spec.new do |s|
   s.subspec 'NSBundle' do |ss|
   ss.source_files = "JPCategory-OC/NSBundle/*.{h,m}"
   end
-# pod trunk push --allow-warnings
+# pod trunk push --allow-warnings --skip-import-validation
 
 end
