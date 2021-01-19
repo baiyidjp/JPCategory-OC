@@ -125,21 +125,27 @@
     return label;
 }
 
++ (void)jp_cancelSaveCustomFontName {
+
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:UILabel_JPCategory_FontName_Regular];
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:UILabel_JPCategory_FontName_Bold];
+}
+
 + (void)jp_saveCustomFontNameRegular:(NSString *)regularName bold:(NSString *)boldName {
 
-    [[NSUserDefaults standardUserDefaults] setObject:regularName forKey:JP_FONTNAME_REGULAR];
-    [[NSUserDefaults standardUserDefaults] setObject:boldName forKey:JP_FONTNAME_BOLD];
+    [[NSUserDefaults standardUserDefaults] setObject:regularName forKey:UILabel_JPCategory_FontName_Regular];
+    [[NSUserDefaults standardUserDefaults] setObject:boldName forKey:UILabel_JPCategory_FontName_Bold];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 + (NSString *)regularFontName {
 
-    return [[NSUserDefaults standardUserDefaults] objectForKey:JP_FONTNAME_REGULAR];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:UILabel_JPCategory_FontName_Regular];
 }
 
 + (NSString *)boldFontName {
 
-    return [[NSUserDefaults standardUserDefaults] objectForKey:JP_FONTNAME_BOLD];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:UILabel_JPCategory_FontName_Bold];
 }
 
 @end

@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define JP_FONTNAME_REGULAR @"jp_fontName_regular"
-#define JP_FONTNAME_BOLD @"jp_fontName_bold"
+static NSString *UILabel_JPCategory_FontName_Regular = @"UILabel_JPCategory_FontName_Regular";
+static NSString *UILabel_JPCategory_FontName_Bold = @"UILabel_JPCategory_FontName_Bold";
 
 @interface UILabel (JPCategory)
 
@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * init label (text/font/color/frame)
  * @param text
- * @param size 自定义文字在程序启动时可在 NSUserDefaults 里存下文字名字， key 为 JP_FONTNAME_REGULAR
+ * @param size 自定义文字在程序启动时可在 NSUserDefaults 里存下文字名字， key 为 UILabel_JPCategory_FontName_Regular
  * @param textColor
  * @param frame
  * @return
@@ -66,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * init label (text/boldFont/color/frame)
  * @param text
- * @param size 自定义文字可在 NSUserDefaults 里存下文字名字， key 为 JP_FONTNAME_BOLD
+ * @param size 自定义文字可在 NSUserDefaults 里存下文字名字， key 为 UILabel_JPCategory_FontName_Bold
  * @param textColor
  * @param frame
  * @return
@@ -78,6 +78,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor;
 
 + (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size;
+
+/**
+ * 取消已保存的自定义字体名
+ */
++ (void)jp_cancelSaveCustomFontName;
 
 /**
  * 可在程序开始时存下自定义的文字名
