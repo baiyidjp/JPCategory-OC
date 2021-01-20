@@ -30,7 +30,6 @@
 
     // 取出保存的数据
     BOOL isApprove = [[NSUserDefaults standardUserDefaults] boolForKey:NSObject_JPCategory_Approve];
-    NSLog(@"isApprove: %@", isApprove ? @"yes" : @"no");
     if (isApprove) {
         if (![self isMemberOfClass:NSClassFromString(@"_UINavigationBarContentViewLayout")]) return;
         CGFloat screenWidth = [[NSUserDefaults standardUserDefaults] floatForKey:NSObject_JPCategory_ScreenWidth];

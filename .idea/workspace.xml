@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIViewController/UIViewController+JPCategory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/UIViewController/UIViewController+JPCategory.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/JPCategory-OC" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -55,7 +50,7 @@
       <workItem from="1610609923019" duration="2130000" />
       <workItem from="1610952500669" duration="2121000" />
       <workItem from="1611041849816" duration="2040000" />
-      <workItem from="1611127692366" duration="599000" />
+      <workItem from="1611127692366" duration="1716000" />
     </task>
     <servers />
   </component>
