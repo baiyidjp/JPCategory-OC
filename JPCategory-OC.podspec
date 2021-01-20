@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JPCategory-OC"
-  s.version      = "1.2.7"
+  s.version      = "1.2.8"
   s.summary      = "views categories."
   s.homepage     = "https://github.com/baiyidjp/JPCategory-OC"
   s.license      = "MIT"
@@ -12,6 +12,11 @@ Pod::Spec.new do |s|
   s.source_files  = "JPCategory-OC/*.{h,m}"
   s.requires_arc = true
 
+  #UIViewCOntroller
+  s.subspec 'UIViewCOntroller' do |ss|
+  ss.source_files = "JPCategory-OC/UIViewCOntroller/*.{h,m}"
+  end
+  
   #UIButton
   s.subspec 'UIButton' do |ss|
   ss.source_files = "JPCategory-OC/UIButton/*.{h,m}"

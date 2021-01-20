@@ -18,5 +18,6 @@
 #import "UIImage/UIImage+JPCategory.h"
 #import "UIColor/UIColor+JPCategory.h"
 #import "UILabel/UILabel+JPCategory.h"
+#import "UIViewController/UIViewController+JPCategory.h"
 
 #endif /* JPCategory_h */

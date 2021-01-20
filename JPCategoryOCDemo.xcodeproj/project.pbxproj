@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */; };
+		F5081C0B25B8134E00A92C12 /* UIViewController+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */; };
 		F5D1DD2D25B0287B00A7936F /* NSObject+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */; };
 		F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */; };
 		F5D1DD3525B0296900A7936F /* UIImage+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */; };
@@ -33,6 +34,8 @@
 /* Begin PBXFileReference section */
 		F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPNavigationBar.h"; sourceTree = "<group>"; };
 		F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPNavigationBar.m"; sourceTree = "<group>"; };
+		F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPCategory.h"; sourceTree = "<group>"; };
+		F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JPCategory.m"; sourceTree = "<group>"; };
 		F5D1DD2B25B0287B00A7936F /* NSObject+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPCategory.h"; sourceTree = "<group>"; };
 		F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPCategory.m"; sourceTree = "<group>"; };
 		F5D1DD2F25B028DD00A7936F /* NSArray+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCategory.h"; sourceTree = "<group>"; };
@@ -85,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2097A29F0B2ED1FFD63375AA /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */,
+				F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		F5D1DD2225B0272D00A7936F /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +231,7 @@
 				F5D1DD2225B0272D00A7936F /* NSObject */,
 				F5DBB00B25918BEB0008D98F /* UIButton */,
 				F5DBB01325918BEB0008D98F /* JPCategory.h */,
+				2097A29F0B2ED1FFD63375AA /* UIViewController */,
 			);
 			path = "JPCategory-OC";
 			sourceTree = SOURCE_ROOT;
@@ -305,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5081C0B25B8134E00A92C12 /* UIViewController+JPCategory.m in Sources */,
 				F5DBB0842591C1C00008D98F /* LeftViewController.m in Sources */,
 				F5DBAFF825918BCA0008D98F /* ViewController.m in Sources */,
 				F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */,
@@ -466,13 +480,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 128;
 				INFOPLIST_FILE = JPCategoryOCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.7;
+				MARKETING_VERSION = 1.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.djp.demo.JPCategoryOCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,13 +499,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 128;
 				INFOPLIST_FILE = JPCategoryOCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.7;
+				MARKETING_VERSION = 1.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.djp.demo.JPCategoryOCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
