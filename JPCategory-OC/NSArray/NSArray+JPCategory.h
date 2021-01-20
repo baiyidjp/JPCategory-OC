@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef id _Nullable (^NSArrayMapComplete)(id obj);
-typedef BOOL(^NSArrayFilterComplete)(id obj);
+typedef id _Nullable (^JPNSArrayMapComplete)(id obj);
+typedef BOOL(^JPNSArrayFilterComplete)(id obj);
 
 @interface NSArray (JPCategory)
 
@@ -19,14 +19,14 @@ typedef BOOL(^NSArrayFilterComplete)(id obj);
  * @param mapComplete
  * @return 数组
  */
-- (NSArray *)jp_map:(NSArrayMapComplete)mapComplete;
+- (NSArray *)jp_map:(JPNSArrayMapComplete)mapComplete;
 
 /**
  * filter 数组
  * @param filterComplete
  * @return 数组
  */
-- (NSArray *)jp_filter:(NSArrayFilterComplete)filterComplete;
+- (NSArray *)jp_filter:(JPNSArrayFilterComplete)filterComplete;
 
 /**
  * 数组倒序排列

@@ -1,13 +1,14 @@
 //
-//  JPCategory.h
-//  JPCategory
+//  JPCategory-OC.h
+//  JPCategoryOCDemo
 //
-//  Created by SteyDong on 2020/12/18.
+//  Created by SteyDong on 2021/1/20.
 //
 
-#ifndef JPCategory_h
-#define JPCategory_h
+#ifndef JPCategory_OC_h
+#define JPCategory_OC_h
 
+#import "JPCategoryConfig.h"
 #import "UIButton/UIButton+JPInitMethod.h"
 #import "UIButton/UIButton+JPImagePosition.h"
 #import "UIButton/UIButton+JPRemoveHighlight.h"
@@ -20,4 +21,4 @@
 #import "UILabel/UILabel+JPCategory.h"
 #import "UIViewController/UIViewController+JPCategory.h"
 
-#endif /* JPCategory_h */
+#endif /* JPCategory_OC_h */

@@ -7,6 +7,7 @@
 
 #import "NSObject+JPNavigationBar.h"
 #import "NSObject+JPCategory.h"
+#import "JPCategoryConfig.h"
 
 @implementation NSObject (JPNavigationBar)
 
@@ -15,7 +16,7 @@
     dispatch_once(&onceToken, ^{
         if (@available(iOS 11.0, *)) {
 
-            [NSObject jp_cancelApproveUseJPNavigationBar];
+            [JPCategoryConfig jp_removeNavigationBarCategory];
 
             NSDictionary *oriSelectors = @{@"_UINavigationBarContentViewLayout": @"_updateMarginConstraints"};
             [oriSelectors enumerateKeysAndObjectsUsingBlock:^(NSString *originalClass, NSString *originalSelector, BOOL * _Nonnull stop) {
@@ -29,12 +30,12 @@
     [self jp_updateMarginConstraints];
 
     // 取出保存的数据
-    BOOL isApprove = [[NSUserDefaults standardUserDefaults] boolForKey:NSObject_JPCategory_Approve];
-    if (isApprove) {
+    BOOL isConfig = [[NSUserDefaults standardUserDefaults] boolForKey:JPCategory_UINavigationBar_Config];
+    if (isConfig) {
         if (![self isMemberOfClass:NSClassFromString(@"_UINavigationBarContentViewLayout")]) return;
-        CGFloat screenWidth = [[NSUserDefaults standardUserDefaults] floatForKey:NSObject_JPCategory_ScreenWidth];
-        CGFloat margin = [[NSUserDefaults standardUserDefaults] floatForKey:NSObject_JPCategory_Margin];
-        CGFloat bigMargin = [[NSUserDefaults standardUserDefaults] floatForKey:NSObject_JPCategory_BigMargin];
+        CGFloat screenWidth = [[NSUserDefaults standardUserDefaults] floatForKey:JPCategory_UINavigationBar_ScreenWidth];
+        CGFloat margin = [[NSUserDefaults standardUserDefaults] floatForKey:JPCategory_UINavigationBar_Margin];
+        CGFloat bigMargin = [[NSUserDefaults standardUserDefaults] floatForKey:JPCategory_UINavigationBar_BigMargin];
         [self jp_adjustLeadingBarConstraintsWithScreenWidth:screenWidth margin:margin bigMargin:bigMargin];
         [self jp_adjustTrailingBarConstraintsWithScreenWidth:screenWidth margin:margin bigMargin:bigMargin];
     }

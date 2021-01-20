@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param size
  * @param completion
  */
-- (void)jp_asynCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *image))completion;
+- (void)jp_asyncCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *image))completion;
 
 /**
  * 异步图片切圆角 适用于只切圆角
@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param cornerRadius
  * @param completion
  */
-- (void)jp_asynCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *cornerImage))completion;
+- (void)jp_asyncCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *cornerImage))completion;
 
 /**
  * 图片剪切为圆形 默认的边框颜色和边框宽度
@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param cornerRadius
  * @param completion
  */
-- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion;
+- (void)jp_asyncRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion;
 
  /**
   * 图片剪切为圆形
@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
   * @param borderColor 边框的颜色
   * @param completion 回调图片
   */
-- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion;
+- (void)jp_asyncRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion;
 
 @end
 

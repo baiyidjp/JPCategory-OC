@@ -9,9 +9,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString *UILabel_JPCategory_FontName_Regular = @"UILabel_JPCategory_FontName_Regular";
-static NSString *UILabel_JPCategory_FontName_Bold = @"UILabel_JPCategory_FontName_Bold";
-
 @interface UILabel (JPCategory)
 
 /**
@@ -52,12 +49,23 @@ static NSString *UILabel_JPCategory_FontName_Bold = @"UILabel_JPCategory_FontNam
 /**
  * init label (text/font/color/frame)
  * @param text
- * @param size 自定义文字在程序启动时可在 NSUserDefaults 里存下文字名字， key 为 UILabel_JPCategory_FontName_Regular
+ * @param size 自定义文字在程序启动时可在 NSUserDefaults 里存下文字名字， key 为 JPCategory_UILabel_FontName_Regular
  * @param textColor
  * @param frame
  * @return
  */
 + (UILabel *)jp_labelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor frame:(CGRect)frame;
+
+/**
+ * init label (text/font/color/backgroundColor/frame)
+ * @param text
+ * @param size 自定义文字在程序启动时可在 NSUserDefaults 里存下文字名字， key 为 JPCategory_UILabel_FontName_Regular
+ * @param textColor
+ * @param backgroundColor
+ * @param frame
+ * @return
+ */
++ (UILabel *)jp_labelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame;
 
 + (UILabel *)jp_labelWith:(NSString *)text boldFont:(CGFloat)size;
 
@@ -66,30 +74,48 @@ static NSString *UILabel_JPCategory_FontName_Bold = @"UILabel_JPCategory_FontNam
 /**
  * init label (text/boldFont/color/frame)
  * @param text
- * @param size 自定义文字可在 NSUserDefaults 里存下文字名字， key 为 UILabel_JPCategory_FontName_Bold
+ * @param size 自定义文字可在 NSUserDefaults 里存下文字名字， key 为 JPCategory_UILabel_FontName_Bold
  * @param textColor
  * @param frame
  * @return
  */
 + (UILabel *)jp_labelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor frame:(CGRect)frame;
 
++ (UILabel *)jp_labelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame;
+
 + (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size;
 
 + (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor;
 
+/**
+ * init label center (text/font/color/frame)
+ * @param text
+ * @param size 自定义文字在程序启动时可在 NSUserDefaults 里存下文字名字， key 为 JPCategory_UILabel_FontName_Regular
+ * @param textColor
+ * @param frame
+ * @return
+ */
++ (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor frame:(CGRect)frame;
+
++ (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame;
+
 + (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size;
 
-/**
- * 取消已保存的自定义字体名
- */
-+ (void)jp_cancelSaveCustomFontName;
++ (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor;
 
 /**
- * 可在程序开始时存下自定义的文字名
- * @param regularName
- * @param boldName
+ * init label center (text/boldFont/color/frame)
+ * @param text
+ * @param size 自定义文字可在 NSUserDefaults 里存下文字名字， key 为 JPCategory_UILabel_FontName_Bold
+ * @param textColor
+ * @param frame
+ * @return
  */
-+ (void)jp_saveCustomFontNameRegular:(NSString *)regularName bold:(NSString *)boldName;
++ (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor frame:(CGRect)frame;
+
++ (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame;
+
+
 
 @end
 

@@ -6,7 +6,7 @@
 //
 
 #import "RightViewController.h"
-#import "JPCategory.h"
+#import "JPCategory-OC.h"
 
 @interface RightViewController ()
 

@@ -8,8 +8,6 @@
 #import "UIButton+JPRemoveHighlight.h"
 #import <objc/runtime.h>
 
-#define KEY @"JPRemoveHighlightKey"
-
 @implementation UIButton (JPRemoveHighlight)
 
 + (void)load {
@@ -41,12 +39,12 @@
 
 - (void)setJp_removeHighlightState:(BOOL)jp_removeHighlightState {
     
-    objc_setAssociatedObject(self, KEY, @(jp_removeHighlightState), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(jp_removeHighlightState), @(jp_removeHighlightState), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (BOOL)jp_removeHighlightState {
     
-    return [objc_getAssociatedObject(self, KEY) boolValue];
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 @end

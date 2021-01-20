@@ -6,6 +6,7 @@
 //
 
 #import "UILabel+JPCategory.h"
+#import "JPCategoryConfig.h"
 
 @implementation UILabel (JPCategory)
 
@@ -76,6 +77,13 @@
     return label;
 }
 
++ (UILabel *)jp_labelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame {
+
+    UILabel *label = [UILabel jp_labelWith:text font:size textColor:textColor frame:frame];
+    label.backgroundColor = backgroundColor;
+    return label;
+}
+
 + (UILabel *)jp_labelWith:(NSString *)text boldFont:(CGFloat)size
 {
     UILabel *label = [UILabel jp_labelWith:text];
@@ -102,10 +110,22 @@
     return label;
 }
 
++ (UILabel *)jp_labelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame {
+
+    UILabel *label = [UILabel jp_labelWith:text boldFont:size textColor:textColor frame:frame];
+    label.backgroundColor = backgroundColor;
+    return label;
+}
+
 + (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size
 {
     UILabel *label = [UILabel jp_centerLabelWith:text];
-    label.font = [UIFont systemFontOfSize:size];
+    NSString *fontName = [self regularFontName];
+    if (fontName && fontName.length > 0) {
+        label.font = [UIFont fontWithName:fontName size:size];
+    } else {
+        label.font = [UIFont systemFontOfSize:size];
+    }
     return label;
 }
 
@@ -113,39 +133,64 @@
 {
     UILabel *label = [UILabel jp_centerLabelWith:text font:size];
     label.textColor = textColor;
-    label.adjustsFontSizeToFitWidth = YES;
-//    label.adjustsLetterSpacingToFitWidth = YES;
+    return label;
+}
+
++ (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor frame:(CGRect)frame {
+
+    UILabel *label = [UILabel jp_centerLabelWith:text font:size textColor:textColor];
+    label.frame = frame;
+    return label;
+}
+
++ (UILabel *)jp_centerLabelWith:(NSString *)text font:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame {
+
+    UILabel *label = [UILabel jp_centerLabelWith:text font:size textColor:textColor frame:frame];
+    label.backgroundColor = backgroundColor;
     return label;
 }
 
 + (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size
 {
     UILabel *label = [UILabel jp_centerLabelWith:text];
-    label.font = [UIFont boldSystemFontOfSize:size];
+    NSString *fontName = [self boldFontName];
+    if (fontName && fontName.length > 0) {
+        label.font = [UIFont fontWithName:fontName size:size];
+    } else {
+        label.font = [UIFont boldSystemFontOfSize:size];
+    }
     return label;
 }
 
-+ (void)jp_cancelSaveCustomFontName {
++ (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor {
 
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:UILabel_JPCategory_FontName_Regular];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:UILabel_JPCategory_FontName_Bold];
+    UILabel *label = [UILabel jp_centerLabelWith:text boldFont:size];
+    label.textColor = textColor;
+    return label;
 }
 
-+ (void)jp_saveCustomFontNameRegular:(NSString *)regularName bold:(NSString *)boldName {
++ (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor frame:(CGRect)frame {
 
-    [[NSUserDefaults standardUserDefaults] setObject:regularName forKey:UILabel_JPCategory_FontName_Regular];
-    [[NSUserDefaults standardUserDefaults] setObject:boldName forKey:UILabel_JPCategory_FontName_Bold];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    UILabel *label = [UILabel jp_centerLabelWith:text boldFont:size textColor:textColor];
+    label.frame = frame;
+    return label;
+}
+
++ (UILabel *)jp_centerLabelWith:(NSString *)text boldFont:(CGFloat)size textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor frame:(CGRect)frame {
+
+    UILabel *label = [UILabel jp_centerLabelWith:text boldFont:size textColor:textColor frame:frame];
+    label.backgroundColor = backgroundColor;
+    return label;
 }
 
 + (NSString *)regularFontName {
 
-    return [[NSUserDefaults standardUserDefaults] objectForKey:UILabel_JPCategory_FontName_Regular];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:JPCategory_UILabel_FontName_Regular];
 }
 
 + (NSString *)boldFontName {
 
-    return [[NSUserDefaults standardUserDefaults] objectForKey:UILabel_JPCategory_FontName_Bold];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:JPCategory_UILabel_FontName_Bold];
 }
 
 @end

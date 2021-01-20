@@ -9,7 +9,7 @@
 
 @implementation NSArray (JPCategory)
 
-- (NSArray *)jp_map:(NSArrayMapComplete)mapComplete {
+- (NSArray *)jp_map:(JPNSArrayMapComplete)mapComplete {
     
     NSMutableArray *mutableArray = [NSMutableArray array];
     for (id obj in self) {
@@ -23,7 +23,7 @@
     
 }
 
-- (NSArray *)jp_filter:(NSArrayFilterComplete)filterComplete {
+- (NSArray *)jp_filter:(JPNSArrayFilterComplete)filterComplete {
     
     NSMutableArray *mutableArray = [NSMutableArray array];
     for (id obj in self) {

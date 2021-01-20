@@ -6,7 +6,7 @@
 //
 
 #import "CenterViewController.h"
-#import "JPCategory.h"
+#import "JPCategory-OC.h"
 
 @interface CenterViewController ()
 
@@ -20,8 +20,20 @@
     
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:scrollView];
+
+    UILabel *label1 = [UILabel jp_labelWith:@"正常文字" font:20 textColor:UIColor.redColor backgroundColor:[UIColor blackColor] frame:CGRectMake(20, 10, 150, 30)];
+    [scrollView addSubview:label1];
+
+    UILabel *label2 = [UILabel jp_labelWith:@"粗体文字" boldFont:20 textColor:UIColor.redColor backgroundColor:[UIColor blackColor] frame:CGRectMake(label1.jp_maxX + 10, 10, 150, 30)];
+    [scrollView addSubview:label2];
+
+    UILabel *label3 = [UILabel jp_centerLabelWith:@"正常居中文字" font:20 textColor:UIColor.redColor backgroundColor:[UIColor blackColor] frame:CGRectMake(20, CGRectGetMaxY(label1.frame) + 10, 150, 30)];
+    [scrollView addSubview:label3];
+
+    UILabel *label4 = [UILabel jp_centerLabelWith:@"粗体居中文字" boldFont:20 textColor:UIColor.redColor backgroundColor:[UIColor blackColor] frame:CGRectMake(label3.jp_maxX + 10, CGRectGetMaxY(label2.frame) + 10, 150, 30)];
+    [scrollView addSubview:label4];
     
-    UIButton *button1 = [UIButton jp_buttonWithNormalTitle:@"垂直居中-默认图片居左-间距0" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, 10, 350, 50)];
+    UIButton *button1 = [UIButton jp_buttonWithNormalTitle:@"垂直居中-默认图片居左-间距0" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, label3.jp_maxY+10, 350, 50)];
     button1.backgroundColor = [UIColor blackColor];
 //    [button1 jp_imagePosition];
     [scrollView addSubview:button1];
@@ -241,8 +253,8 @@
     button262.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [button262 jp_imagePosition:JPButtonImagePosition_Bottom margin:10];
     [scrollView addSubview:button262];
-    
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, CGRectGetMaxY(button262.frame));
+
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, CGRectGetMaxY(button262.frame)+30);
 }
 
 /*

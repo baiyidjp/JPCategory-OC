@@ -6,7 +6,7 @@
 //
 
 #import "LeftViewController.h"
-#import "JPCategory.h"
+#import "JPCategory-OC.h"
 
 @interface LeftViewController ()
 

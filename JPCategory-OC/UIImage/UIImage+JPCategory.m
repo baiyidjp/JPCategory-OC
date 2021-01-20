@@ -67,13 +67,13 @@
     
 }
 
-- (void)jp_asynCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *))completion {
-    
-    [self jp_asynCornerImageWithSize:size cornerRadius:size.width/2.0 completion:completion];
+- (void)jp_asyncCornerImageWithSize:(CGSize)size completion:(void (^)(UIImage *image))completion {
+
+    [self jp_asyncCornerImageWithSize:size cornerRadius:size.width / 2.0 completion:completion];
 }
 
 
-- (void)jp_asynCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion {
+- (void)jp_asyncCornerImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *cornerImage))completion {
     
     //异步绘制
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -112,12 +112,12 @@
     });
 }
 
-- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage * _Nonnull))completion {
-    
-    [self jp_asynRoundImageWithSize:size cornerRadius:cornerRadius borderWidth:2 borderColor:[UIColor colorWithRed:216/255.0 green:216/255.0 blue:216/255.0 alpha:1] completion:completion];
+- (void)jp_asyncRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius completion:(void (^)(UIImage *))completion {
+
+    [self jp_asyncRoundImageWithSize:size cornerRadius:cornerRadius borderWidth:2 borderColor:[UIColor colorWithRed:216 / 255.0 green:216 / 255.0 blue:216 / 255.0 alpha:1] completion:completion];
 }
 
-- (void)jp_asynRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion {
+- (void)jp_asyncRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion {
     
     //异步绘制
     dispatch_async(dispatch_get_global_queue(0, 0), ^{

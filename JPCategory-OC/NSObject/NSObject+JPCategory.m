@@ -44,36 +44,4 @@
 
 }
 
-+ (void)jp_cancelApproveUseJPNavigationBar {
-
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:NSObject_JPCategory_Approve];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:NSObject_JPCategory_ScreenWidth];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:NSObject_JPCategory_Margin];
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:NSObject_JPCategory_BigMargin];
-}
-
-+ (void)jp_approveUseJPNavigationBar {
-
-    [self jp_approveUseJPNavigationBarWithMargin:16];
-}
-
-+ (void)jp_approveUseJPNavigationBarWithMargin:(CGFloat)margin {
-
-    [self jp_approveUseJPNavigationBarWithDefaultScreenWidth:375.0 margin:margin bigMargin:margin];
-}
-
-+ (void)jp_approveUseJPNavigationBarWithMargin:(CGFloat)margin bigMargin:(CGFloat)bigMargin {
-
-    [self jp_approveUseJPNavigationBarWithDefaultScreenWidth:375.0 margin:margin bigMargin:bigMargin];
-}
-
-+ (void)jp_approveUseJPNavigationBarWithDefaultScreenWidth:(CGFloat)screenWidth margin:(CGFloat)margin bigMargin:(CGFloat)bigMargin {
-    
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:NSObject_JPCategory_Approve];
-    [[NSUserDefaults standardUserDefaults] setFloat:(float) screenWidth forKey:NSObject_JPCategory_ScreenWidth];
-    [[NSUserDefaults standardUserDefaults] setFloat:(float) margin forKey:NSObject_JPCategory_Margin];
-    [[NSUserDefaults standardUserDefaults] setFloat:(float) bigMargin forKey:NSObject_JPCategory_BigMargin];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
 @end
