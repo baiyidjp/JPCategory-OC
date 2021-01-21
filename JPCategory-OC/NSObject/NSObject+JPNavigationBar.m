@@ -16,12 +16,7 @@
     dispatch_once(&onceToken, ^{
         if (@available(iOS 11.0, *)) {
 
-            [JPCategoryConfig jp_removeNavigationBarCategory];
-
-            NSDictionary *oriSelectors = @{@"_UINavigationBarContentViewLayout": @"_updateMarginConstraints"};
-            [oriSelectors enumerateKeysAndObjectsUsingBlock:^(NSString *originalClass, NSString *originalSelector, BOOL * _Nonnull stop) {
-                [NSObject jp_swizzledMethodWithOriginalClass:NSClassFromString(originalClass) newClass:self selector:originalSelector newSelector:@"jp_updateMarginConstraints"];
-            }];
+            [NSObject jp_swizzledMethodWithOriginalClass:NSClassFromString(@"_UINavigationBarContentViewLayout") newClass:self selector:@"_updateMarginConstraints" newSelector:@"jp_updateMarginConstraints"];
         }
     });
 }
