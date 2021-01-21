@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2097A390C2FF6BF270E5317F /* JPCategoryConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A20FCD1DBC013744591E /* JPCategoryConfig.m */; };
 		F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */; };
 		F5081C0B25B8134E00A92C12 /* UIViewController+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */; };
-		F5081C2125B8359500A92C12 /* JPCategoryConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081C2025B8359500A92C12 /* JPCategoryConfig.m */; };
 		F5D1DD2D25B0287B00A7936F /* NSObject+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */; };
 		F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */; };
 		F5D1DD3525B0296900A7936F /* UIImage+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */; };
@@ -33,13 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2097A20FCD1DBC013744591E /* JPCategoryConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCategoryConfig.m; sourceTree = "<group>"; };
+		2097A38E34C7F7D6CF148291 /* JPCategoryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCategoryConfig.h; sourceTree = "<group>"; };
 		F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPNavigationBar.h"; sourceTree = "<group>"; };
 		F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPNavigationBar.m"; sourceTree = "<group>"; };
 		F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPCategory.h"; sourceTree = "<group>"; };
 		F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JPCategory.m"; sourceTree = "<group>"; };
 		F5081C1E25B8356700A92C12 /* JPCategory-OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPCategory-OC.h"; sourceTree = "<group>"; };
-		F5081C1F25B8359500A92C12 /* JPCategoryConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPCategoryConfig.h; sourceTree = "<group>"; };
-		F5081C2025B8359500A92C12 /* JPCategoryConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPCategoryConfig.m; sourceTree = "<group>"; };
 		F5D1DD2B25B0287B00A7936F /* NSObject+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPCategory.h"; sourceTree = "<group>"; };
 		F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPCategory.m"; sourceTree = "<group>"; };
 		F5D1DD2F25B028DD00A7936F /* NSArray+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCategory.h"; sourceTree = "<group>"; };
@@ -91,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2097A1834BB548F1A70F71BE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2097A20FCD1DBC013744591E /* JPCategoryConfig.m */,
+				2097A38E34C7F7D6CF148291 /* JPCategoryConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		2097A29F0B2ED1FFD63375AA /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,9 +227,8 @@
 				F5D1DD2225B0272D00A7936F /* NSObject */,
 				F5DBB00B25918BEB0008D98F /* UIButton */,
 				F5081C1E25B8356700A92C12 /* JPCategory-OC.h */,
-				F5081C1F25B8359500A92C12 /* JPCategoryConfig.h */,
-				F5081C2025B8359500A92C12 /* JPCategoryConfig.m */,
 				2097A29F0B2ED1FFD63375AA /* UIViewController */,
+				2097A1834BB548F1A70F71BE /* Config */,
 			);
 			path = "JPCategory-OC";
 			sourceTree = SOURCE_ROOT;
@@ -314,7 +322,6 @@
 				F5D1DD3925B0299400A7936F /* UIColor+JPCategory.m in Sources */,
 				F5DBB0802591C1B70008D98F /* CenterViewController.m in Sources */,
 				F5D1DD4525B02B4E00A7936F /* UILabel+JPCategory.m in Sources */,
-				F5081C2125B8359500A92C12 /* JPCategoryConfig.m in Sources */,
 				F5D1DD2D25B0287B00A7936F /* NSObject+JPCategory.m in Sources */,
 				F5DBB01425918BEB0008D98F /* UIButton+JPImagePosition.m in Sources */,
 				F5DBAFF225918BCA0008D98F /* AppDelegate.m in Sources */,
@@ -327,6 +334,7 @@
 				F5D1DD3D25B029CC00A7936F /* UIView+JPCategory.m in Sources */,
 				F5D1DD4125B02B0900A7936F /* NSBundle+JPCategory.m in Sources */,
 				F5DBAFF525918BCA0008D98F /* SceneDelegate.m in Sources */,
+				2097A390C2FF6BF270E5317F /* JPCategoryConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

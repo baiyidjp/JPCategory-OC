@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory-OC.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategoryConfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategoryConfig.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategory.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategory-OC.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory-OC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategoryConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategoryConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/AppDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +57,8 @@
       <workItem from="1610609923019" duration="2130000" />
       <workItem from="1610952500669" duration="2121000" />
       <workItem from="1611041849816" duration="2040000" />
-      <workItem from="1611127692366" duration="5591000" />
+      <workItem from="1611127692366" duration="8613000" />
+      <workItem from="1611196378400" duration="673000" />
     </task>
     <servers />
   </component>

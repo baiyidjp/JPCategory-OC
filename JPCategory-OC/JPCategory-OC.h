@@ -8,7 +8,7 @@
 #ifndef JPCategory_OC_h
 #define JPCategory_OC_h
 
-#import "JPCategoryConfig.h"
+#import "Config/JPCategoryConfig.h"
 #import "UIButton/UIButton+JPInitMethod.h"
 #import "UIButton/UIButton+JPImagePosition.h"
 #import "UIButton/UIButton+JPRemoveHighlight.h"
