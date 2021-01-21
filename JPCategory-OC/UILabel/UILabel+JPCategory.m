@@ -6,9 +6,17 @@
 //
 
 #import "UILabel+JPCategory.h"
-#import "JPCategoryConfig.h"
+#import "../Config/JPCategoryConfig.h"
 
 @implementation UILabel (JPCategory)
+
++ (void)load {
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [JPCategoryConfig jp_removeCustomFontName];
+    });
+}
 
 + (UILabel *)label
 {

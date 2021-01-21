@@ -7,7 +7,7 @@
 
 #import "NSObject+JPNavigationBar.h"
 #import "NSObject+JPCategory.h"
-#import "JPCategoryConfig.h"
+#import "../Config/JPCategoryConfig.h"
 
 @implementation NSObject (JPNavigationBar)
 
@@ -16,6 +16,7 @@
     dispatch_once(&onceToken, ^{
         if (@available(iOS 11.0, *)) {
 
+            [JPCategoryConfig jp_removeNavigationBarCategory];
             [NSObject jp_swizzledMethodWithOriginalClass:NSClassFromString(@"_UINavigationBarContentViewLayout") newClass:self selector:@"_updateMarginConstraints" newSelector:@"jp_updateMarginConstraints"];
         }
     });
