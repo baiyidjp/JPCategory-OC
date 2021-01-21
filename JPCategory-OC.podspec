@@ -9,11 +9,11 @@ Pod::Spec.new do |s|
   s.author             =  "baiyidjp"
   s.ios.deployment_target = "9.0"
   s.source       = { :git => "https://github.com/baiyidjp/JPCategory-OC.git", :tag => "#{s.version}" }
-  s.source_files  = "JPCategory-OC/*.{h,m}"
+  s.source_files  = "JPCategory-OC/**/*.{h,m}"
   s.requires_arc = true
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  
+
   #UIViewCOntroller
   s.subspec 'UIViewController' do |ss|
   ss.source_files = "JPCategory-OC/UIViewController/*.{h,m}"
