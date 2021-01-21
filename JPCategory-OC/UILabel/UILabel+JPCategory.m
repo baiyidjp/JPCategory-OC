@@ -6,7 +6,7 @@
 //
 
 #import "UILabel+JPCategory.h"
-#import "../Config/JPCategoryConfig.h"
+#import "JPCategoryConfig.h"
 
 @implementation UILabel (JPCategory)
 

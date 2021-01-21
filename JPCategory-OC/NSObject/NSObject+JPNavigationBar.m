@@ -7,7 +7,7 @@
 
 #import "NSObject+JPNavigationBar.h"
 #import "NSObject+JPCategory.h"
-#import "../Config/JPCategoryConfig.h"
+#import "JPCategoryConfig.h"
 
 @implementation NSObject (JPNavigationBar)
 

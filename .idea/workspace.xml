@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" afterDir="false" />
-    </list>
+    <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +49,7 @@
       <workItem from="1610952500669" duration="2121000" />
       <workItem from="1611041849816" duration="2040000" />
       <workItem from="1611127692366" duration="8613000" />
-      <workItem from="1611196378400" duration="5194000" />
+      <workItem from="1611196378400" duration="5489000" />
     </task>
     <servers />
   </component>
