@@ -14,11 +14,22 @@
 
 @implementation LeftViewController
 
+- (void)viewWillDisappear:(BOOL)animated {
+
+    [super viewWillDisappear:animated];
+
+    if (self.jp_routeCompletion) {
+        self.jp_routeCompletion(@"test");
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    self.jp_parameters = @{@"a": @"bb"};
+    self.view.backgroundColor = UIColor .whiteColor;
+
+//    self.jp_parameters = @{@"a": @"bb"};
     NSLog(@"%@",self.jp_parameters);
 
     UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];

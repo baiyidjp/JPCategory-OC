@@ -23,4 +23,17 @@
     return objc_getAssociatedObject(self, _cmd);
 }
 
+- (void)setJp_routeCompletion:(JPRouteCompletion)jp_routeCompletion {
+
+    if (!jp_routeCompletion) {
+        return;
+    }
+    objc_setAssociatedObject(self, @selector(jp_routeCompletion), jp_routeCompletion, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (JPRouteCompletion)jp_routeCompletion {
+
+    return objc_getAssociatedObject(self, _cmd);
+}
+
 @end
