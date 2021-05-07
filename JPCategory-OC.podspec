@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
   end
 
   #UIButton/ImagePosition
-  s.subspec 'UIButton/ImagePosition' do |ss|
-  ss.source_files = "JPCategory-OC/UIButton/JPImagePosition.{h,m}"
+  s.subspec 'UIButton-ImagePosition' do |ss|
+  ss.source_files = "JPCategory-OC/UIButton/UIButton+JPImagePosition.{h,m}"
   end
 
   #UIView

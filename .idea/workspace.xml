@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC.podspec" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +66,7 @@
       <workItem from="1611196378400" duration="6263000" />
       <workItem from="1611217964533" duration="4724000" />
       <workItem from="1620292260440" duration="2156000" />
-      <workItem from="1620356949354" duration="1027000" />
+      <workItem from="1620356949354" duration="2279000" />
     </task>
     <servers />
   </component>
