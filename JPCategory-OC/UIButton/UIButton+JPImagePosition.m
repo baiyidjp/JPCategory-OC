@@ -144,31 +144,13 @@
 }
 
 - (void)jp_buttonImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin {
-    
-    self.jp_observed = YES;
+
+    NSAssert((self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentLeft || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentCenter || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentRight), @"UIButton+JPImagePosition水平对齐只支持: Left & Center & Right");
+    NSAssert((self.contentVerticalAlignment == UIControlContentVerticalAlignmentTop || self.contentVerticalAlignment == UIControlContentVerticalAlignmentCenter || self.contentVerticalAlignment == UIControlContentVerticalAlignmentBottom), @"UIButton+JPImagePosition垂直对齐只支持: Top & Center & Bottom");
+
     self.jp_position = position;
     self.jp_margin = margin;
     self.jp_autoMargin = autoMargin;
-    
-    if (!self.currentImage) {
-        NSLog(@"UIButton+JPImagePosition: 图片不存在");
-        return;
-    }
-    
-    if (!self.titleLabel.text) {
-        NSLog(@"UIButton+JPImagePosition: 文本不存在");
-        return;;
-    }
-    
-    if (!(self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentLeft || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentCenter || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentRight)) {
-        NSLog(@"UIButton+JPImagePosition水平对齐只支持: Left & Center & Right");
-        return;
-    }
-    
-    if (!(self.contentVerticalAlignment == UIControlContentVerticalAlignmentTop || self.contentVerticalAlignment == UIControlContentVerticalAlignmentCenter || self.contentVerticalAlignment == UIControlContentVerticalAlignmentBottom)) {
-        NSLog(@"UIButton+JPImagePosition垂直对齐只支持: Top & Center & Bottom");
-        return;
-    }
 
     CGFloat buttonWidth = self.frame.size.width;
     CGFloat buttonHeight = self.frame.size.height;
@@ -536,9 +518,12 @@
     
     self.imageEdgeInsets = imageEdgeInsets;
     self.titleEdgeInsets = titleEdgeInsets;
-    
-    [self addObserver:self forKeyPath:TitleKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-    [self addObserver:self forKeyPath:ImageKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+
+    if (!self.jp_observed) {
+        self.jp_observed = YES;
+        [self addObserver:self forKeyPath:TitleKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+        [self addObserver:self forKeyPath:ImageKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -546,7 +531,10 @@
     if ([keyPath isEqualToString:TitleKeyPath]) {
         NSString *new = change[NSKeyValueChangeNewKey];
         NSString *old = change[NSKeyValueChangeOldKey];
-        if (new != nil && ![new isEqualToString:old]) {
+        if (new == nil && old != nil) {
+            [self jp_buttonImagePosition];
+        }
+        if (new != nil && ![new isEqual:old]) {
             [self jp_buttonImagePosition];
         }
     }
@@ -554,6 +542,9 @@
     if ([keyPath isEqualToString:ImageKeyPath]) {
         UIImage *new = change[NSKeyValueChangeNewKey];
         UIImage *old = change[NSKeyValueChangeOldKey];
+        if (new == nil && old != nil) {
+            [self jp_buttonImagePosition];
+        }
         if (new != nil && ![new isEqual:old]) {
             [self jp_buttonImagePosition];
         }
@@ -561,9 +552,8 @@
 }
 
 - (void)dealloc {
-    
+
     if (self.jp_observed) {
-        NSLog(@"%@", self);
         [self removeObserver:self forKeyPath:TitleKeyPath context:nil];
         [self removeObserver:self forKeyPath:ImageKeyPath context:nil];
     }
