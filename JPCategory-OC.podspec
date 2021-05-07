@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JPCategory-OC"
-  s.version      = "1.6.1"
+  s.version      = "1.6.2"
   s.summary      = "views categories."
   s.homepage     = "https://github.com/baiyidjp/JPCategory-OC"
   s.license      = "MIT"
@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   end
 
   #UIButton/ImagePosition
-  s.subspec 'UIButton-ImagePosition' do |ss|
+  s.subspec 'ButtonImagePosition' do |ss|
   ss.source_files = "JPCategory-OC/UIButton/UIButton+JPImagePosition.{h,m}"
   end
 
