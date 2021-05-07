@@ -13,149 +13,160 @@
 
 @implementation UIButton (JPImagePosition)
 
-- (void)setJp_Position:(JPButtonImagePosition)jp_Position {
-    
-    objc_setAssociatedObject(self, @selector(jp_Position), @(jp_Position), OBJC_ASSOCIATION_ASSIGN);
+- (void)setJp_observed:(BOOL)jp_observed {
+ 
+    objc_setAssociatedObject(self, @selector(jp_observed), @(jp_observed), OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (JPButtonImagePosition)jp_Position {
+- (BOOL)jp_observed {
+    
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (void)setJp_position:(JPButtonImagePosition)jp_position {
+    
+    objc_setAssociatedObject(self, @selector(jp_position), @(jp_position), OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (JPButtonImagePosition)jp_position {
     
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
-- (void)setJp_Margin:(CGFloat)jp_Margin {
+- (void)setJp_margin:(CGFloat)jp_margin {
  
-    objc_setAssociatedObject(self, @selector(jp_Margin), @(jp_Margin), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(jp_margin), @(jp_margin), OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (CGFloat)jp_Margin {
+- (CGFloat)jp_margin {
     
     return [objc_getAssociatedObject(self, _cmd) floatValue];
 }
 
-- (void)setJp_AutoMargin:(JPButtonImageAutoMargin)jp_AutoMargin {
+- (void)setJp_autoMargin:(JPButtonImageAutoMargin)jp_autoMargin {
     
-    objc_setAssociatedObject(self, @selector(jp_AutoMargin), @(jp_AutoMargin), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(jp_autoMargin), @(jp_autoMargin), OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (JPButtonImageAutoMargin)jp_AutoMargin {
+- (JPButtonImageAutoMargin)jp_autoMargin {
     
     return [objc_getAssociatedObject(self, _cmd) integerValue];
 }
 
-- (void)jp_imagePosition {
+- (void)jp_buttonImagePosition {
 
-    JPButtonImagePosition position = self.jp_Position;
+    JPButtonImagePosition position = self.jp_position;
     if (position == JPButtonImagePosition_None) {
         position = JPButtonImagePosition_Left;
     }
-    CGFloat margin = self.jp_Margin;
+    CGFloat margin = self.jp_margin;
     if (margin == 0) {
         margin = 8;
     }
-    JPButtonImageAutoMargin autoMargin = self.jp_AutoMargin;
+    JPButtonImageAutoMargin autoMargin = self.jp_autoMargin;
     if (autoMargin == JPButtonImageAutoMargin_None) {
         autoMargin = JPButtonImageAutoMargin_YES;
     }
     
-    [self jp_imagePosition:position margin:margin autoMargin:autoMargin];
+    [self jp_buttonImagePosition:position margin:margin autoMargin:autoMargin];
 }
 
-- (void)jp_imagePosition:(JPButtonImagePosition)position {
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position {
 
-    CGFloat margin = self.jp_Margin;
+    CGFloat margin = self.jp_margin;
     if (margin == 0) {
         margin = 8;
     }
-    JPButtonImageAutoMargin autoMargin = self.jp_AutoMargin;
+    JPButtonImageAutoMargin autoMargin = self.jp_autoMargin;
     if (autoMargin == JPButtonImageAutoMargin_None) {
         autoMargin = JPButtonImageAutoMargin_YES;
     }
     
-    [self jp_imagePosition:position margin:margin autoMargin:autoMargin];
+    [self jp_buttonImagePosition:position margin:margin autoMargin:autoMargin];
 }
 
-- (void)jp_imagePositionWithMargin:(CGFloat)margin {
+- (void)jp_buttonImagePositionWithMargin:(CGFloat)margin {
 
-    JPButtonImagePosition position = self.jp_Position;
+    JPButtonImagePosition position = self.jp_position;
     if (position == JPButtonImagePosition_None) {
         position = JPButtonImagePosition_Left;
     }
-    JPButtonImageAutoMargin autoMargin = self.jp_AutoMargin;
+    JPButtonImageAutoMargin autoMargin = self.jp_autoMargin;
     if (autoMargin == JPButtonImageAutoMargin_None) {
         autoMargin = JPButtonImageAutoMargin_YES;
     }
     
-    [self jp_imagePosition:position margin:margin autoMargin:autoMargin];
+    [self jp_buttonImagePosition:position margin:margin autoMargin:autoMargin];
 }
 
-- (void)jp_imagePositionWithAutoMargin:(JPButtonImageAutoMargin)autoMargin {
+- (void)jp_buttonImagePositionWithAutoMargin:(JPButtonImageAutoMargin)autoMargin {
 
-    JPButtonImagePosition position = self.jp_Position;
+    JPButtonImagePosition position = self.jp_position;
     if (position == JPButtonImagePosition_None) {
         position = JPButtonImagePosition_Left;
     }
-    CGFloat margin = self.jp_Margin;
+    CGFloat margin = self.jp_margin;
     if (margin == 0) {
         margin = 8;
     }
     
-    [self jp_imagePosition:position margin:margin autoMargin:autoMargin];
+    [self jp_buttonImagePosition:position margin:margin autoMargin:autoMargin];
 }
 
-- (void)jp_imagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin {
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin {
 
-    JPButtonImageAutoMargin autoMargin = self.jp_AutoMargin;
+    JPButtonImageAutoMargin autoMargin = self.jp_autoMargin;
     if (autoMargin == JPButtonImageAutoMargin_None) {
         autoMargin = JPButtonImageAutoMargin_YES;
     }
     
-    [self jp_imagePosition:position margin:margin autoMargin:autoMargin];
+    [self jp_buttonImagePosition:position margin:margin autoMargin:autoMargin];
 }
 
-- (void)jp_imagePosition:(JPButtonImagePosition)position autoMargin:(JPButtonImageAutoMargin)autoMargin {
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position autoMargin:(JPButtonImageAutoMargin)autoMargin {
 
-    CGFloat margin = self.jp_Margin;
+    CGFloat margin = self.jp_margin;
     if (margin == 0) {
         margin = 8;
     }
     
-    [self jp_imagePosition:position margin:margin autoMargin:autoMargin];
+    [self jp_buttonImagePosition:position margin:margin autoMargin:autoMargin];
 }
 
-- (void)jp_imagePositionWithMargin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin {
+- (void)jp_buttonImagePositionWithMargin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin {
 
-    JPButtonImagePosition position = self.jp_Position;
+    JPButtonImagePosition position = self.jp_position;
     if (position == JPButtonImagePosition_None) {
         position = JPButtonImagePosition_Left;
     }
 
-    [self jp_imagePosition:position margin:margin autoMargin:autoMargin];
+    [self jp_buttonImagePosition:position margin:margin autoMargin:autoMargin];
 }
 
-- (void)jp_imagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin {
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin {
     
-    self.jp_Position = position;
-    self.jp_Margin = margin;
-    self.jp_AutoMargin = autoMargin;
+    self.jp_observed = YES;
+    self.jp_position = position;
+    self.jp_margin = margin;
+    self.jp_autoMargin = autoMargin;
     
     if (!self.currentImage) {
-        NSLog(@"JPImagePosition: 图片不存在");
+        NSLog(@"UIButton+JPImagePosition: 图片不存在");
         return;
     }
     
     if (!self.titleLabel.text) {
-        NSLog(@"JPImagePosition: 文本不存在");
+        NSLog(@"UIButton+JPImagePosition: 文本不存在");
         return;;
     }
     
     if (!(self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentLeft || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentCenter || self.contentHorizontalAlignment == UIControlContentHorizontalAlignmentRight)) {
-        NSLog(@"JPImagePosition水平对齐只支持: Left & Center & Right");
+        NSLog(@"UIButton+JPImagePosition水平对齐只支持: Left & Center & Right");
         return;
     }
     
     if (!(self.contentVerticalAlignment == UIControlContentVerticalAlignmentTop || self.contentVerticalAlignment == UIControlContentVerticalAlignmentCenter || self.contentVerticalAlignment == UIControlContentVerticalAlignmentBottom)) {
-        NSLog(@"JPImagePosition垂直对齐只支持: Top & Center & Bottom");
+        NSLog(@"UIButton+JPImagePosition垂直对齐只支持: Top & Center & Bottom");
         return;
     }
 
@@ -533,19 +544,28 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     
     if ([keyPath isEqualToString:TitleKeyPath]) {
-        NSString *new = change[@"new"];
-        NSString *old = change[@"old"];
+        NSString *new = change[NSKeyValueChangeNewKey];
+        NSString *old = change[NSKeyValueChangeOldKey];
         if (new != nil && ![new isEqualToString:old]) {
-            [self jp_imagePosition];
+            [self jp_buttonImagePosition];
         }
     }
     
     if ([keyPath isEqualToString:ImageKeyPath]) {
-        UIImage *new = change[@"new"];
-        UIImage *old = change[@"old"];
+        UIImage *new = change[NSKeyValueChangeNewKey];
+        UIImage *old = change[NSKeyValueChangeOldKey];
         if (new != nil && ![new isEqual:old]) {
-            [self jp_imagePosition];
+            [self jp_buttonImagePosition];
         }
+    }
+}
+
+- (void)dealloc {
+    
+    if (self.jp_observed) {
+        NSLog(@"%@", self);
+        [self removeObserver:self forKeyPath:TitleKeyPath context:nil];
+        [self removeObserver:self forKeyPath:ImageKeyPath context:nil];
     }
 }
 

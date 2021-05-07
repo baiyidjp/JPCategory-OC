@@ -27,58 +27,60 @@ typedef NS_ENUM(NSInteger, JPButtonImageAutoMargin) {
 
 /********单独设置属性需要写在 imagePosition 方法之前***********/
 
+/** 是否添加了 observe */
+@property(nonatomic,assign) BOOL jp_observed;
 /** 手动设置图片位置 */
-@property(nonatomic,assign) JPButtonImagePosition jp_Position;
+@property(nonatomic,assign) JPButtonImagePosition jp_position;
 /** 手动设置图片文字间距 */
-@property(nonatomic,assign) CGFloat jp_Margin;
+@property(nonatomic,assign) CGFloat jp_margin;
 /** 手动设置是否自动适配间距 */
-@property(nonatomic,assign) JPButtonImageAutoMargin jp_AutoMargin;
+@property(nonatomic,assign) JPButtonImageAutoMargin jp_autoMargin;
 
-/********单独设置属性需要写在 imagePosition 方法之前***********/
+/********单独设置属性需要写在 buttonImagePosition 方法之前***********/
 
 /**
  * 默认图片相对于文字居左,默认图片文字间距为8,默认宽高不足自动适配图片文字间距
  */
-- (void)jp_imagePosition;
+- (void)jp_buttonImagePosition;
 
 /**
  * 默认图片文字间距为8,默认宽高不足自动适配图片文字间距
  * @param position 自定义图片相对于文字方向
  */
-- (void)jp_imagePosition:(JPButtonImagePosition)position;
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position;
 
 /**
  * 默认图片相对于文字居左,默认宽高不足自动适配图片文字间距
  * @param margin 自定义图片文字间距
  */
-- (void)jp_imagePositionWithMargin:(CGFloat)margin;
+- (void)jp_buttonImagePositionWithMargin:(CGFloat)margin;
 
 /**
  * 默认图片相对于文字居左,默认图片文字间距为8
  * @param autoMargin 是否在宽高不足时自动适配图片文字间距
  */
-- (void)jp_imagePositionWithAutoMargin:(JPButtonImageAutoMargin)autoMargin;
+- (void)jp_buttonImagePositionWithAutoMargin:(JPButtonImageAutoMargin)autoMargin;
 
 /**
  * 默认宽高不足自动适配图片文字间距
  * @param position 自定义图片相对于文字方向
  * @param margin 自定义图片文字间距
  */
-- (void)jp_imagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin;
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin;
 
 /**
  * 默认图片文字间距为8
  * @param position 自定义图片相对于文字方向
  * @param autoMargin 是否在宽高不足时自动适配图片文字间距
  */
-- (void)jp_imagePosition:(JPButtonImagePosition)position autoMargin:(JPButtonImageAutoMargin)autoMargin;
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position autoMargin:(JPButtonImageAutoMargin)autoMargin;
 
 /**
  * 默认图片相对于文字居左
  * @param margin 自定义图片文字间距
  * @param autoMargin 是否在宽高不足时自动适配图片文字间距
  */
-- (void)jp_imagePositionWithMargin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin;
+- (void)jp_buttonImagePositionWithMargin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin;
 
 /**
  * 完全自定义
@@ -86,7 +88,7 @@ typedef NS_ENUM(NSInteger, JPButtonImageAutoMargin) {
  * @param margin 自定义图片文字间距
  * @param autoMargin 是否在宽高不足时自动适配图片文字间距
  */
-- (void)jp_imagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin;
+- (void)jp_buttonImagePosition:(JPButtonImagePosition)position margin:(CGFloat)margin autoMargin:(JPButtonImageAutoMargin)autoMargin;
 
 @end
 
