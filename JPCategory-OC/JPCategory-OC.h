@@ -27,6 +27,6 @@
 #import "CrashGuard/NSMutableArray+JPCrashGuard.h"
 #import "CrashGuard/NSDictionary+JPCrashGuard.h"
 #import "CrashGuard/NSMutableDictionary+JPCrashGuard.h"
-#import "CrashGuard/NSObject+JPCrashGuard.h"
+#import "CrashGuard/NSObject+JPMsgSendCrashGuard.h"
 
 #endif /* JPCategory_OC_h */

@@ -66,8 +66,7 @@
             }
             // 如果 转发目标类 没有调用的aSelector，则动态添加一个
             if (!class_getInstanceMethod(crashGuardClass, aSelector)) {
-                Method method = class_getInstanceMethod([self class], @selector(crashGuardMethod));
-                class_addMethod(crashGuardClass, aSelector, method_getImplementation(method), method_getTypeEncoding(method));
+                class_addMethod(crashGuardClass, aSelector, (IMP) crashGuardMethod, @"i16@0:8");
             }
             // 把消息转发到当前动态生成类的实例对象上
             return [[crashGuardClass alloc] init];
@@ -75,10 +74,6 @@
     }
     
     return [self jp_instance_forwardingTargetForSelector:aSelector];
-}
-
-- (int)crashGuardMethod {
-    return 0;
 }
 
 + (id)jp_class_forwardingTargetForSelector:(SEL)aSelector {
@@ -125,8 +120,7 @@
             }
             // 如果 转发目标类 没有调用的aSelector，则动态添加一个
             if (!class_getClassMethod(crashGuardClass, aSelector)) {
-                Method method = class_getClassMethod([self class], @selector(crashGuardMethod));
-                class_addMethod(crashGuardClass, aSelector, method_getImplementation(method), method_getTypeEncoding(method));
+                class_addMethod(crashGuardClass, aSelector, (IMP) crashGuardMethod, @"i16@0:8");
             }
             // 把消息转发到当前动态生成类的实例对象上
             return [[crashGuardClass alloc] init];
@@ -136,7 +130,7 @@
     return [[self class] jp_class_forwardingTargetForSelector:aSelector];
 }
 
-+ (int)crashGuardMethod {
+static int crashGuardMethod(id self, SEL _cmd) {
     return 0;
 }
 
