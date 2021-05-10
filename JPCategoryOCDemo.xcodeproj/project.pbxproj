@@ -10,7 +10,14 @@
 		2097A390C2FF6BF270E5317F /* JPCategoryConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A20FCD1DBC013744591E /* JPCategoryConfig.m */; };
 		F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */; };
 		F5081C0B25B8134E00A92C12 /* UIViewController+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */; };
-		F5D1DD2D25B0287B00A7936F /* NSObject+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */; };
+		F5522BCD264634250034F8AB /* NSObject+JPSwizzledMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BCC264634250034F8AB /* NSObject+JPSwizzledMethod.m */; };
+		F5522BD0264638A70034F8AB /* CrashGuardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BCF264638A70034F8AB /* CrashGuardViewController.m */; };
+		F5522BD3264653990034F8AB /* NSArray+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BD2264653990034F8AB /* NSArray+JPCrashGuard.m */; };
+		F5522BD62646545D0034F8AB /* NSMutableArray+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BD52646545D0034F8AB /* NSMutableArray+JPCrashGuard.m */; };
+		F5522BD926465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */; };
+		F5522BDC264664440034F8AB /* NSDictionary+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */; };
+		F5522BDF26466FCF0034F8AB /* NSObject+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BDE26466FCF0034F8AB /* NSObject+JPCrashGuard.m */; };
+		F5522BE22646754D0034F8AB /* UIButton+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BE12646754D0034F8AB /* UIButton+JPCategory.m */; };
 		F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */; };
 		F5D1DD3525B0296900A7936F /* UIImage+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */; };
 		F5D1DD3925B0299400A7936F /* UIColor+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3825B0299400A7936F /* UIColor+JPCategory.m */; };
@@ -26,7 +33,6 @@
 		F5DBB00325918BCB0008D98F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB00225918BCB0008D98F /* main.m */; };
 		F5DBB01425918BEB0008D98F /* UIButton+JPImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */; };
 		F5DBB01525918BEB0008D98F /* UIButton+JPRemoveHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */; };
-		F5DBB01625918BEB0008D98F /* UIButton+JPInitMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB01225918BEB0008D98F /* UIButton+JPInitMethod.m */; };
 		F5DBB0802591C1B70008D98F /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB07F2591C1B70008D98F /* CenterViewController.m */; };
 		F5DBB0842591C1C00008D98F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB0832591C1C00008D98F /* LeftViewController.m */; };
 		F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB0872591C1C70008D98F /* RightViewController.m */; };
@@ -40,8 +46,22 @@
 		F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPCategory.h"; sourceTree = "<group>"; };
 		F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JPCategory.m"; sourceTree = "<group>"; };
 		F5081C1E25B8356700A92C12 /* JPCategory-OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPCategory-OC.h"; sourceTree = "<group>"; };
-		F5D1DD2B25B0287B00A7936F /* NSObject+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPCategory.h"; sourceTree = "<group>"; };
-		F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPCategory.m"; sourceTree = "<group>"; };
+		F5522BCB264634250034F8AB /* NSObject+JPSwizzledMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPSwizzledMethod.h"; sourceTree = "<group>"; };
+		F5522BCC264634250034F8AB /* NSObject+JPSwizzledMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPSwizzledMethod.m"; sourceTree = "<group>"; };
+		F5522BCE264638A70034F8AB /* CrashGuardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrashGuardViewController.h; sourceTree = "<group>"; };
+		F5522BCF264638A70034F8AB /* CrashGuardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashGuardViewController.m; sourceTree = "<group>"; };
+		F5522BD1264653990034F8AB /* NSArray+JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCrashGuard.h"; sourceTree = "<group>"; };
+		F5522BD2264653990034F8AB /* NSArray+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JPCrashGuard.m"; sourceTree = "<group>"; };
+		F5522BD42646545D0034F8AB /* NSMutableArray+JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JPCrashGuard.h"; sourceTree = "<group>"; };
+		F5522BD52646545D0034F8AB /* NSMutableArray+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JPCrashGuard.m"; sourceTree = "<group>"; };
+		F5522BD726465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+JPCrashGuard.h"; sourceTree = "<group>"; };
+		F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+JPCrashGuard.m"; sourceTree = "<group>"; };
+		F5522BDA264664440034F8AB /* NSDictionary+JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JPCrashGuard.h"; sourceTree = "<group>"; };
+		F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JPCrashGuard.m"; sourceTree = "<group>"; };
+		F5522BDD26466FCF0034F8AB /* NSObject+JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPCrashGuard.h"; sourceTree = "<group>"; };
+		F5522BDE26466FCF0034F8AB /* NSObject+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPCrashGuard.m"; sourceTree = "<group>"; };
+		F5522BE02646754D0034F8AB /* UIButton+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPCategory.h"; sourceTree = "<group>"; };
+		F5522BE12646754D0034F8AB /* UIButton+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPCategory.m"; sourceTree = "<group>"; };
 		F5D1DD2F25B028DD00A7936F /* NSArray+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCategory.h"; sourceTree = "<group>"; };
 		F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JPCategory.m"; sourceTree = "<group>"; };
 		F5D1DD3325B0296900A7936F /* UIImage+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+JPCategory.h"; sourceTree = "<group>"; };
@@ -68,10 +88,8 @@
 		F5DBB00225918BCB0008D98F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5DBB00C25918BEB0008D98F /* UIButton+JPRemoveHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPRemoveHighlight.h"; sourceTree = "<group>"; };
 		F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPImagePosition.m"; sourceTree = "<group>"; };
-		F5DBB00E25918BEB0008D98F /* UIButton+JPInitMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPInitMethod.h"; sourceTree = "<group>"; };
 		F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPRemoveHighlight.m"; sourceTree = "<group>"; };
 		F5DBB01125918BEB0008D98F /* UIButton+JPImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPImagePosition.h"; sourceTree = "<group>"; };
-		F5DBB01225918BEB0008D98F /* UIButton+JPInitMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPInitMethod.m"; sourceTree = "<group>"; };
 		F5DBB07E2591C1B60008D98F /* CenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
 		F5DBB07F2591C1B70008D98F /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
 		F5DBB0822591C1C00008D98F /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -100,78 +118,66 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		2097A29F0B2ED1FFD63375AA /* UIViewController */ = {
+		F5522BC62646320D0034F8AB /* CrashGuard */ = {
 			isa = PBXGroup;
 			children = (
-				F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */,
-				F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */,
+				F5522BD1264653990034F8AB /* NSArray+JPCrashGuard.h */,
+				F5522BD2264653990034F8AB /* NSArray+JPCrashGuard.m */,
+				F5522BDA264664440034F8AB /* NSDictionary+JPCrashGuard.h */,
+				F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */,
+				F5522BD42646545D0034F8AB /* NSMutableArray+JPCrashGuard.h */,
+				F5522BD52646545D0034F8AB /* NSMutableArray+JPCrashGuard.m */,
+				F5522BD726465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.h */,
+				F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */,
+				F5522BDD26466FCF0034F8AB /* NSObject+JPCrashGuard.h */,
+				F5522BDE26466FCF0034F8AB /* NSObject+JPCrashGuard.m */,
 			);
-			path = UIViewController;
+			path = CrashGuard;
 			sourceTree = "<group>";
 		};
-		F5D1DD2225B0272D00A7936F /* NSObject */ = {
+		F5522BCA264633F90034F8AB /* SwizzledMethod */ = {
 			isa = PBXGroup;
 			children = (
-				F5D1DD2B25B0287B00A7936F /* NSObject+JPCategory.h */,
-				F5D1DD2C25B0287B00A7936F /* NSObject+JPCategory.m */,
-				F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */,
-				F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */,
+				F5522BCB264634250034F8AB /* NSObject+JPSwizzledMethod.h */,
+				F5522BCC264634250034F8AB /* NSObject+JPSwizzledMethod.m */,
 			);
-			path = NSObject;
+			path = SwizzledMethod;
 			sourceTree = "<group>";
 		};
-		F5D1DD2325B0273600A7936F /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				F5D1DD3325B0296900A7936F /* UIImage+JPCategory.h */,
-				F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		F5D1DD2525B0274800A7936F /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				F5D1DD3B25B029CC00A7936F /* UIView+JPCategory.h */,
-				F5D1DD3C25B029CC00A7936F /* UIView+JPCategory.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		F5D1DD2625B0277800A7936F /* UIColor */ = {
-			isa = PBXGroup;
-			children = (
-				F5D1DD3725B0299400A7936F /* UIColor+JPCategory.h */,
-				F5D1DD3825B0299400A7936F /* UIColor+JPCategory.m */,
-			);
-			path = UIColor;
-			sourceTree = "<group>";
-		};
-		F5D1DD2725B0277E00A7936F /* UILabel */ = {
-			isa = PBXGroup;
-			children = (
-				F5D1DD4325B02B4E00A7936F /* UILabel+JPCategory.h */,
-				F5D1DD4425B02B4E00A7936F /* UILabel+JPCategory.m */,
-			);
-			path = UILabel;
-			sourceTree = "<group>";
-		};
-		F5D1DD2825B0278300A7936F /* NSBundle */ = {
-			isa = PBXGroup;
-			children = (
-				F5D1DD3F25B02B0900A7936F /* NSBundle+JPCategory.h */,
-				F5D1DD4025B02B0900A7936F /* NSBundle+JPCategory.m */,
-			);
-			path = NSBundle;
-			sourceTree = "<group>";
-		};
-		F5D1DD2925B027A200A7936F /* NSArray */ = {
+		F5522BE3264676490034F8AB /* NSCategory */ = {
 			isa = PBXGroup;
 			children = (
 				F5D1DD2F25B028DD00A7936F /* NSArray+JPCategory.h */,
 				F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */,
+				F5D1DD3F25B02B0900A7936F /* NSBundle+JPCategory.h */,
+				F5D1DD4025B02B0900A7936F /* NSBundle+JPCategory.m */,
+				F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */,
+				F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */,
 			);
-			path = NSArray;
+			path = NSCategory;
+			sourceTree = "<group>";
+		};
+		F5522BE4264676590034F8AB /* JPUIKitCategory */ = {
+			isa = PBXGroup;
+			children = (
+				F5522BE02646754D0034F8AB /* UIButton+JPCategory.h */,
+				F5522BE12646754D0034F8AB /* UIButton+JPCategory.m */,
+				F5DBB01125918BEB0008D98F /* UIButton+JPImagePosition.h */,
+				F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */,
+				F5DBB00C25918BEB0008D98F /* UIButton+JPRemoveHighlight.h */,
+				F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */,
+				F5D1DD3725B0299400A7936F /* UIColor+JPCategory.h */,
+				F5D1DD3825B0299400A7936F /* UIColor+JPCategory.m */,
+				F5D1DD3325B0296900A7936F /* UIImage+JPCategory.h */,
+				F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */,
+				F5D1DD4325B02B4E00A7936F /* UILabel+JPCategory.h */,
+				F5D1DD4425B02B4E00A7936F /* UILabel+JPCategory.m */,
+				F5D1DD3B25B029CC00A7936F /* UIView+JPCategory.h */,
+				F5D1DD3C25B029CC00A7936F /* UIView+JPCategory.m */,
+				F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */,
+				F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */,
+			);
+			path = JPUIKitCategory;
 			sourceTree = "<group>";
 		};
 		F5DBAFE425918BCA0008D98F = {
@@ -206,6 +212,8 @@
 				F5DBB0832591C1C00008D98F /* LeftViewController.m */,
 				F5DBB0862591C1C70008D98F /* RightViewController.h */,
 				F5DBB0872591C1C70008D98F /* RightViewController.m */,
+				F5522BCE264638A70034F8AB /* CrashGuardViewController.h */,
+				F5522BCF264638A70034F8AB /* CrashGuardViewController.m */,
 				F5DBAFF925918BCA0008D98F /* Main.storyboard */,
 				F5DBAFFC25918BCB0008D98F /* Assets.xcassets */,
 				F5DBAFFE25918BCB0008D98F /* LaunchScreen.storyboard */,
@@ -218,33 +226,15 @@
 		F5DBB00A25918BEB0008D98F /* JPCategory-OC */ = {
 			isa = PBXGroup;
 			children = (
-				F5D1DD2925B027A200A7936F /* NSArray */,
-				F5D1DD2825B0278300A7936F /* NSBundle */,
-				F5D1DD2725B0277E00A7936F /* UILabel */,
-				F5D1DD2625B0277800A7936F /* UIColor */,
-				F5D1DD2525B0274800A7936F /* UIView */,
-				F5D1DD2325B0273600A7936F /* UIImage */,
-				F5D1DD2225B0272D00A7936F /* NSObject */,
-				F5DBB00B25918BEB0008D98F /* UIButton */,
+				F5522BE4264676590034F8AB /* JPUIKitCategory */,
+				F5522BE3264676490034F8AB /* NSCategory */,
+				F5522BCA264633F90034F8AB /* SwizzledMethod */,
+				F5522BC62646320D0034F8AB /* CrashGuard */,
 				F5081C1E25B8356700A92C12 /* JPCategory-OC.h */,
-				2097A29F0B2ED1FFD63375AA /* UIViewController */,
 				2097A1834BB548F1A70F71BE /* Config */,
 			);
 			path = "JPCategory-OC";
 			sourceTree = SOURCE_ROOT;
-		};
-		F5DBB00B25918BEB0008D98F /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-				F5DBB00C25918BEB0008D98F /* UIButton+JPRemoveHighlight.h */,
-				F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */,
-				F5DBB00E25918BEB0008D98F /* UIButton+JPInitMethod.h */,
-				F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */,
-				F5DBB01125918BEB0008D98F /* UIButton+JPImagePosition.h */,
-				F5DBB01225918BEB0008D98F /* UIButton+JPInitMethod.m */,
-			);
-			path = UIButton;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -316,18 +306,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5081C0B25B8134E00A92C12 /* UIViewController+JPCategory.m in Sources */,
+				F5522BD0264638A70034F8AB /* CrashGuardViewController.m in Sources */,
 				F5DBB0842591C1C00008D98F /* LeftViewController.m in Sources */,
+				F5522BCD264634250034F8AB /* NSObject+JPSwizzledMethod.m in Sources */,
 				F5DBAFF825918BCA0008D98F /* ViewController.m in Sources */,
 				F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */,
+				F5522BD3264653990034F8AB /* NSArray+JPCrashGuard.m in Sources */,
+				F5522BDF26466FCF0034F8AB /* NSObject+JPCrashGuard.m in Sources */,
 				F5D1DD3925B0299400A7936F /* UIColor+JPCategory.m in Sources */,
 				F5DBB0802591C1B70008D98F /* CenterViewController.m in Sources */,
 				F5D1DD4525B02B4E00A7936F /* UILabel+JPCategory.m in Sources */,
-				F5D1DD2D25B0287B00A7936F /* NSObject+JPCategory.m in Sources */,
 				F5DBB01425918BEB0008D98F /* UIButton+JPImagePosition.m in Sources */,
+				F5522BD62646545D0034F8AB /* NSMutableArray+JPCrashGuard.m in Sources */,
+				F5522BE22646754D0034F8AB /* UIButton+JPCategory.m in Sources */,
 				F5DBAFF225918BCA0008D98F /* AppDelegate.m in Sources */,
 				F5D1DD3525B0296900A7936F /* UIImage+JPCategory.m in Sources */,
+				F5522BD926465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m in Sources */,
 				F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */,
-				F5DBB01625918BEB0008D98F /* UIButton+JPInitMethod.m in Sources */,
+				F5522BDC264664440034F8AB /* NSDictionary+JPCrashGuard.m in Sources */,
 				F5DBB00325918BCB0008D98F /* main.m in Sources */,
 				F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */,
 				F5DBB01525918BEB0008D98F /* UIButton+JPRemoveHighlight.m in Sources */,

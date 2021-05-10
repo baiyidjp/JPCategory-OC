@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h1W-xL-BdY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h1W-xL-BdY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -55,6 +55,19 @@
                                     <segue destination="PQC-tB-9Xy" kind="push" id="4c9-vN-Nvd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPI-vk-DKK">
+                                <rect key="frame" x="20" y="278" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vtt-4k-dUP"/>
+                                </constraints>
+                                <state key="normal" title="Crash防护">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TmJ-Au-O2X" kind="push" id="si8-GV-GtP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -62,8 +75,11 @@
                             <constraint firstItem="cap-F1-wm4" firstAttribute="trailing" secondItem="Frf-ee-91j" secondAttribute="trailing" id="3aj-v4-N2S"/>
                             <constraint firstItem="bsT-J3-av2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="8N1-tC-hhe"/>
                             <constraint firstItem="Frf-ee-91j" firstAttribute="trailing" secondItem="bsT-J3-av2" secondAttribute="trailing" id="Gd3-NG-2Qw"/>
+                            <constraint firstItem="qPI-vk-DKK" firstAttribute="trailing" secondItem="cap-F1-wm4" secondAttribute="trailing" id="Ox3-nM-dCw"/>
                             <constraint firstItem="Frf-ee-91j" firstAttribute="top" secondItem="bsT-J3-av2" secondAttribute="bottom" constant="20" id="ZMC-YI-GSU"/>
+                            <constraint firstItem="qPI-vk-DKK" firstAttribute="leading" secondItem="cap-F1-wm4" secondAttribute="leading" id="aKW-Wn-sCD"/>
                             <constraint firstItem="cap-F1-wm4" firstAttribute="leading" secondItem="Frf-ee-91j" secondAttribute="leading" id="aWH-Tu-bbx"/>
+                            <constraint firstItem="qPI-vk-DKK" firstAttribute="top" secondItem="cap-F1-wm4" secondAttribute="bottom" constant="20" id="e5i-DU-FNh"/>
                             <constraint firstItem="cap-F1-wm4" firstAttribute="top" secondItem="Frf-ee-91j" secondAttribute="bottom" constant="20" id="fY7-zm-Fwh"/>
                             <constraint firstItem="bsT-J3-av2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="u2F-2i-XLS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bsT-J3-av2" secondAttribute="trailing" constant="20" id="yG7-LB-znP"/>
@@ -80,6 +96,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-102.89855072463769" y="-40.178571428571423"/>
+        </scene>
+        <!--Crash防护-->
+        <scene sceneID="6oQ-g9-dR5">
+            <objects>
+                <viewController id="TmJ-Au-O2X" customClass="CrashGuardViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y8k-IF-ejy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jdZ-EK-Tzf">
+                                <rect key="frame" x="20" y="108" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hxv-pE-zAM"/>
+                                </constraints>
+                                <state key="normal" title="数组插入值">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNilObject:" destination="TmJ-Au-O2X" eventType="touchUpInside" id="DGy-rT-rpv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xE9-kM-TIb">
+                                <rect key="frame" x="20" y="168" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Beg-vF-bTx"/>
+                                </constraints>
+                                <state key="normal" title="数组取值">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="getObject:" destination="TmJ-Au-O2X" eventType="touchUpInside" id="zwz-5A-I6y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b58-dt-b2L">
+                                <rect key="frame" x="20" y="228" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="H7k-KD-BIk"/>
+                                </constraints>
+                                <state key="normal" title="字典赋值">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="dictAdd:" destination="TmJ-Au-O2X" eventType="touchUpInside" id="b1K-gq-kNb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBM-ha-443">
+                                <rect key="frame" x="20" y="288" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YSP-CR-tjp"/>
+                                </constraints>
+                                <state key="normal" title="字典取值">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="dictGet:" destination="TmJ-Au-O2X" eventType="touchUpInside" id="8dZ-Wv-Kmw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1h-Zd-Kkr">
+                                <rect key="frame" x="20" y="348" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tVU-8u-Oly"/>
+                                </constraints>
+                                <state key="normal" title="调用未实现的方法">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="unrecognized:" destination="TmJ-Au-O2X" eventType="touchUpInside" id="XMf-cC-mir"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yie-pW-KjZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jdZ-EK-Tzf" firstAttribute="top" secondItem="yie-pW-KjZ" secondAttribute="top" constant="20" id="3mq-q0-YYf"/>
+                            <constraint firstItem="xE9-kM-TIb" firstAttribute="trailing" secondItem="jdZ-EK-Tzf" secondAttribute="trailing" id="4pk-VK-V85"/>
+                            <constraint firstItem="b58-dt-b2L" firstAttribute="trailing" secondItem="xE9-kM-TIb" secondAttribute="trailing" id="4wb-Yj-ql8"/>
+                            <constraint firstItem="xE9-kM-TIb" firstAttribute="top" secondItem="jdZ-EK-Tzf" secondAttribute="bottom" constant="20" id="C6v-KU-4aR"/>
+                            <constraint firstItem="VBM-ha-443" firstAttribute="trailing" secondItem="b58-dt-b2L" secondAttribute="trailing" id="CtQ-5M-D5c"/>
+                            <constraint firstItem="yie-pW-KjZ" firstAttribute="trailing" secondItem="jdZ-EK-Tzf" secondAttribute="trailing" constant="20" id="Di1-DT-b6e"/>
+                            <constraint firstItem="b58-dt-b2L" firstAttribute="top" secondItem="xE9-kM-TIb" secondAttribute="bottom" constant="20" id="Mvc-td-uwI"/>
+                            <constraint firstItem="VBM-ha-443" firstAttribute="top" secondItem="b58-dt-b2L" secondAttribute="bottom" constant="20" id="QBd-TW-w1H"/>
+                            <constraint firstItem="xE9-kM-TIb" firstAttribute="leading" secondItem="jdZ-EK-Tzf" secondAttribute="leading" id="VfU-FX-GeH"/>
+                            <constraint firstItem="f1h-Zd-Kkr" firstAttribute="leading" secondItem="VBM-ha-443" secondAttribute="leading" id="W6S-9W-Qmq"/>
+                            <constraint firstItem="b58-dt-b2L" firstAttribute="leading" secondItem="xE9-kM-TIb" secondAttribute="leading" id="X0Q-2r-yMc"/>
+                            <constraint firstItem="jdZ-EK-Tzf" firstAttribute="leading" secondItem="yie-pW-KjZ" secondAttribute="leading" constant="20" id="Zhw-vi-a7E"/>
+                            <constraint firstItem="f1h-Zd-Kkr" firstAttribute="trailing" secondItem="VBM-ha-443" secondAttribute="trailing" id="fwK-fD-iAd"/>
+                            <constraint firstItem="f1h-Zd-Kkr" firstAttribute="top" secondItem="VBM-ha-443" secondAttribute="bottom" constant="20" id="qpN-4v-boL"/>
+                            <constraint firstItem="VBM-ha-443" firstAttribute="leading" secondItem="b58-dt-b2L" secondAttribute="leading" id="xMM-g6-Kqf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crash防护" id="cjd-5l-UmQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYN-hf-ATs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-342" y="652"/>
         </scene>
         <!--水平居右-->
         <scene sceneID="BFC-4B-pwl">

@@ -2,7 +2,7 @@
 //  JPCategoryConfig.m
 //  JPCategoryOCDemo
 //
-//  Created by SteyDong on 2021/1/20.
+//  Created by baiyidjp on 2021/1/20.
 //
 
 #import "JPCategoryConfig.h"

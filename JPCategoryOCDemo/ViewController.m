@@ -2,7 +2,7 @@
 //  ViewController.m
 //  JPCategoryOCDemo
 //
-//  Created by SteyDong on 2020/12/22.
+//  Created by baiyidjp on 2020/12/22.
 //
 
 #import "ViewController.h"
@@ -26,7 +26,7 @@
     button.backgroundColor = UIColor .blackColor;
     [button setTitle:@"测试回调" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+//    [self.view addSubview:button];
 }
 
 - (void)clickButton {

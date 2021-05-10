@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JPCategory-OC"
-  s.version      = "1.6.2"
+  s.version      = "2.0.0"
   s.summary      = "views categories."
   s.homepage     = "https://github.com/baiyidjp/JPCategory-OC"
   s.license      = "MIT"
@@ -19,57 +19,83 @@ Pod::Spec.new do |s|
   ss.source_files = "JPCategory-OC/Config/*.{h,m}"
   end
 
-  #UIViewCOntroller
-  s.subspec 'UIViewController' do |ss|
-  ss.source_files = "JPCategory-OC/UIViewController/*.{h,m}"
+  #SwizzledMethod
+  s.subspec 'SwizzledMethod' do |ss|
+  ss.source_files = "JPCategory-OC/SwizzledMethod/*.{h,m}"
   end
 
-  #UIButton
-  s.subspec 'UIButton' do |ss|
-  ss.source_files = "JPCategory-OC/UIButton/*.{h,m}"
+  #CrashGuard
+  s.subspec 'CrashGuard' do |ss|
+  ss.source_files = "JPCategory-OC/CrashGuard/*.{h,m}"
+  ss.dependency 'JPCategory-OC/SwizzledMethod'
   end
 
-  #UIButton/ImagePosition
-  s.subspec 'ButtonImagePosition' do |ss|
-  ss.source_files = "JPCategory-OC/UIButton/UIButton+JPImagePosition.{h,m}"
+  #UIKitCategory
+  s.subspec 'JPUIKitCategory' do |ss|
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/*.{h,m}"
+  ss.dependency 'JPCategory-OC/SwizzledMethod'
+  end
+
+  # #FoundationCategory
+  # s.subspec 'NSCategory' do |ss|
+  # ss.source_files = "JPCategory-OC/NSCategory/*.{h,m}"
+  # ss.dependency 'JPCategory-OC/SwizzledMethod'
+  # end
+
+  #UIImage
+  s.subspec 'UIImage' do |ss|
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/UIImage+JPCategory.{h,m}"
   end
 
   #UIView
   s.subspec 'UIView' do |ss|
-  ss.source_files = "JPCategory-OC/UIView/*.{h,m}"
-  end
-
-  #UILabel
-  s.subspec 'UILabel' do |ss|
-  ss.source_files = "JPCategory-OC/UILabel/*.{h,m}"
-  ss.dependency 'JPCategory-OC/Config'
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/UIView+JPCategory.{h,m}"
   end
 
   #UIColor
   s.subspec 'UIColor' do |ss|
-  ss.source_files = "JPCategory-OC/UIColor/*.{h,m}"
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/UIColor+JPCategory.{h,m}"
   end
 
-  #UIImage
-  s.subspec 'UIImage' do |ss|
-  ss.source_files = "JPCategory-OC/UIImage/*.{h,m}"
-  end
-
-  #NSObject
-  s.subspec 'NSObject' do |ss|
-  ss.source_files = "JPCategory-OC/NSObject/*.{h,m}"
+  #UILabel
+  s.subspec 'UILabel' do |ss|
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/UILabel+JPCategory.{h,m}"
   ss.dependency 'JPCategory-OC/Config'
   end
 
-  #NSArray
-  s.subspec 'NSArray' do |ss|
-  ss.source_files = "JPCategory-OC/NSArray/*.{h,m}"
+  #UIButton
+  s.subspec 'UIButton' do |ss|
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/UIButton+JPCategory.{h,m}"
+  end
+
+  #UIButtonImagePosition
+  s.subspec 'UIButtonImagePosition' do |ss|
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/UIButton+JPImagePosition.{h,m}"
+  end
+
+  #UIButtonRemoveHighlight
+  s.subspec 'UIButtonRemoveHighlight' do |ss|
+  ss.source_files = "JPCategory-OC/JPUIKitCategory/UIButton+JPRemoveHighlight.{h,m}"
+  ss.dependency 'JPCategory-OC/SwizzledMethod'
+  end
+
+  #UINavigationBar
+  s.subspec 'UINavigationBar' do |ss|
+  ss.source_files = "JPCategory-OC/NSCategory/NSObject+JPNavigationBar.{h,m}"
+  ss.dependency 'JPCategory-OC/Config'
+  ss.dependency 'JPCategory-OC/SwizzledMethod'
   end
 
   #NSBundle
   s.subspec 'NSBundle' do |ss|
-  ss.source_files = "JPCategory-OC/NSBundle/*.{h,m}"
+  ss.source_files = "JPCategory-OC/NSCategory/NSBundle+JPCategory.{h,m}"
   end
+
+  #NSArray
+  s.subspec 'NSArray' do |ss|
+  ss.source_files = "JPCategory-OC/NSCategory/NSArray+JPCategory.{h,m}"
+  end
+
 # pod trunk push --allow-warnings --skip-import-validation
 
 end
