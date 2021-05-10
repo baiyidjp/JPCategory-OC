@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/1/14.
 //
 
-#import "NSArray+JPCategory.h"
+#import "../Base/NSArray+JPCategory.h"
 
 @implementation NSArray (JPCategory)
 

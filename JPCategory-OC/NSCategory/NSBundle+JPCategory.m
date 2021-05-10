@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/1/14.
 //
 
-#import "NSBundle+JPCategory.h"
+#import "../Base/NSBundle+JPCategory.h"
 #import <objc/runtime.h>
 
 static const char _bundle = 0;

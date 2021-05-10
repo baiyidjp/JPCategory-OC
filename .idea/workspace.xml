@@ -2,66 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSArray+JPCrashGuard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSArray+JPCrashGuard.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSDictionary+JPCrashGuard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSDictionary+JPCrashGuard.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSMutableArray+JPCrashGuard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSMutableArray+JPCrashGuard.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSMutableDictionary+JPCrashGuard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSMutableDictionary+JPCrashGuard.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSObject+JPCrashGuard.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSObject+JPCrashGuard.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/SwizzledMethod/NSObject+JPSwizzledMethod.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategory-OC/SwizzledMethod/NSObject+JPSwizzledMethod.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategoryOCDemo/CrashGuardViewController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JPCategoryOCDemo/CrashGuardViewController.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategory-OC.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/JPCategoryConfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/Config/JPCategoryConfig.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/JPCategoryConfig.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategory-OC.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory-OC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/FoundationCategory/NSArray+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSArray/NSArray+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/FoundationCategory/NSArray+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSBundle/NSBundle+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/FoundationCategory/NSBundle+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSBundle/NSBundle+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/FoundationCategory/NSBundle+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPCategory.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/FoundationCategory/NSObject+JPNavigationBar.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSObject/NSObject+JPNavigationBar.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/FoundationCategory/NSObject+JPNavigationBar.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIButton+JPImagePosition.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPImagePosition.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIButton+JPImagePosition.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPInitMethod.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIButton+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPInitMethod.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIButton+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIButton+JPRemoveHighlight.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIButton/UIButton+JPRemoveHighlight.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIButton+JPRemoveHighlight.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIColor/UIColor+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIColor+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIColor/UIColor+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIColor+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIImage+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIImage/UIImage+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIImage+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UILabel+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UILabel/UILabel+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UILabel+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIView+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIView/UIView+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIView+JPCategory.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIViewController/UIViewController+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIViewController+JPCategory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/UIViewController/UIViewController+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/UIKitCategory/UIViewController+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIButton+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UIButton+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIButton+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UIButton+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIButton+JPImagePosition.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UIButton+JPImagePosition.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIButton+JPImagePosition.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UIButton+JPImagePosition.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIButton+JPRemoveHighlight.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UIButton+JPRemoveHighlight.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIButton+JPRemoveHighlight.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UIButton+JPRemoveHighlight.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIColor+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UIColor+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIColor+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UIColor+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIImage+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UIImage+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIImage+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UIImage+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UILabel+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UILabel+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UILabel+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UILabel+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIView+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UIView+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIView+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UIView+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIViewController+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/UIViewController+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPUIKitCategory/UIViewController+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory/UIViewController+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSArray+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/NSArray+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSArray+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSArray+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSBundle+JPCategory.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/NSBundle+JPCategory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSBundle+JPCategory.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSBundle+JPCategory.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSObject+JPNavigationBar.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/Base/NSObject+JPNavigationBar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSObject+JPNavigationBar.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/NSCategory/NSObject+JPNavigationBar.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/xcuserdata/Dong.xcuserdatad/xcschemes/JPCategoryOCDemo.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/xcuserdata/Dong.xcuserdatad/xcschemes/JPCategoryOCDemo.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/AppDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/AppDelegate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/AppDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/AppDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/CenterViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/LeftViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/RightViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/SceneDelegate.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/SceneDelegate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/SceneDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/SceneDelegate.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/ViewController.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/ViewController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/ViewController.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/ViewController.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo/main.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo/main.m" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +55,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="JPCategoryOCDemo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
@@ -127,6 +96,7 @@
       <workItem from="1620356949354" duration="2653000" />
       <workItem from="1620371997929" duration="1755000" />
       <workItem from="1620442346349" duration="6117000" />
+      <workItem from="1620612898903" duration="1298000" />
     </task>
     <servers />
   </component>

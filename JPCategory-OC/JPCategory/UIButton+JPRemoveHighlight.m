@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2020/12/18.
 //
 
-#import "UIButton+JPRemoveHighlight.h"
+#import "../Base/UIButton+JPRemoveHighlight.h"
 #import "NSObject+JPSwizzledMethod.h"
 
 @implementation UIButton (JPRemoveHighlight)

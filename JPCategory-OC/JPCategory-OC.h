@@ -8,20 +8,19 @@
 #ifndef JPCategory_OC_h
 #define JPCategory_OC_h
 
-#import "Config/JPCategoryConfig.h"
+#import "Base/JPCategoryConfig.h"
 
-#import "JPUIKitCategory/UIView+JPCategory.h"
-#import "JPUIKitCategory/UIImage+JPCategory.h"
-#import "JPUIKitCategory/UIColor+JPCategory.h"
-#import "JPUIKitCategory/UIButton+JPCategory.h"
-#import "JPUIKitCategory/UIButton+JPImagePosition.h"
-#import "JPUIKitCategory/UIButton+JPRemoveHighlight.h"
-#import "JPUIKitCategory/UILabel+JPCategory.h"
-#import "JPUIKitCategory/UIViewController+JPCategory.h"
-
-#import "NSCategory/NSObject+JPNavigationBar.h"
-#import "NSCategory/NSBundle+JPCategory.h"
-#import "NSCategory/NSArray+JPCategory.h"
+#import "Base/UIView+JPCategory.h"
+#import "Base/UIImage+JPCategory.h"
+#import "Base/UIColor+JPCategory.h"
+#import "Base/UIButton+JPCategory.h"
+#import "Base/UIButton+JPImagePosition.h"
+#import "Base/UIButton+JPRemoveHighlight.h"
+#import "Base/UILabel+JPCategory.h"
+#import "Base/UIViewController+JPCategory.h"
+#import "Base/NSObject+JPNavigationBar.h"
+#import "Base/NSBundle+JPCategory.h"
+#import "Base/NSArray+JPCategory.h"
 
 #import "SwizzledMethod/NSObject+JPSwizzledMethod.h"
 #import "CrashGuard/NSArray+JPCrashGuard.h"

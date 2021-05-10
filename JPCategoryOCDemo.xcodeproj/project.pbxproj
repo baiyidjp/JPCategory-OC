@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2097A00B62EB1FF6E3287057 /* NSBundle+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097AFCE4BCFD57A5B4A6A57 /* NSBundle+JPCategory.m */; };
+		2097A28FA8832BB501699286 /* UIButton+JPRemoveHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097AEF99686E6DCF85B0CB3 /* UIButton+JPRemoveHighlight.m */; };
+		2097A2BB4B938A742FD3235D /* NSArray+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A7BDAB795A3A5CE7FBB9 /* NSArray+JPCategory.m */; };
 		2097A390C2FF6BF270E5317F /* JPCategoryConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A20FCD1DBC013744591E /* JPCategoryConfig.m */; };
-		F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */; };
-		F5081C0B25B8134E00A92C12 /* UIViewController+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */; };
+		2097A6112B7DCB07A367A818 /* UIColor+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A428A83C5C7033652558 /* UIColor+JPCategory.m */; };
+		2097A7F5D8F2D844AA4AB087 /* NSObject+JPNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097AD8EB232C0DD65DFDB7E /* NSObject+JPNavigationBar.m */; };
+		2097A88E29697C2262367EF1 /* UIView+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A4B9BEBCEE0EA0852B80 /* UIView+JPCategory.m */; };
+		2097ABDDE604C4FE1AA591A8 /* UIViewController+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097AB02E6BBA1667967F780 /* UIViewController+JPCategory.m */; };
+		2097AD6FFB890908A75C6D11 /* UIButton+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A6B5A7FC976E3296BC0C /* UIButton+JPCategory.m */; };
+		2097ADDA05175E3451F10A7B /* UIImage+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097AEC7F93C717FC069CD59 /* UIImage+JPCategory.m */; };
+		2097AF091745EECE1006A0CD /* UILabel+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097ADF8ECF4E4103EC7DCDA /* UILabel+JPCategory.m */; };
+		2097AFB39F0305F273F1096F /* UIButton+JPImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A5F4C7ABA6B49306A028 /* UIButton+JPImagePosition.m */; };
 		F5522BCD264634250034F8AB /* NSObject+JPSwizzledMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BCC264634250034F8AB /* NSObject+JPSwizzledMethod.m */; };
 		F5522BD0264638A70034F8AB /* CrashGuardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BCF264638A70034F8AB /* CrashGuardViewController.m */; };
 		F5522BD3264653990034F8AB /* NSArray+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BD2264653990034F8AB /* NSArray+JPCrashGuard.m */; };
@@ -17,13 +26,6 @@
 		F5522BD926465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */; };
 		F5522BDC264664440034F8AB /* NSDictionary+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */; };
 		F5522BDF26466FCF0034F8AB /* NSObject+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BDE26466FCF0034F8AB /* NSObject+JPCrashGuard.m */; };
-		F5522BE22646754D0034F8AB /* UIButton+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BE12646754D0034F8AB /* UIButton+JPCategory.m */; };
-		F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */; };
-		F5D1DD3525B0296900A7936F /* UIImage+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */; };
-		F5D1DD3925B0299400A7936F /* UIColor+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3825B0299400A7936F /* UIColor+JPCategory.m */; };
-		F5D1DD3D25B029CC00A7936F /* UIView+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD3C25B029CC00A7936F /* UIView+JPCategory.m */; };
-		F5D1DD4125B02B0900A7936F /* NSBundle+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD4025B02B0900A7936F /* NSBundle+JPCategory.m */; };
-		F5D1DD4525B02B4E00A7936F /* UILabel+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1DD4425B02B4E00A7936F /* UILabel+JPCategory.m */; };
 		F5DBAFF225918BCA0008D98F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBAFF125918BCA0008D98F /* AppDelegate.m */; };
 		F5DBAFF525918BCA0008D98F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBAFF425918BCA0008D98F /* SceneDelegate.m */; };
 		F5DBAFF825918BCA0008D98F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBAFF725918BCA0008D98F /* ViewController.m */; };
@@ -31,20 +33,36 @@
 		F5DBAFFD25918BCB0008D98F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DBAFFC25918BCB0008D98F /* Assets.xcassets */; };
 		F5DBB00025918BCB0008D98F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DBAFFE25918BCB0008D98F /* LaunchScreen.storyboard */; };
 		F5DBB00325918BCB0008D98F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB00225918BCB0008D98F /* main.m */; };
-		F5DBB01425918BEB0008D98F /* UIButton+JPImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */; };
-		F5DBB01525918BEB0008D98F /* UIButton+JPRemoveHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */; };
 		F5DBB0802591C1B70008D98F /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB07F2591C1B70008D98F /* CenterViewController.m */; };
 		F5DBB0842591C1C00008D98F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB0832591C1C00008D98F /* LeftViewController.m */; };
 		F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBB0872591C1C70008D98F /* RightViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2097A0E5BADB14E9B9995046 /* UILabel+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JPCategory.h"; sourceTree = "<group>"; };
+		2097A11047656F7E08C656F9 /* UIView+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JPCategory.h"; sourceTree = "<group>"; };
+		2097A18667FFA9B2D2A318EF /* UIViewController+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPCategory.h"; sourceTree = "<group>"; };
+		2097A1FBFE4064503184ADEB /* UIButton+JPImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPImagePosition.h"; sourceTree = "<group>"; };
 		2097A20FCD1DBC013744591E /* JPCategoryConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCategoryConfig.m; sourceTree = "<group>"; };
 		2097A38E34C7F7D6CF148291 /* JPCategoryConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCategoryConfig.h; sourceTree = "<group>"; };
-		F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPNavigationBar.h"; sourceTree = "<group>"; };
-		F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPNavigationBar.m"; sourceTree = "<group>"; };
-		F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JPCategory.h"; sourceTree = "<group>"; };
-		F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JPCategory.m"; sourceTree = "<group>"; };
+		2097A428A83C5C7033652558 /* UIColor+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JPCategory.m"; path = "JPCategory-OC/JPCategory/UIColor+JPCategory.m"; sourceTree = SOURCE_ROOT; };
+		2097A4B9BEBCEE0EA0852B80 /* UIView+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+JPCategory.m"; path = "JPCategory-OC/JPCategory/UIView+JPCategory.m"; sourceTree = SOURCE_ROOT; };
+		2097A5BD701D6FB1E967CC1C /* UIButton+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPCategory.h"; sourceTree = "<group>"; };
+		2097A5F4C7ABA6B49306A028 /* UIButton+JPImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+JPImagePosition.m"; path = "JPCategory-OC/JPCategory/UIButton+JPImagePosition.m"; sourceTree = SOURCE_ROOT; };
+		2097A6B5A7FC976E3296BC0C /* UIButton+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+JPCategory.m"; path = "JPCategory-OC/JPCategory/UIButton+JPCategory.m"; sourceTree = SOURCE_ROOT; };
+		2097A76BA4346F44A7E11AA2 /* UIColor+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JPCategory.h"; sourceTree = "<group>"; };
+		2097A7BDAB795A3A5CE7FBB9 /* NSArray+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+JPCategory.m"; path = "JPCategory-OC/NSCategory/NSArray+JPCategory.m"; sourceTree = SOURCE_ROOT; };
+		2097A9C9EB44B954F5921303 /* NSObject+JPNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPNavigationBar.h"; sourceTree = "<group>"; };
+		2097AA3586DEEE87008F19FC /* UIImage+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JPCategory.h"; sourceTree = "<group>"; };
+		2097AB02E6BBA1667967F780 /* UIViewController+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+JPCategory.m"; path = "JPCategory-OC/JPCategory/UIViewController+JPCategory.m"; sourceTree = SOURCE_ROOT; };
+		2097AD8EB232C0DD65DFDB7E /* NSObject+JPNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+JPNavigationBar.m"; path = "JPCategory-OC/NSCategory/NSObject+JPNavigationBar.m"; sourceTree = SOURCE_ROOT; };
+		2097ADF8ECF4E4103EC7DCDA /* UILabel+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+JPCategory.m"; path = "JPCategory-OC/JPCategory/UILabel+JPCategory.m"; sourceTree = SOURCE_ROOT; };
+		2097AE358E9ADEA53D11C01A /* UIButton+JPRemoveHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPRemoveHighlight.h"; sourceTree = "<group>"; };
+		2097AE3F0C57DB2661506E68 /* NSArray+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCategory.h"; sourceTree = "<group>"; };
+		2097AE6F03D0CE09BF54B1F7 /* NSBundle+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JPCategory.h"; sourceTree = "<group>"; };
+		2097AEC7F93C717FC069CD59 /* UIImage+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+JPCategory.m"; path = "JPCategory-OC/JPCategory/UIImage+JPCategory.m"; sourceTree = SOURCE_ROOT; };
+		2097AEF99686E6DCF85B0CB3 /* UIButton+JPRemoveHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+JPRemoveHighlight.m"; path = "JPCategory-OC/JPCategory/UIButton+JPRemoveHighlight.m"; sourceTree = SOURCE_ROOT; };
+		2097AFCE4BCFD57A5B4A6A57 /* NSBundle+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+JPCategory.m"; path = "JPCategory-OC/NSCategory/NSBundle+JPCategory.m"; sourceTree = SOURCE_ROOT; };
 		F5081C1E25B8356700A92C12 /* JPCategory-OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPCategory-OC.h"; sourceTree = "<group>"; };
 		F5522BCB264634250034F8AB /* NSObject+JPSwizzledMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPSwizzledMethod.h"; sourceTree = "<group>"; };
 		F5522BCC264634250034F8AB /* NSObject+JPSwizzledMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPSwizzledMethod.m"; sourceTree = "<group>"; };
@@ -60,20 +78,6 @@
 		F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JPCrashGuard.m"; sourceTree = "<group>"; };
 		F5522BDD26466FCF0034F8AB /* NSObject+JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPCrashGuard.h"; sourceTree = "<group>"; };
 		F5522BDE26466FCF0034F8AB /* NSObject+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPCrashGuard.m"; sourceTree = "<group>"; };
-		F5522BE02646754D0034F8AB /* UIButton+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPCategory.h"; sourceTree = "<group>"; };
-		F5522BE12646754D0034F8AB /* UIButton+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPCategory.m"; sourceTree = "<group>"; };
-		F5D1DD2F25B028DD00A7936F /* NSArray+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCategory.h"; sourceTree = "<group>"; };
-		F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JPCategory.m"; sourceTree = "<group>"; };
-		F5D1DD3325B0296900A7936F /* UIImage+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+JPCategory.h"; sourceTree = "<group>"; };
-		F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JPCategory.m"; sourceTree = "<group>"; };
-		F5D1DD3725B0299400A7936F /* UIColor+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JPCategory.h"; sourceTree = "<group>"; };
-		F5D1DD3825B0299400A7936F /* UIColor+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JPCategory.m"; sourceTree = "<group>"; };
-		F5D1DD3B25B029CC00A7936F /* UIView+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+JPCategory.h"; sourceTree = "<group>"; };
-		F5D1DD3C25B029CC00A7936F /* UIView+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+JPCategory.m"; sourceTree = "<group>"; };
-		F5D1DD3F25B02B0900A7936F /* NSBundle+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JPCategory.h"; sourceTree = "<group>"; };
-		F5D1DD4025B02B0900A7936F /* NSBundle+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+JPCategory.m"; sourceTree = "<group>"; };
-		F5D1DD4325B02B4E00A7936F /* UILabel+JPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+JPCategory.h"; sourceTree = "<group>"; };
-		F5D1DD4425B02B4E00A7936F /* UILabel+JPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JPCategory.m"; sourceTree = "<group>"; };
 		F5DBAFED25918BCA0008D98F /* JPCategoryOCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPCategoryOCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DBAFF025918BCA0008D98F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5DBAFF125918BCA0008D98F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,10 +90,6 @@
 		F5DBAFFF25918BCB0008D98F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5DBB00125918BCB0008D98F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5DBB00225918BCB0008D98F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F5DBB00C25918BEB0008D98F /* UIButton+JPRemoveHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPRemoveHighlight.h"; sourceTree = "<group>"; };
-		F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPImagePosition.m"; sourceTree = "<group>"; };
-		F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPRemoveHighlight.m"; sourceTree = "<group>"; };
-		F5DBB01125918BEB0008D98F /* UIButton+JPImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JPImagePosition.h"; sourceTree = "<group>"; };
 		F5DBB07E2591C1B60008D98F /* CenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CenterViewController.h; sourceTree = "<group>"; };
 		F5DBB07F2591C1B70008D98F /* CenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CenterViewController.m; sourceTree = "<group>"; };
 		F5DBB0822591C1C00008D98F /* LeftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -109,13 +109,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2097A1834BB548F1A70F71BE /* Config */ = {
+		2097A1834BB548F1A70F71BE /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				2097A20FCD1DBC013744591E /* JPCategoryConfig.m */,
 				2097A38E34C7F7D6CF148291 /* JPCategoryConfig.h */,
+				2097A4B9BEBCEE0EA0852B80 /* UIView+JPCategory.m */,
+				2097A428A83C5C7033652558 /* UIColor+JPCategory.m */,
+				2097AEF99686E6DCF85B0CB3 /* UIButton+JPRemoveHighlight.m */,
+				2097ADF8ECF4E4103EC7DCDA /* UILabel+JPCategory.m */,
+				2097AB02E6BBA1667967F780 /* UIViewController+JPCategory.m */,
+				2097A5F4C7ABA6B49306A028 /* UIButton+JPImagePosition.m */,
+				2097A6B5A7FC976E3296BC0C /* UIButton+JPCategory.m */,
+				2097AEC7F93C717FC069CD59 /* UIImage+JPCategory.m */,
+				2097A11047656F7E08C656F9 /* UIView+JPCategory.h */,
+				2097A18667FFA9B2D2A318EF /* UIViewController+JPCategory.h */,
+				2097A1FBFE4064503184ADEB /* UIButton+JPImagePosition.h */,
+				2097AA3586DEEE87008F19FC /* UIImage+JPCategory.h */,
+				2097AE358E9ADEA53D11C01A /* UIButton+JPRemoveHighlight.h */,
+				2097A0E5BADB14E9B9995046 /* UILabel+JPCategory.h */,
+				2097A5BD701D6FB1E967CC1C /* UIButton+JPCategory.h */,
+				2097A76BA4346F44A7E11AA2 /* UIColor+JPCategory.h */,
+				2097AFCE4BCFD57A5B4A6A57 /* NSBundle+JPCategory.m */,
+				2097AD8EB232C0DD65DFDB7E /* NSObject+JPNavigationBar.m */,
+				2097A7BDAB795A3A5CE7FBB9 /* NSArray+JPCategory.m */,
+				2097A9C9EB44B954F5921303 /* NSObject+JPNavigationBar.h */,
+				2097AE3F0C57DB2661506E68 /* NSArray+JPCategory.h */,
+				2097AE6F03D0CE09BF54B1F7 /* NSBundle+JPCategory.h */,
 			);
-			path = Config;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		F5522BC62646320D0034F8AB /* CrashGuard */ = {
@@ -142,42 +164,6 @@
 				F5522BCC264634250034F8AB /* NSObject+JPSwizzledMethod.m */,
 			);
 			path = SwizzledMethod;
-			sourceTree = "<group>";
-		};
-		F5522BE3264676490034F8AB /* NSCategory */ = {
-			isa = PBXGroup;
-			children = (
-				F5D1DD2F25B028DD00A7936F /* NSArray+JPCategory.h */,
-				F5D1DD3025B028DD00A7936F /* NSArray+JPCategory.m */,
-				F5D1DD3F25B02B0900A7936F /* NSBundle+JPCategory.h */,
-				F5D1DD4025B02B0900A7936F /* NSBundle+JPCategory.m */,
-				F5081BC725B6BF1800A92C12 /* NSObject+JPNavigationBar.h */,
-				F5081BC825B6BF1800A92C12 /* NSObject+JPNavigationBar.m */,
-			);
-			path = NSCategory;
-			sourceTree = "<group>";
-		};
-		F5522BE4264676590034F8AB /* JPUIKitCategory */ = {
-			isa = PBXGroup;
-			children = (
-				F5522BE02646754D0034F8AB /* UIButton+JPCategory.h */,
-				F5522BE12646754D0034F8AB /* UIButton+JPCategory.m */,
-				F5DBB01125918BEB0008D98F /* UIButton+JPImagePosition.h */,
-				F5DBB00D25918BEB0008D98F /* UIButton+JPImagePosition.m */,
-				F5DBB00C25918BEB0008D98F /* UIButton+JPRemoveHighlight.h */,
-				F5DBB01025918BEB0008D98F /* UIButton+JPRemoveHighlight.m */,
-				F5D1DD3725B0299400A7936F /* UIColor+JPCategory.h */,
-				F5D1DD3825B0299400A7936F /* UIColor+JPCategory.m */,
-				F5D1DD3325B0296900A7936F /* UIImage+JPCategory.h */,
-				F5D1DD3425B0296900A7936F /* UIImage+JPCategory.m */,
-				F5D1DD4325B02B4E00A7936F /* UILabel+JPCategory.h */,
-				F5D1DD4425B02B4E00A7936F /* UILabel+JPCategory.m */,
-				F5D1DD3B25B029CC00A7936F /* UIView+JPCategory.h */,
-				F5D1DD3C25B029CC00A7936F /* UIView+JPCategory.m */,
-				F5081C0925B8134E00A92C12 /* UIViewController+JPCategory.h */,
-				F5081C0A25B8134E00A92C12 /* UIViewController+JPCategory.m */,
-			);
-			path = JPUIKitCategory;
 			sourceTree = "<group>";
 		};
 		F5DBAFE425918BCA0008D98F = {
@@ -226,12 +212,10 @@
 		F5DBB00A25918BEB0008D98F /* JPCategory-OC */ = {
 			isa = PBXGroup;
 			children = (
-				F5522BE4264676590034F8AB /* JPUIKitCategory */,
-				F5522BE3264676490034F8AB /* NSCategory */,
 				F5522BCA264633F90034F8AB /* SwizzledMethod */,
 				F5522BC62646320D0034F8AB /* CrashGuard */,
 				F5081C1E25B8356700A92C12 /* JPCategory-OC.h */,
-				2097A1834BB548F1A70F71BE /* Config */,
+				2097A1834BB548F1A70F71BE /* Base */,
 			);
 			path = "JPCategory-OC";
 			sourceTree = SOURCE_ROOT;
@@ -305,32 +289,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5081C0B25B8134E00A92C12 /* UIViewController+JPCategory.m in Sources */,
 				F5522BD0264638A70034F8AB /* CrashGuardViewController.m in Sources */,
 				F5DBB0842591C1C00008D98F /* LeftViewController.m in Sources */,
 				F5522BCD264634250034F8AB /* NSObject+JPSwizzledMethod.m in Sources */,
 				F5DBAFF825918BCA0008D98F /* ViewController.m in Sources */,
-				F5D1DD3125B028DD00A7936F /* NSArray+JPCategory.m in Sources */,
 				F5522BD3264653990034F8AB /* NSArray+JPCrashGuard.m in Sources */,
 				F5522BDF26466FCF0034F8AB /* NSObject+JPCrashGuard.m in Sources */,
-				F5D1DD3925B0299400A7936F /* UIColor+JPCategory.m in Sources */,
 				F5DBB0802591C1B70008D98F /* CenterViewController.m in Sources */,
-				F5D1DD4525B02B4E00A7936F /* UILabel+JPCategory.m in Sources */,
-				F5DBB01425918BEB0008D98F /* UIButton+JPImagePosition.m in Sources */,
 				F5522BD62646545D0034F8AB /* NSMutableArray+JPCrashGuard.m in Sources */,
-				F5522BE22646754D0034F8AB /* UIButton+JPCategory.m in Sources */,
 				F5DBAFF225918BCA0008D98F /* AppDelegate.m in Sources */,
-				F5D1DD3525B0296900A7936F /* UIImage+JPCategory.m in Sources */,
 				F5522BD926465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m in Sources */,
 				F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */,
 				F5522BDC264664440034F8AB /* NSDictionary+JPCrashGuard.m in Sources */,
 				F5DBB00325918BCB0008D98F /* main.m in Sources */,
-				F5081BC925B6BF1800A92C12 /* NSObject+JPNavigationBar.m in Sources */,
-				F5DBB01525918BEB0008D98F /* UIButton+JPRemoveHighlight.m in Sources */,
-				F5D1DD3D25B029CC00A7936F /* UIView+JPCategory.m in Sources */,
-				F5D1DD4125B02B0900A7936F /* NSBundle+JPCategory.m in Sources */,
 				F5DBAFF525918BCA0008D98F /* SceneDelegate.m in Sources */,
 				2097A390C2FF6BF270E5317F /* JPCategoryConfig.m in Sources */,
+				2097A88E29697C2262367EF1 /* UIView+JPCategory.m in Sources */,
+				2097A6112B7DCB07A367A818 /* UIColor+JPCategory.m in Sources */,
+				2097A28FA8832BB501699286 /* UIButton+JPRemoveHighlight.m in Sources */,
+				2097AF091745EECE1006A0CD /* UILabel+JPCategory.m in Sources */,
+				2097ABDDE604C4FE1AA591A8 /* UIViewController+JPCategory.m in Sources */,
+				2097AFB39F0305F273F1096F /* UIButton+JPImagePosition.m in Sources */,
+				2097AD6FFB890908A75C6D11 /* UIButton+JPCategory.m in Sources */,
+				2097ADDA05175E3451F10A7B /* UIImage+JPCategory.m in Sources */,
+				2097A00B62EB1FF6E3287057 /* NSBundle+JPCategory.m in Sources */,
+				2097A7F5D8F2D844AA4AB087 /* NSObject+JPNavigationBar.m in Sources */,
+				2097A2BB4B938A742FD3235D /* NSArray+JPCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/1/14.
 //
 
-#import "UIColor+JPCategory.h"
+#import "../Base/UIColor+JPCategory.h"
 
 @implementation UIColor (JPCategory)
 

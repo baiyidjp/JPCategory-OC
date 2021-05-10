@@ -10,7 +10,7 @@ static char kActionHandlerTapGestureKey;
 static char kActionHandlerLongPressBlockKey;
 static char kActionHandlerLongPressGestureKey;
 
-#import "UIView+JPCategory.h"
+#import "../Base/UIView+JPCategory.h"
 #import <objc/runtime.h>
 
 @implementation UIView (JPCategory)
