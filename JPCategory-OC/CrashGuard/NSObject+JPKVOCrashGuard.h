@@ -2,7 +2,7 @@
 //  NSObject+JPKVOCrashGuard.h
 //  JPCategoryOCDemo
 //
-//  Created by SteyDong on 2021/5/10.
+//  Created by baiyidjp on 2021/5/10.
 //
 
 #import <Foundation/Foundation.h>

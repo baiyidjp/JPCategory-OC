@@ -27,7 +27,7 @@
         id key = keys[i];
         id obj = objects[i];
         if (obj == nil || key == nil) {
-            NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - initWithObjects:forKeys:count: attempt to insert nil object from objects[%zd]", i];
+            NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - initWithObjects:forKeys:count: attempt to insert nil object from objects[%zd]", i];
             #ifdef DEBUG
             NSAssert((obj != nil && key != nil), errorString);
             #else

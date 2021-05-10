@@ -26,7 +26,7 @@
 - (void)jp_setObject:(id)anObject forKey:(id <NSCopying>)aKey {
 
     if (aKey == nil) {
-        NSString *errorString = @"Crash⚠️ - setObject:forKey: key cannot be nil";
+        NSString *errorString = @"CrashGuard⚠️ - setObject:forKey: key cannot be nil";
         #ifdef DEBUG
         NSAssert(aKey != nil, errorString);
         #else
@@ -36,7 +36,7 @@
     }
     
     if (anObject == nil) {
-        NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - setObject:forKey: object cannot be nil (key: %@)", aKey];
+        NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - setObject:forKey: object cannot be nil (key: %@)", aKey];
         #ifdef DEBUG
         NSAssert(anObject != nil, errorString);
         #else
@@ -51,7 +51,7 @@
 - (void)jp_setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key {
     
     if (key == nil) {
-        NSString *errorString = @"Crash⚠️ - setObject:forKeyedSubscript: key cannot be nil";
+        NSString *errorString = @"CrashGuard⚠️ - setObject:forKeyedSubscript: key cannot be nil";
         #ifdef DEBUG
         NSAssert(key != nil, errorString);
         #else
@@ -66,7 +66,7 @@
 - (id)jp_objectForKeyedSubscript:(id)key {
     
     if (key == nil) {
-        NSString *errorString = @"Crash⚠️ - objectForKeyedSubscript: key cannot be nil";
+        NSString *errorString = @"CrashGuard⚠️ - objectForKeyedSubscript: key cannot be nil";
         #ifdef DEBUG
         NSAssert(key != nil, errorString);
         #else

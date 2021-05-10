@@ -2,7 +2,7 @@
 //  NSObject+JPMsgSendCrashGuard.m
 //  JPCategoryOCDemo
 //
-//  Created by SteyDong on 2021/5/10.
+//  Created by baiyidjp on 2021/5/10.
 //
 
 #import "NSObject+JPMsgSendCrashGuard.h"
@@ -49,7 +49,7 @@
 //        NSLog(@"instance %@ rootMethodSignatureIMP: %p, currentMethodSignatureIMP: %p",self, rootMethodSignatureIMP, currentMethodSignatureIMP);
         // 如果没有重写，则转发到自定义的类上，防止crash
         if (!isRealizeMethodSignature) {
-            NSString *errorString = [NSString stringWithFormat:@"Crash⚠️  -[%@ %@]: unrecognized selector sent to instance %p", NSStringFromClass([self class]), NSStringFromSelector(aSelector), self];
+            NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️  -[%@ %@]: unrecognized selector sent to instance %p", NSStringFromClass([self class]), NSStringFromSelector(aSelector), self];
             #ifdef DEBUG
             NSAssert(isRealizeMethodSignature, errorString);
             #else
@@ -103,7 +103,7 @@
 //        NSLog(@"class %@ rootMethodSignatureIMP: %p, currentMethodSignatureIMP: %p",self, rootMethodSignatureIMP, currentMethodSignatureIMP);
         // 如果没有重写，则转发到自定义的类上，防止crash
         if (!isRealizeMethodSignature) {
-            NSString *errorString = [NSString stringWithFormat:@"Crash⚠️  +[%@ %@]: unrecognized selector sent to class %p", NSStringFromClass([self class]), NSStringFromSelector(aSelector), [self class]];
+            NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️  +[%@ %@]: unrecognized selector sent to class %p", NSStringFromClass([self class]), NSStringFromSelector(aSelector), [self class]];
             #ifdef DEBUG
             NSAssert(isRealizeMethodSignature, errorString);
             #else

@@ -25,7 +25,7 @@
 - (void)jp_insertObject:(id)anObject atIndex:(NSUInteger)index {
 
     if (!anObject) {
-        NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - insertObject️: object cannot be nil (index: %zd)", index];
+        NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - insertObject️: object cannot be nil (index: %zd)", index];
         #ifdef DEBUG
         NSAssert(anObject != nil, errorString);
         #else
@@ -35,9 +35,9 @@
     }
     
     if (index > self.count) {
-        NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - insertObject️: index %zd beyond bounds [0 .. %zd]", index, self.count-1];
+        NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - insertObject️: index %zd beyond bounds [0 .. %zd]", index, self.count-1];
         if (self.count == 0) {
-            errorString = [NSString stringWithFormat:@"Crash⚠️ - insertObject️: index %zd beyond bounds for empty array", index];
+            errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - insertObject️: index %zd beyond bounds for empty array", index];
         }
         #ifdef DEBUG
         NSAssert(index <= self.count, errorString);
@@ -54,7 +54,7 @@
 - (void)jp_insertObjects:(NSArray *)objects atIndexes:(NSIndexSet *)indexes {
  
     if (objects.count != indexes.count) {
-        NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - insertObjects: count of array (%zd) differs from count of index set (%zd)", objects.count, indexes.count];
+        NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - insertObjects: count of array (%zd) differs from count of index set (%zd)", objects.count, indexes.count];
         #ifdef DEBUG
         NSAssert(objects.count == indexes.count, errorString);
         #else
@@ -64,9 +64,9 @@
     }
     
     if (indexes.lastIndex >= (self.count + indexes.count)) {
-        NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - insertObjects: index %zd in index set beyond bounds [0 .. %zd]", indexes.lastIndex, indexes.count+self.count-1];
+        NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - insertObjects: index %zd in index set beyond bounds [0 .. %zd]", indexes.lastIndex, indexes.count+self.count-1];
         if (self.count == 0) {
-            errorString = [NSString stringWithFormat:@"Crash⚠️ - objectAtIndex: index %zd beyond bounds for empty array", indexes.lastIndex];
+            errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectAtIndex: index %zd beyond bounds for empty array", indexes.lastIndex];
         }
         #ifdef DEBUG
         NSAssert(indexes.lastIndex < (self.count + indexes.count), errorString);
@@ -83,9 +83,9 @@
 - (id)jp_objectAtIndex:(NSUInteger)index {
     
     if (index >= self.count) {
-        NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - objectAtIndex: index %zd beyond bounds [0 .. %zd]", index, self.count-1];
+        NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectAtIndex: index %zd beyond bounds [0 .. %zd]", index, self.count-1];
         if (self.count == 0) {
-            errorString = [NSString stringWithFormat:@"Crash⚠️ - objectAtIndex: index %zd beyond bounds for empty array", index];
+            errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectAtIndex: index %zd beyond bounds for empty array", index];
         }
         #ifdef DEBUG
         NSAssert(index < self.count, errorString);
@@ -101,9 +101,9 @@
 - (id)jp_objectAtIndexedSubscript:(NSUInteger)idx {
 
     if (idx >= self.count) {
-        NSString *errorString = [NSString stringWithFormat:@"Crash⚠️ - objectAtIndexedSubscript: index %zd beyond bounds [0 .. %zd]", idx, self.count-1];
+        NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectAtIndexedSubscript: index %zd beyond bounds [0 .. %zd]", idx, self.count-1];
         if (self.count == 0) {
-            errorString = [NSString stringWithFormat:@"Crash⚠️ - objectAtIndexedSubscript: index %zd beyond bounds for empty array", idx];
+            errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectAtIndexedSubscript: index %zd beyond bounds for empty array", idx];
         }
         #ifdef DEBUG
         NSAssert(idx < self.count, errorString);
