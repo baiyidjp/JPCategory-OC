@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f243fbb-2dce-4211-b602-2d5afbb20ae8" name="默认的" comment="默认的">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSObject+JPMsgSendCrashGuard.m" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/CrashGuard/NSObject+JPMsgSendCrashGuard.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategory-OC/JPCategory-OC.h" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC/JPCategory-OC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategoryOCDemo.xcodeproj/project.xcworkspace/xcuserdata/Dong.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JPCategory-OC.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/JPCategory-OC.podspec" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <workItem from="1620371997929" duration="1755000" />
       <workItem from="1620442346349" duration="6117000" />
       <workItem from="1620612898903" duration="4042000" />
-      <workItem from="1620625215219" duration="6342000" />
+      <workItem from="1620625215219" duration="7025000" />
     </task>
     <servers />
   </component>

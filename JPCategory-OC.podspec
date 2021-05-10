@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   #Config
   s.subspec 'Config' do |ss|
-  ss.source_files = "JPCategory-OC/Base/JPCategory+Config.{h,m}"
+  ss.source_files = "JPCategory-OC/Base/JPCategoryConfig.{h,m}"
   end
 
   #SwizzledMethod
