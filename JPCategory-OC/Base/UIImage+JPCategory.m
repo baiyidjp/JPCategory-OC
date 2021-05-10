@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/1/14.
 //
 
-#import "../Base/UIImage+JPCategory.h"
+#import "UIImage+JPCategory.h"
 
 @implementation UIImage (JPCategory)
 

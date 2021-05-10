@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/1/19.
 //
 
-#import "../Base/NSObject+JPNavigationBar.h"
+#import "NSObject+JPNavigationBar.h"
 #import "NSObject+JPSwizzledMethod.h"
 #import "JPCategoryConfig.h"
 

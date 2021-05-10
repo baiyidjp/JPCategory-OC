@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/1/20.
 //
 
-#import "../Base/UIViewController+JPCategory.h"
+#import "UIViewController+JPCategory.h"
 #import "objc/runtime.h"
 
 @implementation UIViewController (JPCategory)

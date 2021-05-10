@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JPCategory-OC"
-  s.version      = "2.0.1"
+  s.version      = "2.1.0"
   s.summary      = "views categories."
   s.homepage     = "https://github.com/baiyidjp/JPCategory-OC"
   s.license      = "MIT"
@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   #Base
   s.subspec 'Base' do |ss|
   ss.source_files = "JPCategory-OC/Base/*.{h,m}"
+  ss.dependency 'JPCategory-OC/SwizzledMethod'
   end
 
   #Config

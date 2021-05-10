@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/1/14.
 //
 
-#import "../Base/UILabel+JPCategory.h"
+#import "UILabel+JPCategory.h"
 #import "JPCategoryConfig.h"
 
 @implementation UILabel (JPCategory)

@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2020/12/18.
 //
 
-#import "../Base/UIButton+JPImagePosition.h"
+#import "UIButton+JPImagePosition.h"
 #import <objc/runtime.h>
 
 #define TitleKeyPath @"titleLabel.text"

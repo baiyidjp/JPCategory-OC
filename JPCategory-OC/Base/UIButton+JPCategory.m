@@ -5,7 +5,7 @@
 //  Created by baiyidjp on 2021/5/8.
 //
 
-#import "../Base/UIButton+JPCategory.h"
+#import "UIButton+JPCategory.h"
 
 @implementation UIButton (JPCategory)
 
