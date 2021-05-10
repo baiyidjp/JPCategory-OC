@@ -20,13 +20,13 @@
 
 - (NSArray *)jp_objectsAtIndexes:(NSIndexSet *)indexes {
     
-    if (indexes.lastIndex >= (self.count + indexes.count)) {
+    if (indexes.lastIndex >= self.count) {
         NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectsAtIndexes: index %zd in index set beyond bounds [0 .. %zd]", indexes.lastIndex, indexes.count+self.count-1];
         if (self.count == 0) {
             errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectAtIndex: index %zd beyond bounds for empty array", indexes.lastIndex];
         }
         #ifdef DEBUG
-        NSAssert(indexes.lastIndex < (self.count + indexes.count), errorString);
+        NSAssert(indexes.lastIndex < self.count, errorString);
         #else
         NSLog(@"%@", errorString);
         return @[];
