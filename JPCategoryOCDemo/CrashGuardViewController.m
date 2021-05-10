@@ -68,7 +68,11 @@
 - (IBAction)unrecognized:(id)sender {
     
     JPObjcClass *objc = [[JPObjcClass alloc] init];
+    NSLog(@"%p", objc);
     [objc test];
+    
+    NSLog(@"%p", [JPObjcClass class]);
+    [JPObjcClass testM];
 }
 
 - (NSMutableArray *)mutableArray {
@@ -93,5 +97,15 @@
 
 @implementation JPObjcClass
 
+//+ (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+//
+//    NSLog(@"___methodSignatureForSelector");
+//    return [NSMethodSignature signatureWithObjCTypes:"v@:"];
+//}
+//
+//+ (void)forwardInvocation:(NSInvocation *)anInvocation {
+//
+//    NSLog(@"forwardInvocation");
+//}
 
 @end
