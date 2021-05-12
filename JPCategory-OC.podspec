@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JPCategory-OC"
-  s.version      = "2.1.3"
+  s.version      = "2.1.5"
   s.summary      = "views categories."
   s.homepage     = "https://github.com/baiyidjp/JPCategory-OC"
   s.license      = "MIT"
@@ -33,18 +33,6 @@ Pod::Spec.new do |s|
   #CrashGuard
   s.subspec 'CrashGuard' do |ss|
   ss.source_files = "JPCategory-OC/CrashGuard/*.{h,m}"
-  ss.dependency 'JPCategory-OC/SwizzledMethod'
-  end
-
-  #ArrayCrashGuard
-  s.subspec 'ArrayCrashGuard' do |ss|
-  ss.source_files = "JPCategory-OC/CrashGuard/Array/*.{h,m}"
-  ss.dependency 'JPCategory-OC/SwizzledMethod'
-  end
-
-  #DictionaryCrashGuard
-  s.subspec 'DictionaryCrashGuard' do |ss|
-  ss.source_files = "JPCategory-OC/CrashGuard/Dictionary/*.{h,m}"
   ss.dependency 'JPCategory-OC/SwizzledMethod'
   end
 

@@ -137,33 +137,17 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		F51EF457264BAF54002B8134 /* Array */ = {
+		F5522BC62646320D0034F8AB /* CrashGuard */ = {
 			isa = PBXGroup;
 			children = (
 				F5522BD42646545D0034F8AB /* NSMutableArray+JPCrashGuard.h */,
 				F5522BD52646545D0034F8AB /* NSMutableArray+JPCrashGuard.m */,
 				F5522BD1264653990034F8AB /* NSArray+JPCrashGuard.h */,
 				F5522BD2264653990034F8AB /* NSArray+JPCrashGuard.m */,
-			);
-			path = Array;
-			sourceTree = "<group>";
-		};
-		F51EF458264BAF5A002B8134 /* Dictionary */ = {
-			isa = PBXGroup;
-			children = (
 				F5522BD726465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.h */,
 				F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */,
 				F5522BDA264664440034F8AB /* NSDictionary+JPCrashGuard.h */,
 				F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */,
-			);
-			path = Dictionary;
-			sourceTree = "<group>";
-		};
-		F5522BC62646320D0034F8AB /* CrashGuard */ = {
-			isa = PBXGroup;
-			children = (
-				F51EF458264BAF5A002B8134 /* Dictionary */,
-				F51EF457264BAF54002B8134 /* Array */,
 			);
 			path = CrashGuard;
 			sourceTree = "<group>";
