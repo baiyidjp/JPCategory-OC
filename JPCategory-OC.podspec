@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JPCategory-OC"
-  s.version      = "2.1.1"
+  s.version      = "2.1.2"
   s.summary      = "views categories."
   s.homepage     = "https://github.com/baiyidjp/JPCategory-OC"
   s.license      = "MIT"

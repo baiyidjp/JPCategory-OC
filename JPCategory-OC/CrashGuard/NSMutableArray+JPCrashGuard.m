@@ -63,7 +63,7 @@
         #endif
     }
     
-    if (indexes.lastIndex >= (self.count + indexes.count)) {
+    if (indexes.count > 0 && indexes.lastIndex >= (self.count + indexes.count)) {
         NSString *errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - insertObjects: index %zd in index set beyond bounds [0 .. %zd]", indexes.lastIndex, indexes.count+self.count-1];
         if (self.count == 0) {
             errorString = [NSString stringWithFormat:@"CrashGuard⚠️ - objectAtIndex: index %zd beyond bounds for empty array", indexes.lastIndex];

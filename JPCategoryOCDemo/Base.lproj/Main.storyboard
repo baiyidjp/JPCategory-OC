@@ -170,6 +170,12 @@
                                     <action selector="unrecognized:" destination="TmJ-Au-O2X" eventType="touchUpInside" id="XMf-cC-mir"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ps9-kV-Qml">
+                                <rect key="frame" x="20" y="409" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yie-pW-KjZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
