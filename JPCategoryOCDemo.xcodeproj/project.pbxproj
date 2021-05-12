@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2097A390C2FF6BF270E5317F /* JPCategoryConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2097A20FCD1DBC013744591E /* JPCategoryConfig.m */; };
-		F51EF41E26491573002B8134 /* NSObject+JPMsgSendCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EF41D26491573002B8134 /* NSObject+JPMsgSendCrashGuard.m */; };
 		F51EF42326491F54002B8134 /* NSArray+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EF42226491F54002B8134 /* NSArray+JPCategory.m */; };
 		F51EF42E26491F62002B8134 /* UIButton+JPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EF42426491F62002B8134 /* UIButton+JPCategory.m */; };
 		F51EF42F26491F62002B8134 /* UIButton+JPImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EF42526491F62002B8134 /* UIButton+JPImagePosition.m */; };
@@ -53,8 +52,6 @@
 		2097AE3F0C57DB2661506E68 /* NSArray+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JPCategory.h"; sourceTree = "<group>"; };
 		2097AE6F03D0CE09BF54B1F7 /* NSBundle+JPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+JPCategory.h"; sourceTree = "<group>"; };
 		F5081C1E25B8356700A92C12 /* JPCategory-OC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPCategory-OC.h"; sourceTree = "<group>"; };
-		F51EF41C26491573002B8134 /* NSObject+JPMsgSendCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+JPMsgSendCrashGuard.h"; sourceTree = "<group>"; };
-		F51EF41D26491573002B8134 /* NSObject+JPMsgSendCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JPMsgSendCrashGuard.m"; sourceTree = "<group>"; };
 		F51EF42226491F54002B8134 /* NSArray+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JPCategory.m"; sourceTree = "<group>"; };
 		F51EF42426491F62002B8134 /* UIButton+JPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPCategory.m"; sourceTree = "<group>"; };
 		F51EF42526491F62002B8134 /* UIButton+JPImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JPImagePosition.m"; sourceTree = "<group>"; };
@@ -140,19 +137,33 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		F51EF457264BAF54002B8134 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				F5522BD42646545D0034F8AB /* NSMutableArray+JPCrashGuard.h */,
+				F5522BD52646545D0034F8AB /* NSMutableArray+JPCrashGuard.m */,
+				F5522BD1264653990034F8AB /* NSArray+JPCrashGuard.h */,
+				F5522BD2264653990034F8AB /* NSArray+JPCrashGuard.m */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		F51EF458264BAF5A002B8134 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				F5522BD726465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.h */,
+				F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */,
+				F5522BDA264664440034F8AB /* NSDictionary+JPCrashGuard.h */,
+				F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
 		F5522BC62646320D0034F8AB /* CrashGuard */ = {
 			isa = PBXGroup;
 			children = (
-				F5522BD1264653990034F8AB /* NSArray+JPCrashGuard.h */,
-				F5522BD2264653990034F8AB /* NSArray+JPCrashGuard.m */,
-				F5522BDA264664440034F8AB /* NSDictionary+JPCrashGuard.h */,
-				F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */,
-				F5522BD42646545D0034F8AB /* NSMutableArray+JPCrashGuard.h */,
-				F5522BD52646545D0034F8AB /* NSMutableArray+JPCrashGuard.m */,
-				F5522BD726465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.h */,
-				F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */,
-				F51EF41C26491573002B8134 /* NSObject+JPMsgSendCrashGuard.h */,
-				F51EF41D26491573002B8134 /* NSObject+JPMsgSendCrashGuard.m */,
+				F51EF458264BAF5A002B8134 /* Dictionary */,
+				F51EF457264BAF54002B8134 /* Array */,
 			);
 			path = CrashGuard;
 			sourceTree = "<group>";
@@ -313,7 +324,6 @@
 				F51EF43126491F62002B8134 /* UIImage+JPCategory.m in Sources */,
 				F51EF43526491F62002B8134 /* UILabel+JPCategory.m in Sources */,
 				2097A390C2FF6BF270E5317F /* JPCategoryConfig.m in Sources */,
-				F51EF41E26491573002B8134 /* NSObject+JPMsgSendCrashGuard.m in Sources */,
 				F51EF43026491F62002B8134 /* UIColor+JPCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
