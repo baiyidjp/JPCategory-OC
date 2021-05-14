@@ -59,13 +59,25 @@
     [button4 jp_buttonImagePosition:JPButtonImagePosition_Top margin:10];
     [scrollView addSubview:button4];
     
-    UIButton *button5 = [UIButton jp_buttonWithNormalTitle:@"垂直居中-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button4.frame) + 10, 350, 80)];
+    UIButton *button41 = [UIButton jp_buttonWithNormalTitle:@"垂直居中-图片居上-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button4.frame) + 10, 50, 10)];
+    button41.backgroundColor = [UIColor blackColor];
+    button41.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [button41 jp_buttonImagePosition:JPButtonImagePosition_Top margin:10];
+    [scrollView addSubview:button41];
+    
+    UIButton *button5 = [UIButton jp_buttonWithNormalTitle:@"垂直居中-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button41.frame) + 10, 350, 80)];
     button5.backgroundColor = [UIColor blackColor];
     button5.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [button5 jp_buttonImagePosition:JPButtonImagePosition_Bottom margin:10];
     [scrollView addSubview:button5];
     
-    UIButton *button60 = [UIButton jp_buttonWithNormalTitle:@"垂直居上-默认图片居左-间距0" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button5.frame) + 10, 350, 50)];
+    UIButton *button51 = [UIButton jp_buttonWithNormalTitle:@"垂直居中-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button5.frame) + 10, 50, 10)];
+    button51.backgroundColor = [UIColor blackColor];
+    button51.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [button51 jp_buttonImagePosition:JPButtonImagePosition_Bottom margin:10];
+    [scrollView addSubview:button51];
+    
+    UIButton *button60 = [UIButton jp_buttonWithNormalTitle:@"垂直居上-默认图片居左-间距0" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button51.frame) + 10, 350, 50)];
     button60.backgroundColor = [UIColor blackColor];
     button60.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     button60.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
@@ -91,15 +103,29 @@
     button8.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
     [button8 jp_buttonImagePosition:JPButtonImagePosition_Top margin:10];
     [scrollView addSubview:button8];
+    
+    UIButton *button81 = [UIButton jp_buttonWithNormalTitle:@"垂直居上-图片居上-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button8.frame) + 10, 50, 10)];
+    button81.backgroundColor = [UIColor blackColor];
+    button81.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    button81.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
+    [button81 jp_buttonImagePosition:JPButtonImagePosition_Top margin:10];
+    [scrollView addSubview:button81];
 
-    UIButton *button9 = [UIButton jp_buttonWithNormalTitle:@"垂直居上-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button8.frame) + 10, 350, 80)];
+    UIButton *button9 = [UIButton jp_buttonWithNormalTitle:@"垂直居上-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button81.frame) + 10, 350, 80)];
     button9.backgroundColor = [UIColor blackColor];
     button9.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     button9.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
     [button9 jp_buttonImagePosition:JPButtonImagePosition_Bottom margin:10];
     [scrollView addSubview:button9];
     
-    UIButton *button10 = [UIButton jp_buttonWithNormalTitle:@"垂直居下-默认图片居左-间距0" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button9.frame) + 10, 350, 50)];
+    UIButton *button91 = [UIButton jp_buttonWithNormalTitle:@"垂直居上-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button9.frame) + 10, 50, 10)];
+    button91.backgroundColor = [UIColor blackColor];
+    button91.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    button91.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
+    [button91 jp_buttonImagePosition:JPButtonImagePosition_Bottom margin:10];
+    [scrollView addSubview:button91];
+    
+    UIButton *button10 = [UIButton jp_buttonWithNormalTitle:@"垂直居下-默认图片居左-间距0" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button91.frame) + 10, 350, 50)];
     button10.backgroundColor = [UIColor blackColor];
     button10.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     button10.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
@@ -125,15 +151,29 @@
     button13.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [button13 jp_buttonImagePosition:JPButtonImagePosition_Top margin:10];
     [scrollView addSubview:button13];
+    
+    UIButton *button131 = [UIButton jp_buttonWithNormalTitle:@"垂直居下-图片居上-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button13.frame) + 10, 50, 10)];
+    button131.backgroundColor = [UIColor blackColor];
+    button131.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    button131.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
+    [button131 jp_buttonImagePosition:JPButtonImagePosition_Top margin:10];
+    [scrollView addSubview:button131];
 
-    UIButton *button14 = [UIButton jp_buttonWithNormalTitle:@"垂直居下-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button13.frame) + 10, 350, 80)];
+    UIButton *button14 = [UIButton jp_buttonWithNormalTitle:@"垂直居下-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button131.frame) + 10, 350, 80)];
     button14.backgroundColor = [UIColor blackColor];
     button14.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     button14.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
     [button14 jp_buttonImagePosition:JPButtonImagePosition_Bottom margin:10];
     [scrollView addSubview:button14];
     
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, CGRectGetMaxY(button14.frame));
+    UIButton *button141 = [UIButton jp_buttonWithNormalTitle:@"垂直居下-图片居下-间距10" titleFont:[UIFont systemFontOfSize:15] normalTitleColor:[UIColor whiteColor] normalImage:[UIImage imageNamed:@"icon_coin24"] frame:CGRectMake(20, CGRectGetMaxY(button14.frame) + 10, 350, 80)];
+    button141.backgroundColor = [UIColor blackColor];
+    button141.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    button141.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
+    [button141 jp_buttonImagePosition:JPButtonImagePosition_Bottom margin:10];
+    [scrollView addSubview:button141];
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, CGRectGetMaxY(button141.frame));
 }
 
 /*
