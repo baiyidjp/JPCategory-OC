@@ -81,6 +81,10 @@ NS_ASSUME_NONNULL_BEGIN
   */
 - (void)jp_asyncRoundImageWithSize:(CGSize)size cornerRadius:(CGFloat)cornerRadius borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor completion:(void (^)(UIImage *))completion;
 
+- (UIImage *)jp_compress;
+
+- (UIImage *)jp_compressWithBoundary:(CGFloat)boundary smallBoundary:(CGFloat)smallBoundary compression:(CGFloat)compression;
+
 @end
 
 NS_ASSUME_NONNULL_END

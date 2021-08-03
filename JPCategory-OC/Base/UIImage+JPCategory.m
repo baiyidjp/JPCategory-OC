@@ -157,4 +157,63 @@
     
 }
 
+- (UIImage *)jp_compress {
+    
+    return [self jp_compressWithBoundary:1920 smallBoundary:1080 compression:0.5];
+}
+
+- (UIImage *)jp_compressWithBoundary:(CGFloat)boundary smallBoundary:(CGFloat)smallBoundary compression:(CGFloat)compression {
+    
+    CGFloat imageWidth = self.size.width;
+    CGFloat imageHeight = self.size.height;
+    CGFloat compressWidth = imageWidth;
+    CGFloat compressHeight = imageHeight;
+    CGSize compressSize = CGSizeMake(compressWidth, compressHeight);
+    
+    // 如果图片本身的宽高 <= boundary, 则使用图片本身的size
+    // 如果宽高有一个 > boundary, 通过宽高比计算目标宽高
+    if (imageWidth > boundary || imageHeight > boundary) {
+        // 宽高比
+        CGFloat scale = MAX(imageWidth, imageHeight) / MIN(imageWidth, imageHeight);
+        if (scale <= 2) {
+            CGFloat s = MAX(imageWidth, imageHeight) / boundary;
+            if (imageWidth > imageHeight) {
+                compressWidth = boundary;
+                compressHeight = imageHeight / s;
+            } else {
+                compressHeight = boundary;
+                compressWidth = imageWidth / s;
+            }
+        } else {
+            if (MIN(imageWidth, imageHeight) >= boundary) {
+                // 图片的最小边 > boundary, 那么将最小边设为 smallBoundary
+                CGFloat newBoundary = smallBoundary;
+                CGFloat s = MIN(imageWidth, imageHeight) / newBoundary;
+                if (imageWidth < imageHeight) {
+                    compressWidth = newBoundary;
+                    compressHeight = imageHeight / s;
+                } else {
+                    compressHeight = newBoundary;
+                    compressWidth = imageWidth / s;
+                }
+            }
+        }
+        compressSize = CGSizeMake(compressWidth, compressHeight);
+    }
+    
+    // 重绘
+    UIGraphicsBeginImageContext(compressSize);
+    [self drawInRect:CGRectMake(0, 0, compressSize.width, compressSize.height)];
+    UIImage *compressImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    // 压缩图片
+    NSData *imageData = UIImageJPEGRepresentation(compressImage, compression);
+    if (imageData.length > 0) {
+        return [UIImage imageWithData:imageData];
+    }
+    
+    return self;
+}
+
 @end

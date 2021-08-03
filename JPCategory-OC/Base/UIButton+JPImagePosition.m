@@ -9,6 +9,7 @@
 #import <objc/runtime.h>
 
 #define TitleKeyPath @"titleLabel.text"
+#define TitleAttributedTextPath @"titleLabel.attributedText"
 #define ImageKeyPath @"imageView.image"
 
 @implementation UIButton (JPImagePosition)
@@ -776,6 +777,7 @@
     if (!self.jp_observed) {
         self.jp_observed = YES;
         [self addObserver:self forKeyPath:TitleKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+        [self addObserver:self forKeyPath:TitleAttributedTextPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
         [self addObserver:self forKeyPath:ImageKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     }
 }
@@ -785,6 +787,17 @@
     if ([keyPath isEqualToString:TitleKeyPath]) {
         NSString *new = change[NSKeyValueChangeNewKey];
         NSString *old = change[NSKeyValueChangeOldKey];
+        if (new == nil && old != nil) {
+            [self jp_buttonImagePosition];
+        }
+        if (new != nil && ![new isEqual:old]) {
+            [self jp_buttonImagePosition];
+        }
+    }
+    
+    if ([keyPath isEqualToString:TitleAttributedTextPath]) {
+        NSAttributedString *new = change[NSKeyValueChangeNewKey];
+        NSAttributedString *old = change[NSKeyValueChangeOldKey];
         if (new == nil && old != nil) {
             [self jp_buttonImagePosition];
         }
@@ -809,6 +822,7 @@
 
     if (self.jp_observed) {
         [self removeObserver:self forKeyPath:TitleKeyPath context:nil];
+        [self removeObserver:self forKeyPath:TitleAttributedTextPath context:nil];
         [self removeObserver:self forKeyPath:ImageKeyPath context:nil];
     }
 }
