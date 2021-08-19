@@ -25,6 +25,7 @@
 		F5522BD62646545D0034F8AB /* NSMutableArray+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BD52646545D0034F8AB /* NSMutableArray+JPCrashGuard.m */; };
 		F5522BD926465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */; };
 		F5522BDC264664440034F8AB /* NSDictionary+JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */; };
+		F56826D326CE09530016685A /* JPCrashGuard.m in Sources */ = {isa = PBXBuildFile; fileRef = F56826D226CE09530016685A /* JPCrashGuard.m */; };
 		F5DBAFF225918BCA0008D98F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBAFF125918BCA0008D98F /* AppDelegate.m */; };
 		F5DBAFF525918BCA0008D98F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBAFF425918BCA0008D98F /* SceneDelegate.m */; };
 		F5DBAFF825918BCA0008D98F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DBAFF725918BCA0008D98F /* ViewController.m */; };
@@ -75,6 +76,8 @@
 		F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+JPCrashGuard.m"; sourceTree = "<group>"; };
 		F5522BDA264664440034F8AB /* NSDictionary+JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JPCrashGuard.h"; sourceTree = "<group>"; };
 		F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JPCrashGuard.m"; sourceTree = "<group>"; };
+		F56826D126CE09530016685A /* JPCrashGuard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPCrashGuard.h; sourceTree = "<group>"; };
+		F56826D226CE09530016685A /* JPCrashGuard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPCrashGuard.m; sourceTree = "<group>"; };
 		F5DBAFED25918BCA0008D98F /* JPCategoryOCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPCategoryOCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DBAFF025918BCA0008D98F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F5DBAFF125918BCA0008D98F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				F5522BD826465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m */,
 				F5522BDA264664440034F8AB /* NSDictionary+JPCrashGuard.h */,
 				F5522BDB264664440034F8AB /* NSDictionary+JPCrashGuard.m */,
+				F56826D126CE09530016685A /* JPCrashGuard.h */,
+				F56826D226CE09530016685A /* JPCrashGuard.m */,
 			);
 			path = CrashGuard;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				F51EF42F26491F62002B8134 /* UIButton+JPImagePosition.m in Sources */,
 				F5522BD62646545D0034F8AB /* NSMutableArray+JPCrashGuard.m in Sources */,
 				F5DBAFF225918BCA0008D98F /* AppDelegate.m in Sources */,
+				F56826D326CE09530016685A /* JPCrashGuard.m in Sources */,
 				F5522BD926465BC50034F8AB /* NSMutableDictionary+JPCrashGuard.m in Sources */,
 				F5DBB0882591C1C70008D98F /* RightViewController.m in Sources */,
 				F5522BDC264664440034F8AB /* NSDictionary+JPCrashGuard.m in Sources */,
@@ -452,13 +458,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 218;
+				CURRENT_PROJECT_VERSION = 220;
 				INFOPLIST_FILE = JPCategoryOCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.8;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.djp.demo.JPCategoryOCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,13 +477,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 218;
+				CURRENT_PROJECT_VERSION = 220;
 				INFOPLIST_FILE = JPCategoryOCDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.8;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.djp.demo.JPCategoryOCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

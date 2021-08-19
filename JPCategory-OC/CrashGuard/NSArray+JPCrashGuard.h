@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSArray (JPCrashGuard)
 
++ (void)jp_startCrashGuard;
+
 @end
 
 NS_ASSUME_NONNULL_END

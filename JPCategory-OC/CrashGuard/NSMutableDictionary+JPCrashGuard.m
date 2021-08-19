@@ -10,7 +10,7 @@
 
 @implementation NSMutableDictionary (JPCrashGuard)
 
-+ (void)load {
++ (void)jp_startCrashGuard {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
 
@@ -30,7 +30,9 @@
         #ifdef DEBUG
         NSAssert(aKey != nil, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Dictionary_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return;
         #endif
     }
@@ -40,7 +42,9 @@
         #ifdef DEBUG
         NSAssert(anObject != nil, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Dictionary_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return;
         #endif
     }
@@ -55,7 +59,9 @@
         #ifdef DEBUG
         NSAssert(key != nil, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Dictionary_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return;
         #endif
     }
@@ -70,7 +76,9 @@
         #ifdef DEBUG
         NSAssert(key != nil, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Dictionary_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return [NSNull null];
         #endif
     }

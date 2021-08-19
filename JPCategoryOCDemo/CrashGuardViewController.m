@@ -6,6 +6,7 @@
 //
 
 #import "CrashGuardViewController.h"
+#import "JPCrashGuard.h"
 
 @interface CrashGuardViewController ()
 
@@ -21,8 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(arrayCrash:) name:JPCrashGuard_Array_NotificationName object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dictCrash:) name:JPCrashGuard_Dictionary_NotificationName object:nil];
 
 }
+
+- (void)arrayCrash:(NSNotification *)notification {
+    
+    NSLog(@"❎ Array: %@", notification.userInfo[@"crashInfo"]);
+}
+
+- (void)dictCrash:(NSNotification *)notification {
+    
+    NSLog(@"❎ Dictionary: %@", notification.userInfo[@"crashInfo"]);
+}
+
 - (IBAction)addNilObject:(id)sender {
     
     [self.mutableArray addObject:nil];

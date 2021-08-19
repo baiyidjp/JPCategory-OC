@@ -8,9 +8,9 @@
 #import "UIButton+JPImagePosition.h"
 #import <objc/runtime.h>
 
-#define TitleKeyPath @"titleLabel.text"
-#define TitleAttributedTextPath @"titleLabel.attributedText"
-#define ImageKeyPath @"imageView.image"
+static NSString *kTitleKeyPath = @"titleLabel.text";
+static NSString *kTitleAttributedTextPath = @"titleLabel.attributedText";
+static NSString *kImageKeyPath = @"imageView.image";
 
 @implementation UIButton (JPImagePosition)
 
@@ -776,15 +776,15 @@
 
     if (!self.jp_observed) {
         self.jp_observed = YES;
-        [self addObserver:self forKeyPath:TitleKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-        [self addObserver:self forKeyPath:TitleAttributedTextPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
-        [self addObserver:self forKeyPath:ImageKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+        [self addObserver:self forKeyPath:kTitleKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+        [self addObserver:self forKeyPath:kTitleAttributedTextPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+        [self addObserver:self forKeyPath:kImageKeyPath options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
     }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     
-    if ([keyPath isEqualToString:TitleKeyPath]) {
+    if ([keyPath isEqualToString:kTitleKeyPath]) {
         NSString *new = change[NSKeyValueChangeNewKey];
         NSString *old = change[NSKeyValueChangeOldKey];
         if (new == nil && old != nil) {
@@ -795,7 +795,7 @@
         }
     }
     
-    if ([keyPath isEqualToString:TitleAttributedTextPath]) {
+    if ([keyPath isEqualToString:kTitleAttributedTextPath]) {
         NSAttributedString *new = change[NSKeyValueChangeNewKey];
         NSAttributedString *old = change[NSKeyValueChangeOldKey];
         if (new == nil && old != nil) {
@@ -806,7 +806,7 @@
         }
     }
     
-    if ([keyPath isEqualToString:ImageKeyPath]) {
+    if ([keyPath isEqualToString:kImageKeyPath]) {
         UIImage *new = change[NSKeyValueChangeNewKey];
         UIImage *old = change[NSKeyValueChangeOldKey];
         if (new == nil && old != nil) {
@@ -821,9 +821,9 @@
 - (void)dealloc {
 
     if (self.jp_observed) {
-        [self removeObserver:self forKeyPath:TitleKeyPath context:nil];
-        [self removeObserver:self forKeyPath:TitleAttributedTextPath context:nil];
-        [self removeObserver:self forKeyPath:ImageKeyPath context:nil];
+        [self removeObserver:self forKeyPath:kTitleKeyPath context:nil];
+        [self removeObserver:self forKeyPath:kTitleAttributedTextPath context:nil];
+        [self removeObserver:self forKeyPath:kImageKeyPath context:nil];
     }
 }
 

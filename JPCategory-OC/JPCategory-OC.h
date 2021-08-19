@@ -23,9 +23,6 @@
 #import "Base/NSArray+JPCategory.h"
 
 #import "SwizzledMethod/NSObject+JPSwizzledMethod.h"
-#import "CrashGuard/NSArray+JPCrashGuard.h"
-#import "CrashGuard/NSMutableArray+JPCrashGuard.h"
-#import "CrashGuard/NSDictionary+JPCrashGuard.h"
-#import "CrashGuard/NSMutableDictionary+JPCrashGuard.h"
+#import "CrashGuard/JPCrashGuard.h"
 
 #endif /* JPCategory_OC_h */

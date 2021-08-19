@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
 
     [JPCategoryConfig jp_configNavigationBarCategoryAndCustomFontNameWithRegular:@"" bold:@""];
+    [[JPCrashGuard sharedInstance] jp_startCrashGuard];
     
     return YES;
 }

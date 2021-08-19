@@ -10,7 +10,7 @@
 
 @implementation NSDictionary (JPCrashGuard)
 
-+ (void)load {
++ (void)jp_startCrashGuard {
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -31,7 +31,9 @@
             #ifdef DEBUG
             NSAssert((obj != nil && key != nil), errorString);
             #else
-            NSLog(@"%@", errorString);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Dictionary_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+            });
             return [NSDictionary dictionary];
             #endif
         }

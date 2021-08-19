@@ -10,7 +10,7 @@
 
 @implementation NSMutableArray (JPCrashGuard)
 
-+ (void)load {
++ (void)jp_startCrashGuard {
 
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -29,7 +29,9 @@
         #ifdef DEBUG
         NSAssert(anObject != nil, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Array_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return;
         #endif
     }
@@ -42,7 +44,9 @@
         #ifdef DEBUG
         NSAssert(index <= self.count, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Array_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return;
         #endif
     }
@@ -58,7 +62,9 @@
         #ifdef DEBUG
         NSAssert(objects.count == indexes.count, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Array_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return;
         #endif
     }
@@ -71,7 +77,9 @@
         #ifdef DEBUG
         NSAssert(indexes.lastIndex < (self.count + indexes.count), errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Array_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return;
         #endif
     }
@@ -90,7 +98,9 @@
         #ifdef DEBUG
         NSAssert(index < self.count, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Array_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return [NSNull null];
         #endif
     }
@@ -108,7 +118,9 @@
         #ifdef DEBUG
         NSAssert(idx < self.count, errorString);
         #else
-        NSLog(@"%@", errorString);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"JPCrashGuard_Array_NotificationName" object:nil userInfo:@{@"crashInfo": errorString}];
+        });
         return [NSNull null];
         #endif
     }
