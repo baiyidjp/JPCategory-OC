@@ -15,10 +15,12 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cls = NSClassFromString(@"__NSArrayM");
-        [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(insertObject:atIndex:) swizzledSelector:@selector(jp_insertObject:atIndex:)];
+        if (cls) {
+            [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(insertObject:atIndex:) swizzledSelector:@selector(jp_insertObject:atIndex:)];
+            [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(objectAtIndexedSubscript:) swizzledSelector:@selector(jp_objectAtIndexedSubscript:)];
+            [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(objectAtIndex:) swizzledSelector:@selector(jp_objectAtIndex:)];            
+        }
         [NSObject jp_swizzledInstanceMethodWithClass:[NSMutableArray class] originalSelector:@selector(insertObjects:atIndexes:) swizzledSelector:@selector(jp_insertObjects:atIndexes:)];
-        [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(objectAtIndexedSubscript:) swizzledSelector:@selector(jp_objectAtIndexedSubscript:)];
-        [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(objectAtIndex:) swizzledSelector:@selector(jp_objectAtIndex:)];
     });
 }
 

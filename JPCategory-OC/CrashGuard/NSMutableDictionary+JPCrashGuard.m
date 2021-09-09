@@ -15,11 +15,15 @@
     dispatch_once(&onceToken, ^{
 
         Class cls = NSClassFromString(@"__NSDictionaryM");
-        [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(setObject:forKey:) swizzledSelector:@selector(jp_setObject:forKey:)];
-        [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(setObject:forKeyedSubscript:) swizzledSelector:@selector(jp_setObject:forKeyedSubscript:)];
+        if (cls) {
+            [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(setObject:forKey:) swizzledSelector:@selector(jp_setObject:forKey:)];
+            [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(setObject:forKeyedSubscript:) swizzledSelector:@selector(jp_setObject:forKeyedSubscript:)];
+        }
 
         Class cls2 = NSClassFromString(@"__NSDictionaryI");
-        [NSObject jp_swizzledInstanceMethodWithClass:cls2 originalSelector:@selector(objectForKeyedSubscript:) swizzledSelector:@selector(jp_objectForKeyedSubscript:)];
+        if (cls2) {
+            [NSObject jp_swizzledInstanceMethodWithClass:cls2 originalSelector:@selector(objectForKeyedSubscript:) swizzledSelector:@selector(jp_objectForKeyedSubscript:)];            
+        }
     });
 }
 

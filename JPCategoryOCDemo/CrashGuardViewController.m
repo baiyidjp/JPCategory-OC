@@ -51,6 +51,12 @@
 }
 - (IBAction)getObject:(id)sender {
     
+    NSArray *array = @[@"2"];
+    NSString *item = array[1];
+    
+    NSArray *array1 = [NSArray arrayWithObject:@"1"];
+    NSString *item1 = array1[1];
+    
     [self.mutableArray addObject:@"0"];
     self.mutableArray[20];
     [self.mutableArray objectAtIndex:20];

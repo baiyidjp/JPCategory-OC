@@ -16,7 +16,9 @@
     dispatch_once(&onceToken, ^{
        
         Class cls = NSClassFromString(@"__NSPlaceholderDictionary");
-        [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(initWithObjects:forKeys:count:) swizzledSelector:@selector(jp_initWithObjects:forKeys:count:)];
+        if (cls) {
+            [NSObject jp_swizzledInstanceMethodWithClass:cls originalSelector:@selector(initWithObjects:forKeys:count:) swizzledSelector:@selector(jp_initWithObjects:forKeys:count:)];            
+        }
         
     });
 }

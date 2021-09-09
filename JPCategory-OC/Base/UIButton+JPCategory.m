@@ -65,7 +65,7 @@
                selectedBackgroundImage:(UIImage *)selectedBackgroundImage
                                  frame:(CGRect)frame {
 
-    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:nil selectedImage:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage frame:frame];
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImage:nil selectedImage:nil normalBackgroundImage:normalBackgroundImage selectedBackgroundImage:selectedBackgroundImage frame:frame];
 }
 
 + (UIButton *)jp_buttonWithNormalTitle:(NSString *)normalTitle
@@ -95,7 +95,7 @@
                     selectedTitleColor:(UIColor *)selectedTitleColor
                                  frame:(CGRect)frame {
 
-    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:nil normalImage:nil selectedImage:nil normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
+    return [self jp_buttonWithNormalTitle:normalTitle selectedTitle:nil titleFont:titleFont normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImage:nil selectedImage:nil normalBackgroundImage:nil selectedBackgroundImage:nil frame:frame];
 }
 
 + (UIButton *)jp_buttonWithNormalBackgroundImage:(UIImage *)normalBackgroundImage
